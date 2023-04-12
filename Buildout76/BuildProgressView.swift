@@ -26,8 +26,12 @@ struct BuildProgressView: View {
                 ForEach(pickedPerks, id: \.id) { pickedPerk in
                     HStack {
                         if pickedPerk.perk.specialCategory.contains("Strength") {
-                            Text(pickedPerk.perk.name)
-                            Text("\(pickedPerk.perkLevel)")
+                            NavigationLink {
+                                PerkCardView(perk: pickedPerk.perk)
+                            } label: {
+                                Text(pickedPerk.perk.name)
+                                Text("\(pickedPerk.perkLevel)")
+                            }
                         }
                     }
                 }
@@ -39,8 +43,12 @@ struct BuildProgressView: View {
                 ForEach(pickedPerks, id: \.id) { pickedPerk in
                     HStack {
                         if pickedPerk.perk.specialCategory.contains("Perception") {
-                            Text(pickedPerk.perk.name)
-                            Text("\(pickedPerk.perkLevel)")
+                            NavigationLink {
+                                PerkCardView(perk: pickedPerk.perk)
+                            } label: {
+                                Text(pickedPerk.perk.name)
+                                Text("\(pickedPerk.perkLevel)")
+                            }
                         }
                     }
                 }
@@ -52,8 +60,12 @@ struct BuildProgressView: View {
                 ForEach(pickedPerks, id: \.id) { pickedPerk in
                     HStack {
                         if pickedPerk.perk.specialCategory.contains("Endurance") {
-                            Text(pickedPerk.perk.name)
-                            Text("\(pickedPerk.perkLevel)")
+                            NavigationLink {
+                                PerkCardView(perk: pickedPerk.perk)
+                            } label: {
+                                Text(pickedPerk.perk.name)
+                                Text("\(pickedPerk.perkLevel)")
+                            }
                         }
                     }
                 }
@@ -65,8 +77,12 @@ struct BuildProgressView: View {
                 ForEach(pickedPerks, id: \.id) { pickedPerk in
                     HStack {
                         if pickedPerk.perk.specialCategory.contains("Charisma") {
-                            Text(pickedPerk.perk.name)
-                            Text("\(pickedPerk.perkLevel)")
+                            NavigationLink {
+                                PerkCardView(perk: pickedPerk.perk)
+                            } label: {
+                                Text(pickedPerk.perk.name)
+                                Text("\(pickedPerk.perkLevel)")
+                            }
                         }
                     }
                 }
@@ -78,8 +94,12 @@ struct BuildProgressView: View {
                 ForEach(pickedPerks, id: \.id) { pickedPerk in
                     HStack {
                         if pickedPerk.perk.specialCategory.contains("Intelligence") {
-                            Text(pickedPerk.perk.name)
-                            Text("\(pickedPerk.perkLevel)")
+                            NavigationLink {
+                                PerkCardView(perk: pickedPerk.perk)
+                            } label: {
+                                Text(pickedPerk.perk.name)
+                                Text("\(pickedPerk.perkLevel)")
+                            }
                         }
                     }
                 }
@@ -91,8 +111,12 @@ struct BuildProgressView: View {
                 ForEach(pickedPerks, id: \.id) { pickedPerk in
                     HStack {
                         if pickedPerk.perk.specialCategory.contains("Agility") {
-                            Text(pickedPerk.perk.name)
-                            Text("\(pickedPerk.perkLevel)")
+                            NavigationLink {
+                                PerkCardView(perk: pickedPerk.perk)
+                            } label: {
+                                Text(pickedPerk.perk.name)
+                                Text("\(pickedPerk.perkLevel)")
+                            }
                         }
                     }
                 }
@@ -104,8 +128,12 @@ struct BuildProgressView: View {
                 ForEach(pickedPerks, id: \.id) { pickedPerk in
                     HStack {
                         if pickedPerk.perk.specialCategory.contains("Luck") {
-                            Text(pickedPerk.perk.name)
-                            Text("\(pickedPerk.perkLevel)")
+                            NavigationLink {
+                                PerkCardView(perk: pickedPerk.perk)
+                            } label: {
+                                Text(pickedPerk.perk.name)
+                                Text("\(pickedPerk.perkLevel)")
+                            }
                         }
                     }
                 }
