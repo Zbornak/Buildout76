@@ -23,18 +23,7 @@ struct BuildProgressView: View {
             }
             
             Section {
-                ForEach(pickedPerks, id: \.id) { pickedPerk in
-                        if pickedPerk.perk.specialCategory.contains("Strength") {
-                            NavigationLink {
-                                PerkCardView(perk: pickedPerk.perk)
-                            } label: {
-                                HStack {
-                                    Text(pickedPerk.perk.name)
-                                    Text("\(pickedPerk.perkLevel)")
-                                }
-                            }
-                        }
-                }
+                FilteredProgressView()
             } header: {
                 Text("strength perks")
             }
