@@ -69,8 +69,8 @@
 			children = (
 				19E63ABE29E6A9BE0065155B /* Buildout76App.swift */,
 				19E63AC029E6A9BE0065155B /* ContentView.swift */,
-				19E63AD829E6B1110065155B /* PerkCardView.swift */,
 				19E63ADC29E6B7A00065155B /* AllPerksView.swift */,
+				19E63AD829E6B1110065155B /* PerkCardView.swift */,
 				19E63AD029E6AA6C0065155B /* Perk.swift */,
 				19E63AD429E6AC250065155B /* PickedPerk.swift */,
 				19E63AD229E6ABBD0065155B /* Build.swift */,
