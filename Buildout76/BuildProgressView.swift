@@ -22,11 +22,8 @@ struct BuildProgressView: View {
                 Text("build name")
             }
             
-            Section {
-                FilteredProgressView()
-            } header: {
-                Text("strength perks")
-            }
+            FilteredProgressView(filter: .strength)
+            
         }
     }
 }
