@@ -30,7 +30,7 @@ struct BuildProgressView: View {
                                 PerkCardView(perk: pickedPerk.perk)
                             } label: {
                                 Text(pickedPerk.perk.name)
-                                Text(starDisplay())
+                                Text("\(pickedPerk.perkLevel)")
                             }
                         }
                     }
@@ -38,131 +38,13 @@ struct BuildProgressView: View {
             } header: {
                 Text("strength perks")
             }
-            
-            Section {
-                ForEach(pickedPerks, id: \.id) { pickedPerk in
-                    HStack {
-                        if pickedPerk.perk.specialCategory.contains("Perception") {
-                            NavigationLink {
-                                PerkCardView(perk: pickedPerk.perk)
-                            } label: {
-                                Text(pickedPerk.perk.name)
-                                Text(starDisplay())
-                            }
-                        }
-                    }
-                }
-            } header: {
-                Text("perception perks")
-            }
-            
-            Section {
-                ForEach(pickedPerks, id: \.id) { pickedPerk in
-                    HStack {
-                        if pickedPerk.perk.specialCategory.contains("Endurance") {
-                            NavigationLink {
-                                PerkCardView(perk: pickedPerk.perk)
-                            } label: {
-                                Text(pickedPerk.perk.name)
-                                Text(starDisplay())
-                            }
-                        }
-                    }
-                }
-            } header: {
-                Text("endurance perks")
-            }
-            
-            Section {
-                ForEach(pickedPerks, id: \.id) { pickedPerk in
-                    HStack {
-                        if pickedPerk.perk.specialCategory.contains("Charisma") {
-                            NavigationLink {
-                                PerkCardView(perk: pickedPerk.perk)
-                            } label: {
-                                Text(pickedPerk.perk.name)
-                                Text(starDisplay())
-                            }
-                        }
-                    }
-                }
-            } header: {
-                Text("charisma perks")
-            }
-            
-            Section {
-                ForEach(pickedPerks, id: \.id) { pickedPerk in
-                    HStack {
-                        if pickedPerk.perk.specialCategory.contains("Intelligence") {
-                            NavigationLink {
-                                PerkCardView(perk: pickedPerk.perk)
-                            } label: {
-                                Text(pickedPerk.perk.name)
-                                Text(starDisplay())
-                            }
-                        }
-                    }
-                }
-            } header: {
-                Text("intelligence perks")
-            }
-            
-            Section {
-                ForEach(pickedPerks, id: \.id) { pickedPerk in
-                    HStack {
-                        if pickedPerk.perk.specialCategory.contains("Agility") {
-                            NavigationLink {
-                                PerkCardView(perk: pickedPerk.perk)
-                            } label: {
-                                Text(pickedPerk.perk.name)
-                                Text(starDisplay())
-                            }
-                        }
-                    }
-                }
-            } header: {
-                Text("agility perks")
-            }
-            
-            Section {
-                ForEach(pickedPerks, id: \.id) { pickedPerk in
-                    HStack {
-                        if pickedPerk.perk.specialCategory.contains("Luck") {
-                            NavigationLink {
-                                PerkCardView(perk: pickedPerk.perk)
-                            } label: {
-                                Text(pickedPerk.perk.name)
-                                Text(starDisplay())
-                            }
-                        }
-                    }
-                }
-            } header: {
-                Text("luck perks")
-            }
         }
-    }
-    
-    func starDisplay() -> String {
-        for pickedPerk in pickedPerks {
-            if pickedPerk.perkLevel == 1 {
-                return "★"
-            } else if pickedPerk.perkLevel == 2 {
-                return "★★"
-            } else if pickedPerk.perkLevel == 3 {
-                return "★★★"
-            } else if pickedPerk.perkLevel == 4 {
-                return "★★★★"
-            }
-        }
-        
-        return "★★★★★"
     }
 }
 
 struct BuildProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        BuildProgressView(pickedPerks: .constant([PickedPerk.example]))
+        BuildProgressView()
             .environmentObject(PickedPerks())
     }
 }
