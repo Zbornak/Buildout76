@@ -12,13 +12,11 @@ struct BuildProgressView: View {
     
     @State private var buildName = ""
     
-    enum FilterType {
+    enum FilterType: CaseIterable {
         case strength, perception, endurance, charisma, intelligence, agility, luck
     }
     
-    let filter: FilterType
-    
-    var header: String {
+    func header(_ filter: FilterType) -> String {
         switch filter {
         case .strength:
             return "strength perks"
@@ -37,7 +35,7 @@ struct BuildProgressView: View {
         }
     }
     
-    var filteredPickedPerks: [PickedPerk] {
+    func filteredPickedPerks(_ filter: FilterType) -> [PickedPerk] {
         switch filter {
         case .strength:
             return pickedPerks.pickedPerks.filter { $0.perk.specialCategory == "Strength" }
@@ -62,81 +60,17 @@ struct BuildProgressView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.horizontal)
             
-            Section {
-                ForEach(filteredPickedPerks) { perk in
-                    HStack {
-                        Text(perk.perk.name)
-                        Text("\(perk.perkLevel)")
+            ForEach(FilterType.allCases, id: \.self) { filter in
+                Section {
+                    ForEach(filteredPickedPerks(filter)) { perk in
+                        HStack {
+                            Text(perk.perk.name)
+                            Text("\(perk.perkLevel)")
+                        }
                     }
+                } header: {
+                    Text(header(filter))
                 }
-            } header: {
-                Text(header)
-            }
-            
-            Section {
-                ForEach(filteredPickedPerks) { perk in
-                    HStack {
-                        Text(perk.perk.name)
-                        Text("\(perk.perkLevel)")
-                    }
-                }
-            } header: {
-                Text(header)
-            }
-            
-            Section {
-                ForEach(filteredPickedPerks) { perk in
-                    HStack {
-                        Text(perk.perk.name)
-                        Text("\(perk.perkLevel)")
-                    }
-                }
-            } header: {
-                Text(header)
-            }
-            
-            Section {
-                ForEach(filteredPickedPerks) { perk in
-                    HStack {
-                        Text(perk.perk.name)
-                        Text("\(perk.perkLevel)")
-                    }
-                }
-            } header: {
-                Text(header)
-            }
-            
-            Section {
-                ForEach(filteredPickedPerks) { perk in
-                    HStack {
-                        Text(perk.perk.name)
-                        Text("\(perk.perkLevel)")
-                    }
-                }
-            } header: {
-                Text(header)
-            }
-            
-            Section {
-                ForEach(filteredPickedPerks) { perk in
-                    HStack {
-                        Text(perk.perk.name)
-                        Text("\(perk.perkLevel)")
-                    }
-                }
-            } header: {
-                Text(header)
-            }
-            
-            Section {
-                ForEach(filteredPickedPerks) { perk in
-                    HStack {
-                        Text(perk.perk.name)
-                        Text("\(perk.perkLevel)")
-                    }
-                }
-            } header: {
-                Text(header)
             }
         }
     }
@@ -144,7 +78,7 @@ struct BuildProgressView: View {
 
 struct BuildProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        BuildProgressView(filter: .strength)
+        BuildProgressView()
             .environmentObject(PickedPerks())
     }
 }
