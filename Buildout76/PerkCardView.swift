@@ -12,7 +12,7 @@ struct PerkCardView: View {
     
     @State private var perkCardLevel = 1
     
-    @State private var pickedPerks = [PickedPerk]()
+    @EnvironmentObject var pickedPerks: PickedPerks
     
     var setPerkCardColor: Color {
         if perk.specialCategory == "Strength" {
@@ -69,7 +69,7 @@ struct PerkCardView: View {
                     Button("+") {
                         //add perk to array of pickedPerks (including level)
                         let newPickedPerk = PickedPerk(perk: perk, perkLevel: perkCardLevel)
-                        pickedPerks.append(newPickedPerk)
+                        pickedPerks.add(newPickedPerk)
                     }
                     .buttonStyle(.borderedProminent)
                 }
@@ -83,5 +83,6 @@ struct PerkCardView: View {
 struct PerkCardView_Previews: PreviewProvider {
     static var previews: some View {
         PerkCardView(perk: Perk.example)
+            .environmentObject(PickedPerks())
     }
 }

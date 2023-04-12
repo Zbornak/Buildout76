@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BuildProgressView: View {
-    @Binding var pickedPerks: [PickedPerk]
+    @EnvironmentObject var pickedPerks: PickedPerks
     
     @State private var buildName = ""
     
@@ -163,5 +163,6 @@ struct BuildProgressView: View {
 struct BuildProgressView_Previews: PreviewProvider {
     static var previews: some View {
         BuildProgressView(pickedPerks: .constant([PickedPerk.example]))
+            .environmentObject(PickedPerks())
     }
 }

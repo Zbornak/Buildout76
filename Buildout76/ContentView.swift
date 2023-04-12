@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var builds = Builds()
+    @StateObject var pickedPerks = PickedPerks()
     
     var body: some View {
         TabView {
@@ -17,12 +18,13 @@ struct ContentView: View {
                     Label("Perks", systemImage: "person.crop.circle.fill.badge.plus")
                 }
             
-            BuildProgressView(pickedPerks: .constant([PickedPerk.example]))
+            BuildProgressView()
                 .tabItem {
                     Label("In Progress", systemImage: "gearshape.2")
                 }
         }
         .environmentObject(builds)
+        .environmentObject(pickedPerks)
     }
 }
 
