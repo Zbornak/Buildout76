@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FilteredProgressView: View {
+    @EnvironmentObject var pickedPerks: PickedPerks
+    
     enum FilterType {
         case strength, perception, endurance, charisma, intelligence, agility, luck
     }
@@ -35,7 +37,7 @@ struct FilteredProgressView: View {
     
     var body: some View {
         Section {
-            
+            // filtered results here
         } header: {
             Text(header)
         }
@@ -45,5 +47,6 @@ struct FilteredProgressView: View {
 struct FilteredProgressView_Previews: PreviewProvider {
     static var previews: some View {
         FilteredProgressView(filter: .strength)
+            .environmentObject(PickedPerks())
     }
 }

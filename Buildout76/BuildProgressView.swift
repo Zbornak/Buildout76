@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct BuildProgressView: View {
-    @EnvironmentObject var pickedPerks: PickedPerks
-    
     @State private var buildName = ""
     
     var body: some View {
