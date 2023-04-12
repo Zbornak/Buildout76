@@ -23,7 +23,7 @@ struct BuildProgressView: View {
             }
             
             Section {
-                Text("")
+                Text("None selected")
             } header: {
                 Text("strength perks")
             }
