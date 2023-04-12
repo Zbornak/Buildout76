@@ -5,7 +5,7 @@
 //  Created by Mark Strijdom on 07/04/2023.
 //
 
-import Foundation
+import SwiftUI
 
 class Builds: ObservableObject {
     var savedBuilds: [Build]

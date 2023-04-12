@@ -5,7 +5,7 @@
 //  Created by Mark Strijdom on 12/04/2023.
 //
 
-import Foundation
+import SwiftUI
 
 class PickedPerks: ObservableObject {
     @Published var pickedPerks: [PickedPerk]
