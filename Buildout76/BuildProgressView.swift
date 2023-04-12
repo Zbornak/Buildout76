@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BuildProgressView: View {
+    @Binding var pickedPerks: [PickedPerk]
+    
     @State private var buildName = ""
     
     var body: some View {
@@ -21,7 +23,7 @@ struct BuildProgressView: View {
             }
             
             Section {
-                Text("None selected")
+                Text("")
             } header: {
                 Text("strength perks")
             }
@@ -67,6 +69,6 @@ struct BuildProgressView: View {
 
 struct BuildProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        BuildProgressView()
+        BuildProgressView(pickedPerks: .constant([PickedPerk.example]))
     }
 }

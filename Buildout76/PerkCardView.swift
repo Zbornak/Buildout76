@@ -12,6 +12,8 @@ struct PerkCardView: View {
     
     @State private var perkCardLevel = 1
     
+    @State private var pickedPerks = [PickedPerk]()
+    
     var setPerkCardColor: Color {
         if perk.specialCategory == "Strength" {
             return .green.opacity(0.5)
@@ -65,7 +67,9 @@ struct PerkCardView: View {
                     Text("\(perk.levelAvailable)")
                     Spacer()
                     Button("+") {
-                        //add perk to pickedPerk (including level)
+                        //add perk to array of pickedPerks (including level)
+                        let newPickedPerk = PickedPerk(perk: perk, perkLevel: perkCardLevel)
+                        pickedPerks.append(newPickedPerk)
                     }
                     .buttonStyle(.borderedProminent)
                 }
