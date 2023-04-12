@@ -18,6 +18,7 @@
 		19E63AD529E6AC250065155B /* PickedPerk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63AD429E6AC250065155B /* PickedPerk.swift */; };
 		19E63AD729E6AE2A0065155B /* Builds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63AD629E6AE2A0065155B /* Builds.swift */; };
 		19E63AD929E6B1110065155B /* PerkCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63AD829E6B1110065155B /* PerkCardView.swift */; };
+		19E63ADD29E6B7A00065155B /* AllPerksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63ADC29E6B7A00065155B /* AllPerksView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		19E63AD429E6AC250065155B /* PickedPerk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickedPerk.swift; sourceTree = "<group>"; };
 		19E63AD629E6AE2A0065155B /* Builds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builds.swift; sourceTree = "<group>"; };
 		19E63AD829E6B1110065155B /* PerkCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerkCardView.swift; sourceTree = "<group>"; };
+		19E63ADC29E6B7A00065155B /* AllPerksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPerksView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				19E63ABE29E6A9BE0065155B /* Buildout76App.swift */,
 				19E63AC029E6A9BE0065155B /* ContentView.swift */,
 				19E63AD829E6B1110065155B /* PerkCardView.swift */,
+				19E63ADC29E6B7A00065155B /* AllPerksView.swift */,
 				19E63AD029E6AA6C0065155B /* Perk.swift */,
 				19E63AD429E6AC250065155B /* PickedPerk.swift */,
 				19E63AD229E6ABBD0065155B /* Build.swift */,
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19E63AC129E6A9BE0065155B /* ContentView.swift in Sources */,
+				19E63ADD29E6B7A00065155B /* AllPerksView.swift in Sources */,
 				19E63AD529E6AC250065155B /* PickedPerk.swift in Sources */,
 				19E63ABF29E6A9BE0065155B /* Buildout76App.swift in Sources */,
 				19E63AD329E6ABBD0065155B /* Build.swift in Sources */,
@@ -300,8 +304,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,9 +313,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zbornak.Buildout76;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -328,8 +335,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,9 +344,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zbornak.Buildout76;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
