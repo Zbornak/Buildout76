@@ -72,6 +72,72 @@ struct BuildProgressView: View {
             } header: {
                 Text(header)
             }
+            
+            Section {
+                ForEach(filteredPickedPerks) { perk in
+                    HStack {
+                        Text(perk.perk.name)
+                        Text("\(perk.perkLevel)")
+                    }
+                }
+            } header: {
+                Text(header)
+            }
+            
+            Section {
+                ForEach(filteredPickedPerks) { perk in
+                    HStack {
+                        Text(perk.perk.name)
+                        Text("\(perk.perkLevel)")
+                    }
+                }
+            } header: {
+                Text(header)
+            }
+            
+            Section {
+                ForEach(filteredPickedPerks) { perk in
+                    HStack {
+                        Text(perk.perk.name)
+                        Text("\(perk.perkLevel)")
+                    }
+                }
+            } header: {
+                Text(header)
+            }
+            
+            Section {
+                ForEach(filteredPickedPerks) { perk in
+                    HStack {
+                        Text(perk.perk.name)
+                        Text("\(perk.perkLevel)")
+                    }
+                }
+            } header: {
+                Text(header)
+            }
+            
+            Section {
+                ForEach(filteredPickedPerks) { perk in
+                    HStack {
+                        Text(perk.perk.name)
+                        Text("\(perk.perkLevel)")
+                    }
+                }
+            } header: {
+                Text(header)
+            }
+            
+            Section {
+                ForEach(filteredPickedPerks) { perk in
+                    HStack {
+                        Text(perk.perk.name)
+                        Text("\(perk.perkLevel)")
+                    }
+                }
+            } header: {
+                Text(header)
+            }
         }
     }
 }
