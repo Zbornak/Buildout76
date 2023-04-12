@@ -8,7 +8,7 @@
 import SwiftUI
 
 class Builds: ObservableObject {
-    var savedBuilds: [Build]
+    @Published var savedBuilds: [Build]
     
     private let saveKey = "Builds"
     
