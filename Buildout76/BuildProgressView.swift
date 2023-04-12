@@ -34,6 +34,5 @@ struct BuildProgressView: View {
 struct BuildProgressView_Previews: PreviewProvider {
     static var previews: some View {
         BuildProgressView()
-            .environmentObject(PickedPerks())
     }
 }
