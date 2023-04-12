@@ -19,6 +19,7 @@
 		19E63AD729E6AE2A0065155B /* Builds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63AD629E6AE2A0065155B /* Builds.swift */; };
 		19E63AD929E6B1110065155B /* PerkCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63AD829E6B1110065155B /* PerkCardView.swift */; };
 		19E63ADD29E6B7A00065155B /* AllPerksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63ADC29E6B7A00065155B /* AllPerksView.swift */; };
+		19E63ADF29E6BE990065155B /* BuildProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63ADE29E6BE990065155B /* BuildProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		19E63AD629E6AE2A0065155B /* Builds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builds.swift; sourceTree = "<group>"; };
 		19E63AD829E6B1110065155B /* PerkCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerkCardView.swift; sourceTree = "<group>"; };
 		19E63ADC29E6B7A00065155B /* AllPerksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPerksView.swift; sourceTree = "<group>"; };
+		19E63ADE29E6BE990065155B /* BuildProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				19E63AC029E6A9BE0065155B /* ContentView.swift */,
 				19E63ADC29E6B7A00065155B /* AllPerksView.swift */,
 				19E63AD829E6B1110065155B /* PerkCardView.swift */,
+				19E63ADE29E6BE990065155B /* BuildProgressView.swift */,
 				19E63AD029E6AA6C0065155B /* Perk.swift */,
 				19E63AD429E6AC250065155B /* PickedPerk.swift */,
 				19E63AD229E6ABBD0065155B /* Build.swift */,
@@ -166,6 +169,7 @@
 				19E63ADD29E6B7A00065155B /* AllPerksView.swift in Sources */,
 				19E63AD529E6AC250065155B /* PickedPerk.swift in Sources */,
 				19E63ABF29E6A9BE0065155B /* Buildout76App.swift in Sources */,
+				19E63ADF29E6BE990065155B /* BuildProgressView.swift in Sources */,
 				19E63AD329E6ABBD0065155B /* Build.swift in Sources */,
 				19E63AD929E6B1110065155B /* PerkCardView.swift in Sources */,
 				19E63ACF29E6AA180065155B /* Bundle-Decodable.swift in Sources */,
