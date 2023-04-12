@@ -21,7 +21,12 @@ struct BuildProgressView: View {
             }
             
             FilteredProgressView(filter: .strength)
-            
+            FilteredProgressView(filter: .perception)
+            FilteredProgressView(filter: .endurance)
+            FilteredProgressView(filter: .charisma)
+            FilteredProgressView(filter: .intelligence)
+            FilteredProgressView(filter: .agility)
+            FilteredProgressView(filter: .luck)
         }
     }
 }
