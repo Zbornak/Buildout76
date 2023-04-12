@@ -14,6 +14,8 @@
 		19E63ACD29E6A9FB0065155B /* perks.json in Resources */ = {isa = PBXBuildFile; fileRef = 19E63ACC29E6A9FB0065155B /* perks.json */; };
 		19E63ACF29E6AA180065155B /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63ACE29E6AA180065155B /* Bundle-Decodable.swift */; };
 		19E63AD129E6AA6C0065155B /* Perk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63AD029E6AA6C0065155B /* Perk.swift */; };
+		19E63AD329E6ABBD0065155B /* Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63AD229E6ABBD0065155B /* Build.swift */; };
+		19E63AD529E6AC250065155B /* PickedPerk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63AD429E6AC250065155B /* PickedPerk.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		19E63ACC29E6A9FB0065155B /* perks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = perks.json; sourceTree = "<group>"; };
 		19E63ACE29E6AA180065155B /* Bundle-Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		19E63AD029E6AA6C0065155B /* Perk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Perk.swift; sourceTree = "<group>"; };
+		19E63AD229E6ABBD0065155B /* Build.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Build.swift; sourceTree = "<group>"; };
+		19E63AD429E6AC250065155B /* PickedPerk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickedPerk.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				19E63ABE29E6A9BE0065155B /* Buildout76App.swift */,
 				19E63AC029E6A9BE0065155B /* ContentView.swift */,
 				19E63AD029E6AA6C0065155B /* Perk.swift */,
+				19E63AD429E6AC250065155B /* PickedPerk.swift */,
+				19E63AD229E6ABBD0065155B /* Build.swift */,
 				19E63ACC29E6A9FB0065155B /* perks.json */,
 				19E63ACE29E6AA180065155B /* Bundle-Decodable.swift */,
 				19E63AC229E6A9BF0065155B /* Assets.xcassets */,
@@ -148,7 +154,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				19E63AC129E6A9BE0065155B /* ContentView.swift in Sources */,
+				19E63AD529E6AC250065155B /* PickedPerk.swift in Sources */,
 				19E63ABF29E6A9BE0065155B /* Buildout76App.swift in Sources */,
+				19E63AD329E6ABBD0065155B /* Build.swift in Sources */,
 				19E63ACF29E6AA180065155B /* Bundle-Decodable.swift in Sources */,
 				19E63AD129E6AA6C0065155B /* Perk.swift in Sources */,
 			);
