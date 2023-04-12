@@ -30,7 +30,7 @@ struct BuildProgressView: View {
                                 PerkCardView(perk: pickedPerk.perk)
                             } label: {
                                 Text(pickedPerk.perk.name)
-                                Text("\(pickedPerk.perkLevel)")
+                                Text(starDisplay())
                             }
                         }
                     }
@@ -47,7 +47,7 @@ struct BuildProgressView: View {
                                 PerkCardView(perk: pickedPerk.perk)
                             } label: {
                                 Text(pickedPerk.perk.name)
-                                Text("\(pickedPerk.perkLevel)")
+                                Text(starDisplay())
                             }
                         }
                     }
@@ -64,7 +64,7 @@ struct BuildProgressView: View {
                                 PerkCardView(perk: pickedPerk.perk)
                             } label: {
                                 Text(pickedPerk.perk.name)
-                                Text("\(pickedPerk.perkLevel)")
+                                Text(starDisplay())
                             }
                         }
                     }
@@ -81,7 +81,7 @@ struct BuildProgressView: View {
                                 PerkCardView(perk: pickedPerk.perk)
                             } label: {
                                 Text(pickedPerk.perk.name)
-                                Text("\(pickedPerk.perkLevel)")
+                                Text(starDisplay())
                             }
                         }
                     }
@@ -98,7 +98,7 @@ struct BuildProgressView: View {
                                 PerkCardView(perk: pickedPerk.perk)
                             } label: {
                                 Text(pickedPerk.perk.name)
-                                Text("\(pickedPerk.perkLevel)")
+                                Text(starDisplay())
                             }
                         }
                     }
@@ -115,7 +115,7 @@ struct BuildProgressView: View {
                                 PerkCardView(perk: pickedPerk.perk)
                             } label: {
                                 Text(pickedPerk.perk.name)
-                                Text("\(pickedPerk.perkLevel)")
+                                Text(starDisplay())
                             }
                         }
                     }
@@ -132,7 +132,7 @@ struct BuildProgressView: View {
                                 PerkCardView(perk: pickedPerk.perk)
                             } label: {
                                 Text(pickedPerk.perk.name)
-                                Text("\(pickedPerk.perkLevel)")
+                                Text(starDisplay())
                             }
                         }
                     }
@@ -141,6 +141,22 @@ struct BuildProgressView: View {
                 Text("luck perks")
             }
         }
+    }
+    
+    func starDisplay() -> String {
+        for pickedPerk in pickedPerks {
+            if pickedPerk.perkLevel == 1 {
+                return "★"
+            } else if pickedPerk.perkLevel == 2 {
+                return "★★"
+            } else if pickedPerk.perkLevel == 3 {
+                return "★★★"
+            } else if pickedPerk.perkLevel == 4 {
+                return "★★★★"
+            }
+        }
+        
+        return "★★★★★"
     }
 }
 
