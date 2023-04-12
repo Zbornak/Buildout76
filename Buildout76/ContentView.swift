@@ -11,13 +11,17 @@ struct ContentView: View {
     @StateObject var builds = Builds()
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            AllPerksView()
+                .tabItem {
+                    Label("Perks", systemImage: "person.crop.circle.fill.badge.plus")
+                }
+            
+            BuildProgressView(pickedPerks: .constant([PickedPerk.example]))
+                .tabItem {
+                    Label("In Progress", systemImage: "gearshape.2")
+                }
         }
-        .padding()
         .environmentObject(builds)
     }
 }
