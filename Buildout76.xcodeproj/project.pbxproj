@@ -11,6 +11,8 @@
 		19E63AC129E6A9BE0065155B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63AC029E6A9BE0065155B /* ContentView.swift */; };
 		19E63AC329E6A9BF0065155B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E63AC229E6A9BF0065155B /* Assets.xcassets */; };
 		19E63AC629E6A9BF0065155B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E63AC529E6A9BF0065155B /* Preview Assets.xcassets */; };
+		19E63ACD29E6A9FB0065155B /* perks.json in Resources */ = {isa = PBXBuildFile; fileRef = 19E63ACC29E6A9FB0065155B /* perks.json */; };
+		19E63ACF29E6AA180065155B /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63ACE29E6AA180065155B /* Bundle-Decodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		19E63AC029E6A9BE0065155B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		19E63AC229E6A9BF0065155B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19E63AC529E6A9BF0065155B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		19E63ACC29E6A9FB0065155B /* perks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = perks.json; sourceTree = "<group>"; };
+		19E63ACE29E6AA180065155B /* Bundle-Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				19E63ABE29E6A9BE0065155B /* Buildout76App.swift */,
 				19E63AC029E6A9BE0065155B /* ContentView.swift */,
+				19E63ACC29E6A9FB0065155B /* perks.json */,
+				19E63ACE29E6AA180065155B /* Bundle-Decodable.swift */,
 				19E63AC229E6A9BF0065155B /* Assets.xcassets */,
 				19E63AC429E6A9BF0065155B /* Preview Content */,
 			);
@@ -127,6 +133,7 @@
 			files = (
 				19E63AC629E6A9BF0065155B /* Preview Assets.xcassets in Resources */,
 				19E63AC329E6A9BF0065155B /* Assets.xcassets in Resources */,
+				19E63ACD29E6A9FB0065155B /* perks.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +146,7 @@
 			files = (
 				19E63AC129E6A9BE0065155B /* ContentView.swift in Sources */,
 				19E63ABF29E6A9BE0065155B /* Buildout76App.swift in Sources */,
+				19E63ACF29E6AA180065155B /* Bundle-Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
