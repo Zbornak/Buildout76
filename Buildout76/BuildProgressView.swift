@@ -8,8 +8,60 @@
 import SwiftUI
 
 struct BuildProgressView: View {
+    @State private var buildName = ""
+    
     var body: some View {
-        Text("Build in progress...")
+        Form {
+            Section {
+                TextField("Enter build name", text: $buildName)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal)
+            } header: {
+                Text("build name")
+            }
+            
+            Section {
+                Text("None selected")
+            } header: {
+                Text("strength perks")
+            }
+            
+            Section {
+                Text("None selected")
+            } header: {
+                Text("perception perks")
+            }
+            
+            Section {
+                Text("None selected")
+            } header: {
+                Text("endurance perks")
+            }
+            
+            Section {
+                Text("None selected")
+            } header: {
+                Text("charisma perks")
+            }
+            
+            Section {
+                Text("None selected")
+            } header: {
+                Text("intelligence perks")
+            }
+            
+            Section {
+                Text("None selected")
+            } header: {
+                Text("agility perks")
+            }
+            
+            Section {
+                Text("None selected")
+            } header: {
+                Text("luck perks")
+            }
+        }
     }
 }
 
