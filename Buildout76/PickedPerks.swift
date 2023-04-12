@@ -8,7 +8,7 @@
 import Foundation
 
 class PickedPerks: ObservableObject {
-    var pickedPerks: [PickedPerk]
+    @Published var pickedPerks: [PickedPerk]
     
     private let saveKey = "PickedPerks"
     
