@@ -23,43 +23,78 @@ struct BuildProgressView: View {
             }
             
             Section {
-                Text("None selected")
+                ForEach(pickedPerks, id: \.id) { pickedPerk in
+                    HStack {
+                        Text(pickedPerk.perk.name)
+                        Text("\(pickedPerk.perkLevel)")
+                    }
+                }
             } header: {
                 Text("strength perks")
             }
             
             Section {
-                Text("None selected")
+                ForEach(pickedPerks, id: \.id) { pickedPerk in
+                    HStack {
+                        Text(pickedPerk.perk.name)
+                        Text("\(pickedPerk.perkLevel)")
+                    }
+                }
             } header: {
                 Text("perception perks")
             }
             
             Section {
-                Text("None selected")
+                ForEach(pickedPerks, id: \.id) { pickedPerk in
+                    HStack {
+                        Text(pickedPerk.perk.name)
+                        Text("\(pickedPerk.perkLevel)")
+                    }
+                }
             } header: {
                 Text("endurance perks")
             }
             
             Section {
-                Text("None selected")
+                ForEach(pickedPerks, id: \.id) { pickedPerk in
+                    HStack {
+                        Text(pickedPerk.perk.name)
+                        Text("\(pickedPerk.perkLevel)")
+                    }
+                }
             } header: {
                 Text("charisma perks")
             }
             
             Section {
-                Text("None selected")
+                ForEach(pickedPerks, id: \.id) { pickedPerk in
+                    HStack {
+                        Text(pickedPerk.perk.name)
+                        Text("\(pickedPerk.perkLevel)")
+                    }
+                }
             } header: {
                 Text("intelligence perks")
             }
             
             Section {
-                Text("None selected")
+                ForEach(pickedPerks, id: \.id) { pickedPerk in
+                    HStack {
+                        Text(pickedPerk.perk.name)
+                        Text("\(pickedPerk.perkLevel)")
+                    }
+                }
             } header: {
                 Text("agility perks")
             }
             
             Section {
-                Text("None selected")
+                ForEach(pickedPerks, id: \.id) { pickedPerk in
+                    HStack {
+                        Text(pickedPerk.perk.name)
+                        Text("\(pickedPerk.perkLevel)")
+                    }
+                }
             } header: {
                 Text("luck perks")
             }
