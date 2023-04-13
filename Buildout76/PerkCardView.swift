@@ -69,7 +69,10 @@ struct PerkCardView: View {
                     Button("+") {
                         //add perk to array of pickedPerks (including level)
                         let newPickedPerk = PickedPerk(perk: perk, perkLevel: perkCardLevel)
-                        pickedPerks.add(newPickedPerk)
+                        
+                        if pickedPerks.perks.firstIndex(where: { $0.perk.name == perk.name }) == nil {
+                            pickedPerks.add(newPickedPerk)
+                        }
                     }
                     .buttonStyle(.borderedProminent)
                 }
