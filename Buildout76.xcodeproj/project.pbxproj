@@ -22,6 +22,7 @@
 		19E63ADF29E6BE990065155B /* BuildProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63ADE29E6BE990065155B /* BuildProgressView.swift */; };
 		19E63AE129E6EAD50065155B /* PickedPerks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63AE029E6EAD50065155B /* PickedPerks.swift */; };
 		19E7B77C29E8491100A00469 /* SavedBuildsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E7B77B29E8491100A00469 /* SavedBuildsListView.swift */; };
+		19E7B77E29E84B6600A00469 /* BuildDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E7B77D29E84B6600A00469 /* BuildDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		19E63ADE29E6BE990065155B /* BuildProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildProgressView.swift; sourceTree = "<group>"; };
 		19E63AE029E6EAD50065155B /* PickedPerks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickedPerks.swift; sourceTree = "<group>"; };
 		19E7B77B29E8491100A00469 /* SavedBuildsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedBuildsListView.swift; sourceTree = "<group>"; };
+		19E7B77D29E84B6600A00469 /* BuildDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				19E63ABE29E6A9BE0065155B /* Buildout76App.swift */,
 				19E63AC029E6A9BE0065155B /* ContentView.swift */,
 				19E7B77B29E8491100A00469 /* SavedBuildsListView.swift */,
+				19E7B77D29E84B6600A00469 /* BuildDetailView.swift */,
 				19E63ADC29E6B7A00065155B /* AllPerksView.swift */,
 				19E63AD829E6B1110065155B /* PerkCardView.swift */,
 				19E63ADE29E6BE990065155B /* BuildProgressView.swift */,
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19E63AC129E6A9BE0065155B /* ContentView.swift in Sources */,
+				19E7B77E29E84B6600A00469 /* BuildDetailView.swift in Sources */,
 				19E7B77C29E8491100A00469 /* SavedBuildsListView.swift in Sources */,
 				19E63ADD29E6B7A00065155B /* AllPerksView.swift in Sources */,
 				19E63AD529E6AC250065155B /* PickedPerk.swift in Sources */,

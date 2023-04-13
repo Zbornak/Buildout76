@@ -15,7 +15,7 @@ struct SavedBuildsListView: View {
             List {
                 ForEach(builds.builds) { build in
                     NavigationLink {
-                        Text("Build details")
+                        BuildDetailView(build: build)
                     } label: {
                         Text(build.name)
                     }
