@@ -81,6 +81,23 @@ struct BuildProgressView: View {
                     }
                 }
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        let build = Build(name: buildName, perks: pickedPerks.perks)
+                        pickedPerks.objectWillChange.send()
+                        builds.objectWillChange.send()
+                        builds.add(build)
+                        pickedPerks.perks.removeAll()
+                        builds.save()
+                        pickedPerks.save()
+                        buildName = ""
+                        buildSaved = true
+                    } label: {
+                        Text("Save")
+                    }
+                }
+            }
         }
     }
 }
