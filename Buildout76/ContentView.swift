@@ -13,6 +13,11 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
+            SavedBuildsListView()
+                .tabItem {
+                    Label("Builds", systemImage: "gearshape.circle")
+                }
+            
             AllPerksView()
                 .tabItem {
                     Label("Perks", systemImage: "person.crop.circle.fill.badge.plus")
