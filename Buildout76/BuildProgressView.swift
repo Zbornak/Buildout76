@@ -63,9 +63,13 @@ struct BuildProgressView: View {
             ForEach(FilterType.allCases, id: \.self) { filter in
                 Section {
                     ForEach(filteredPickedPerks(filter)) { perk in
-                        HStack {
-                            Text(perk.perk.name)
-                            Text("\(perk.perkLevel)")
+                        NavigationLink {
+                            PerkCardView(perk: perk.perk)
+                        } label: {
+                            HStack {
+                                Text(perk.perk.name)
+                                Text("\(perk.perkLevel)")
+                            }
                         }
                     }
                 } header: {
