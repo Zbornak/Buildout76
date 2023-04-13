@@ -55,25 +55,27 @@ struct BuildProgressView: View {
     }
     
     var body: some View {
-        Form {
-            TextField("Enter build name", text: $buildName)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal)
+        NavigationView {
+            Form {
+                TextField("Enter build name", text: $buildName)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal)
             
-            ForEach(FilterType.allCases, id: \.self) { filter in
-                Section {
-                    ForEach(filteredPickedPerks(filter)) { perk in
-                        NavigationLink {
-                            PerkCardView(perk: perk.perk)
-                        } label: {
-                            HStack {
-                                Text(perk.perk.name)
-                                Text("\(perk.perkLevel)")
+                ForEach(FilterType.allCases, id: \.self) { filter in
+                    Section {
+                        ForEach(filteredPickedPerks(filter)) { perk in
+                            NavigationLink {
+                                PerkCardView(perk: perk.perk)
+                            } label: {
+                                HStack {
+                                    Text(perk.perk.name)
+                                    Text("\(perk.perkLevel)")
+                                }
                             }
                         }
+                    } header: {
+                        Text(header(filter))
                     }
-                } header: {
-                    Text(header(filter))
                 }
             }
         }
