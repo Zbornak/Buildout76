@@ -9,8 +9,11 @@ import SwiftUI
 
 struct BuildProgressView: View {
     @EnvironmentObject var pickedPerks: PickedPerks
+    @EnvironmentObject var builds: Builds
     
     @State private var buildName = ""
+    @State var build: Build
+    @State private var buildSaved = false
     
     enum FilterType: CaseIterable {
         case strength, perception, endurance, charisma, intelligence, agility, luck
@@ -84,7 +87,8 @@ struct BuildProgressView: View {
 
 struct BuildProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        BuildProgressView()
+        BuildProgressView(build: Build.example)
             .environmentObject(PickedPerks())
+            .environmentObject(Builds())
     }
 }
