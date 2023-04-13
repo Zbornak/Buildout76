@@ -98,6 +98,9 @@ struct BuildProgressView: View {
                     }
                 }
             }
+            .alert("Build saved!", isPresented: $buildSaved) {
+                Button("OK", role: .cancel) { }
+            }
         }
     }
 }
