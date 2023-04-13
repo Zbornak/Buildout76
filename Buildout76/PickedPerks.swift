@@ -23,6 +23,10 @@ class PickedPerks: ObservableObject {
         pickedPerks = []
     }
     
+    func contains(_ pickedPerk: PickedPerk) -> Bool {
+        pickedPerks.contains(where: { $0.id == pickedPerk.id })
+    }
+    
     func add(_ pickedPerk: PickedPerk) {
         objectWillChange.send()
         pickedPerks.append(pickedPerk)
