@@ -38,19 +38,19 @@ struct BuildProgressView: View {
     func filteredPickedPerks(_ filter: FilterType) -> [PickedPerk] {
         switch filter {
         case .strength:
-            return pickedPerks.pickedPerks.filter { $0.perk.specialCategory == "Strength" }
+            return pickedPerks.perks.filter { $0.perk.specialCategory == "Strength" }
         case .perception:
-            return pickedPerks.pickedPerks.filter { $0.perk.specialCategory == "Perception" }
+            return pickedPerks.perks.filter { $0.perk.specialCategory == "Perception" }
         case .endurance:
-            return pickedPerks.pickedPerks.filter { $0.perk.specialCategory == "Endurance" }
+            return pickedPerks.perks.filter { $0.perk.specialCategory == "Endurance" }
         case .charisma:
-            return pickedPerks.pickedPerks.filter { $0.perk.specialCategory == "Charisma" }
+            return pickedPerks.perks.filter { $0.perk.specialCategory == "Charisma" }
         case .intelligence:
-            return pickedPerks.pickedPerks.filter { $0.perk.specialCategory == "Intelligence" }
+            return pickedPerks.perks.filter { $0.perk.specialCategory == "Intelligence" }
         case .agility:
-            return pickedPerks.pickedPerks.filter { $0.perk.specialCategory == "Agility" }
+            return pickedPerks.perks.filter { $0.perk.specialCategory == "Agility" }
         case .luck:
-            return pickedPerks.pickedPerks.filter { $0.perk.specialCategory == "Luck" }
+            return pickedPerks.perks.filter { $0.perk.specialCategory == "Luck" }
         }
     }
     
