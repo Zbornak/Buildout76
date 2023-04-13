@@ -16,7 +16,7 @@ struct BuildDetailView: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 20) {
                 ForEach(build.perks, id: \.id) { perk in
-                    PerkCardView(perk: perk.perk)
+                    PerkCardSummaryView(perk: perk.perk)
                 }
             }
             .padding(.horizontal)
