@@ -12,15 +12,24 @@ struct SavedBuildsListView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(builds.builds) { build in
-                    NavigationLink {
-                        BuildDetailView(build: build)
-                    } label: {
-                        Text(build.name)
+            VStack {
+                List {
+                    ForEach(builds.builds) { build in
+                        NavigationLink {
+                            BuildDetailView(build: build)
+                        } label: {
+                            Text(build.name)
+                        }
+                    }
+                    .onDelete(perform: deleteItems)
+                }
+                
+                if builds.builds.isEmpty {
+                    VStack {
+                        Text("Go to the Perks tab to begin!")
+                        Text("↓")
                     }
                 }
-                .onDelete(perform: deleteItems)
             }
             .toolbar {
                 EditButton()
