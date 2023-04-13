@@ -8,29 +8,29 @@
 import SwiftUI
 
 class Builds: ObservableObject {
-    @Published var savedBuilds: [Build]
+    @Published var builds: [Build]
     
     private let saveKey = "Builds"
     
     init() {
         if let data = UserDefaults.standard.data(forKey: saveKey) {
             if let decodedData = try? JSONDecoder().decode([Build].self, from: data) {
-                savedBuilds = decodedData
+                builds = decodedData
                 return
             }
         }
         
-        savedBuilds = []
+        builds = []
     }
     
     func add(_ build: Build) {
         objectWillChange.send()
-        savedBuilds.append(build)
+        builds.append(build)
         save()
     }
     
     func save() {
-        if let encodedData = try? JSONEncoder().encode(savedBuilds) {
+        if let encodedData = try? JSONEncoder().encode(builds) {
             UserDefaults.standard.set(encodedData, forKey: saveKey)
         }
     }
