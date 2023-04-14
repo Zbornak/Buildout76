@@ -20,6 +20,16 @@ struct AllPerksView: View {
     var body: some View {
         VStack {
             HStack {
+                Text("15")
+                Text("15")
+                Text("15")
+                Text("15")
+                Text("15")
+                Text("15")
+                Text("15")
+            }
+            
+            HStack {
                 Button {
                     filteredResults.removeAll()
                     filterPerks(special: "Strength")
