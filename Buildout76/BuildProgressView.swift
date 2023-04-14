@@ -80,9 +80,10 @@ struct BuildProgressView: View {
                         Text(header(filter))
                     }
                 }
+                .onDelete(perform: deleteItems)
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Button {
                         let build = Build(name: buildName, perks: pickedPerks.perks)
                         pickedPerks.objectWillChange.send()
@@ -98,10 +99,19 @@ struct BuildProgressView: View {
                     }
                 }
             }
+            .toolbar {
+                EditButton()
+            }
             .alert("Build saved!", isPresented: $buildSaved) {
                 Button("OK", role: .cancel) { }
             }
         }
+    }
+    
+    func deleteItems(at offsets: IndexSet) {
+        pickedPerks.objectWillChange.send()
+        pickedPerks.perks.remove(atOffsets: offsets)
+        pickedPerks.save()
     }
 }
 
