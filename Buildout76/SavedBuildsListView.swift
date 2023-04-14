@@ -34,7 +34,7 @@ struct SavedBuildsListView: View {
                     }
                 }
             }
-            .navigationTitle("☢️ My Builds")
+            .navigationTitle("⚛︎ My Builds")
         }
     }
     
