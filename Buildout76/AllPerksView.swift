@@ -21,7 +21,7 @@ struct AllPerksView: View {
     
     var body: some View {
         VStack {
-            HStack {
+            HStack(spacing: 30) {
                 Text("\(build.strengthPointsRemaining)")
                 Text("\(build.perceptionPointsRemaining)")
                 Text("\(build.endurancePointsRemaining)")
