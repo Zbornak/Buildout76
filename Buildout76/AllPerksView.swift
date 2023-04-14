@@ -87,7 +87,7 @@ struct AllPerksView: View {
             if filteredResults.isEmpty {
                 VStack {
                     Text("↑")
-                    Text("Pick a SPECIAL catergory")
+                    Text("Pick a SPECIAL category")
                 }
                 .padding()
             }
