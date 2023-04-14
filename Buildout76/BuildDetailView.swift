@@ -18,7 +18,7 @@ struct BuildDetailView: View {
                 ForEach(build.perks, id: \.id) { perk in
                     ZStack(alignment: .bottomTrailing) {
                         PerkCardSummaryView(perk: perk.perk)
-                            .frame(height: 220)
+                            .frame(height: 230)
                         
                         VStack {
                             if perk.perkLevel == 1 {
@@ -39,7 +39,7 @@ struct BuildDetailView: View {
                             }
                             
                             
-                            Text("\(perk.perkLevel)")
+                            Text("\(perk.perkLevel)/\(perk.perk.maxLevel)")
                                 .padding(.bottom)
                         }
                     }
