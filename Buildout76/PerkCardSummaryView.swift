@@ -46,20 +46,6 @@ struct PerkCardSummaryView: View {
                     .fontWeight(.bold)
                 
                 Spacer()
-                
-                if perkCardLevel == 1 {
-                    Text(perk.description1)
-                } else if perkCardLevel == 2 {
-                    Text(perk.description2 ?? "Maximum level reached.")
-                } else if perkCardLevel == 3 {
-                    Text(perk.description3 ?? "Maximum level reached.")
-                } else if perkCardLevel == 4 {
-                    Text(perk.description4 ?? "Maximum level reached.")
-                } else {
-                    Text(perk.description5 ?? "Maximum level reached.")
-                }
-                
-                Spacer()
             }
             .padding()
         }

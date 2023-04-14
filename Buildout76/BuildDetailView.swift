@@ -18,28 +18,55 @@ struct BuildDetailView: View {
                 ForEach(build.perks, id: \.id) { perk in
                     ZStack(alignment: .bottomTrailing) {
                         PerkCardSummaryView(perk: perk.perk)
-                        if perk.perkLevel == 1 {
-                            Text("★")
-                                .padding(8)
-                        } else if perk.perkLevel == 2 {
-                            Text("★★")
-                                .padding(8)
-                        } else if perk.perkLevel == 3 {
-                            Text("★★★")
-                                .padding(8)
-                        } else if perk.perkLevel == 4 {
-                            Text("★★★★")
-                                .padding(8)
-                        } else {
-                            Text("★★★★★")
-                                .padding(8)
+                        
+                        VStack {
+                            Text(perkDescription())
+                            
+                            Text(perkLevel())
                         }
+                        .padding()
                     }
                 }
             }
             .padding(.horizontal)
         }
         .navigationTitle(build.name)
+    }
+    
+    func perkDescription() -> String {
+        for perk in build.perks {
+            if perk.perkLevel == 1 {
+                return perk.perk.description1
+            } else if perk.perkLevel == 2 {
+                return perk.perk.description2 ?? "Maximum level reached."
+            } else if perk.perkLevel == 3 {
+                return perk.perk.description3 ?? "Maximum level reached."
+            } else if perk.perkLevel == 4 {
+                return perk.perk.description4 ?? "Maximum level reached."
+            } else {
+                return perk.perk.description5 ?? "Maximum level reached."
+            }
+        }
+        
+        return "Unknown description."
+    }
+    
+    func perkLevel() -> String {
+        for perk in build.perks {
+            if perk.perkLevel == 1 {
+                return "★"
+            } else if perk.perkLevel == 2 {
+                return "★★"
+            } else if perk.perkLevel == 3 {
+                return "★★★"
+            } else if perk.perkLevel == 4 {
+                return "★★★★"
+            } else {
+                return "★★★★★"
+            }
+        }
+        
+        return "Unknown level."
     }
 }
 
