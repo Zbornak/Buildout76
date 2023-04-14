@@ -23,7 +23,7 @@ struct ContentView: View {
                     Label("Perks", systemImage: "person.crop.circle.fill.badge.plus")
                 }
             
-            BuildProgressView(build: Build.example)
+            BuildProgressView(build: Build.example, pickedPerk: .constant(PickedPerk.example))
                 .tabItem {
                     Label("In Progress", systemImage: "gearshape.2")
                 }
