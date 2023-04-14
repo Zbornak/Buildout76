@@ -21,10 +21,25 @@ struct BuildDetailView: View {
                             .frame(height: 220)
                         
                         VStack {
-                            Text(perkDescription())
-                                .padding()
+                            if perk.perkLevel == 1 {
+                                Text(perk.perk.description1)
+                                    .padding()
+                            } else if perk.perkLevel == 2 {
+                                Text(perk.perk.description2 ?? "Maximum level reached.")
+                                    .padding()
+                            } else if perk.perkLevel == 3 {
+                                Text(perk.perk.description3 ?? "Maximum level reached.")
+                                    .padding()
+                            } else if perk.perkLevel == 4 {
+                                Text(perk.perk.description4 ?? "Maximum level reached.")
+                                    .padding()
+                            } else {
+                                Text(perk.perk.description5 ?? "Maximum level reached.")
+                                    .padding()
+                            }
                             
-                            Text(perkLevel())
+                            
+                            Text("\(perk.perkLevel)")
                                 .padding(.bottom)
                         }
                     }
@@ -33,42 +48,6 @@ struct BuildDetailView: View {
             .padding(.horizontal)
         }
         .navigationTitle(build.name)
-    }
-    
-    func perkDescription() -> String {
-        for perk in build.perks {
-            if perk.perkLevel == 1 {
-                return perk.perk.description1
-            } else if perk.perkLevel == 2 {
-                return perk.perk.description2 ?? "Maximum level reached."
-            } else if perk.perkLevel == 3 {
-                return perk.perk.description3 ?? "Maximum level reached."
-            } else if perk.perkLevel == 4 {
-                return perk.perk.description4 ?? "Maximum level reached."
-            } else {
-                return perk.perk.description5 ?? "Maximum level reached."
-            }
-        }
-        
-        return "Unknown description."
-    }
-    
-    func perkLevel() -> String {
-        for perk in build.perks {
-            if perk.perkLevel == 1 {
-                return "★"
-            } else if perk.perkLevel == 2 {
-                return "★★"
-            } else if perk.perkLevel == 3 {
-                return "★★★"
-            } else if perk.perkLevel == 4 {
-                return "★★★★"
-            } else {
-                return "★★★★★"
-            }
-        }
-        
-        return "Unknown level."
     }
 }
 
