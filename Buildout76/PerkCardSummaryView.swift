@@ -60,8 +60,6 @@ struct PerkCardSummaryView: View {
                 }
                 
                 Spacer()
-                
-                Text("★")
             }
             .padding()
         }
