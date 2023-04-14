@@ -102,6 +102,7 @@ struct BuildProgressView: View {
                     }
                 }
             }
+            .navigationTitle("Build in Progress")
             .alert("Build saved!", isPresented: $buildSaved) {
                 Button("OK", role: .cancel) { }
             }
