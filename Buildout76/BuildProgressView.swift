@@ -68,7 +68,7 @@ struct BuildProgressView: View {
                     Section {
                         ForEach(filteredPickedPerks(filter)) { perk in
                             NavigationLink {
-                                PerkCardSummaryView(perk: perk.perk)
+                                PerkCardView(perk: perk.perk)
                             } label: {
                                 HStack {
                                     Text(perk.perk.name)
