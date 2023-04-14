@@ -111,6 +111,10 @@ struct AllPerksView: View {
                 filteredResults.append(perk)
             }
         }
+        
+        filteredResults = filteredResults.sorted(by: { perk, otherPerk in
+            perk.name < otherPerk.name
+        })
     }
 }
 
