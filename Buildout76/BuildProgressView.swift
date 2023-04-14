@@ -15,8 +15,6 @@ struct BuildProgressView: View {
     @State var build: Build
     @State private var buildSaved = false
     
-    @Binding var pickedPerk: PickedPerk
-    
     enum FilterType: CaseIterable {
         case strength, perception, endurance, charisma, intelligence, agility, luck
     }
@@ -70,7 +68,7 @@ struct BuildProgressView: View {
                     Section {
                         ForEach(filteredPickedPerks(filter)) { perk in
                             NavigationLink {
-                                PerkCardView(perk: perk.perk, pickedPerk: PickedPerk.example)
+                                PerkCardView(perk: perk.perk)
                             } label: {
                                 HStack {
                                     Text(perk.perk.name)
@@ -96,7 +94,6 @@ struct BuildProgressView: View {
                         pickedPerks.save()
                         buildName = ""
                         buildSaved = true
-                        pickedPerk.isSelected = false
                     } label: {
                         Text("Save")
                     }
@@ -113,14 +110,12 @@ struct BuildProgressView: View {
         pickedPerks.objectWillChange.send()
         pickedPerks.perks.remove(atOffsets: offsets)
         pickedPerks.save()
-        
-        pickedPerk.isSelected = false
     }
 }
 
 struct BuildProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        BuildProgressView(build: Build.example, pickedPerk: .constant(PickedPerk.example))
+        BuildProgressView(build: Build.example)
             .environmentObject(PickedPerks())
             .environmentObject(Builds())
     }
