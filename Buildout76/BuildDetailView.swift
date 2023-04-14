@@ -18,13 +18,15 @@ struct BuildDetailView: View {
                 ForEach(build.perks, id: \.id) { perk in
                     ZStack(alignment: .bottomTrailing) {
                         PerkCardSummaryView(perk: perk.perk)
+                            .frame(height: 220)
                         
                         VStack {
                             Text(perkDescription())
+                                .padding()
                             
                             Text(perkLevel())
+                                .padding(.bottom)
                         }
-                        .padding()
                     }
                 }
             }
