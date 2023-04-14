@@ -85,8 +85,11 @@ struct AllPerksView: View {
             }
             
             if filteredResults.isEmpty {
-                Text("Pick a SPECIAL catergory")
-                    .padding()
+                VStack {
+                    Text("↑")
+                    Text("Pick a SPECIAL catergory")
+                }
+                .padding()
             }
             
             // loop through the filteredResults and show user the perk cards in a grid
