@@ -10,8 +10,6 @@ import SwiftUI
 struct PerkCardView: View {
     let perk: Perk
     
-    @State var isSelected = false
-    
     @State private var perkCardLevel = 1
     
     @EnvironmentObject var pickedPerks: PickedPerks
@@ -41,7 +39,7 @@ struct PerkCardView: View {
                 .foregroundColor(setPerkCardColor)
             
             RoundedRectangle(cornerRadius: 20)
-                .stroke(lineWidth: isSelected ? 4 : 1)
+                .stroke(lineWidth: 1)
                 
             VStack(alignment: .center) {
                 Stepper("Lvl \(perkCardLevel)", value: $perkCardLevel, in: 1...perk.maxLevel)
@@ -74,10 +72,6 @@ struct PerkCardView: View {
                         
                         if pickedPerks.perks.firstIndex(where: { $0.perk.name == perk.name }) == nil {
                             pickedPerks.add(newPickedPerk)
-                        }
-                        
-                        withAnimation {
-                            isSelected = true
                         }
                     }
                     .buttonStyle(.borderedProminent)
