@@ -17,16 +17,18 @@ struct AllPerksView: View {
     // the perks array filtered depending on SPECIAL category
     @State private var filteredResults = [Perk]()
     
+    let build: Build
+    
     var body: some View {
         VStack {
             HStack {
-                Text("15")
-                Text("15")
-                Text("15")
-                Text("15")
-                Text("15")
-                Text("15")
-                Text("15")
+                Text("\(build.strengthPointsRemaining)")
+                Text("\(build.perceptionPointsRemaining)")
+                Text("\(build.endurancePointsRemaining)")
+                Text("\(build.charismaPointsRemaining)")
+                Text("\(build.intelligencePointsRemaining)")
+                Text("\(build.agilityPointsRemaining)")
+                Text("\(build.luckPointsRemaining)")
             }
             
             HStack {
@@ -133,6 +135,6 @@ struct AllPerksView: View {
 
 struct AllPerksView_Previews: PreviewProvider {
     static var previews: some View {
-        AllPerksView()
+        AllPerksView(build: Build.example)
     }
 }
