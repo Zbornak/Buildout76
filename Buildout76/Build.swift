@@ -13,6 +13,6 @@ struct Build: Codable, Identifiable {
     var perks: [PickedPerk]
     
     static let allPerks: [Perk] = Bundle.main.decode("perks.json")
-    static let pickedPerk = PickedPerk(perk: allPerks[0], perkLevel: 1)
+    static let pickedPerk = PickedPerk(perk: allPerks[0], perkLevel: 1, isSelected: false)
     static let example = Build(name: "Tha Killah", perks: [pickedPerk])
 }

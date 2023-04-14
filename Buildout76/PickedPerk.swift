@@ -11,7 +11,8 @@ struct PickedPerk: Codable, Identifiable, Equatable {
     var id = UUID()
     let perk: Perk
     let perkLevel: Int
+    var isSelected: Bool
     
     static let allPerks: [Perk] = Bundle.main.decode("perks.json")
-    static let example = PickedPerk(id: UUID(), perk: allPerks[0], perkLevel: 1)
+    static let example = PickedPerk(id: UUID(), perk: allPerks[0], perkLevel: 1, isSelected: true)
 }

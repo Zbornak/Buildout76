@@ -31,9 +31,6 @@ struct SavedBuildsListView: View {
                     }
                 }
             }
-            .toolbar {
-                EditButton()
-            }
         }
     }
     
