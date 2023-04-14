@@ -96,7 +96,7 @@ struct AllPerksView: View {
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(filteredResults, id: \.id) { perk in
-                        PerkCardView(perk: perk)
+                        PerkCardView(perk: perk, pickedPerk: PickedPerk.example)
                     }
                 }
                 .padding(.horizontal)
