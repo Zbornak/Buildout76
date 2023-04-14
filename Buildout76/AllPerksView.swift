@@ -87,7 +87,10 @@ struct AllPerksView: View {
             if filteredResults.isEmpty {
                 VStack {
                     Text("↑")
-                    Text("Pick a SPECIAL category")
+                    HStack {
+                        Image(systemName: "gearshape.fill")
+                        Text("Pick a SPECIAL category")
+                    }
                 }
                 .padding()
             }

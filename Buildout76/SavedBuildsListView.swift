@@ -26,11 +26,15 @@ struct SavedBuildsListView: View {
                 
                 if builds.builds.isEmpty {
                     VStack {
-                        Text("Go to the Perks tab to begin!")
+                        HStack {
+                            Image(systemName: "gearshape.fill")
+                            Text("Go to the Perks tab to begin!")
+                        }
                         Text("↓")
                     }
                 }
             }
+            .navigationTitle("My Builds")
         }
     }
     
