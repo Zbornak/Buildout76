@@ -25,16 +25,16 @@ struct BuildDetailView: View {
                                 Text(perk.perk.description1)
                                     .padding()
                             } else if perk.perkLevel == 2 {
-                                Text(perk.perk.description2 ?? "Maximum level reached.")
+                                Text(perk.perk.description2 ?? "Unknown description.")
                                     .padding()
                             } else if perk.perkLevel == 3 {
-                                Text(perk.perk.description3 ?? "Maximum level reached.")
+                                Text(perk.perk.description3 ?? "Unknown description.")
                                     .padding()
                             } else if perk.perkLevel == 4 {
-                                Text(perk.perk.description4 ?? "Maximum level reached.")
+                                Text(perk.perk.description4 ?? "Unknown description.")
                                     .padding()
                             } else {
-                                Text(perk.perk.description5 ?? "Maximum level reached.")
+                                Text(perk.perk.description5 ?? "Unknown description.")
                                     .padding()
                             }
                             
