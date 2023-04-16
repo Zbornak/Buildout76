@@ -15,48 +15,6 @@ struct BuildProgressView: View {
     @State var build: Build
     @State private var buildSaved = false
     
-    enum FilterType: CaseIterable {
-        case strength, perception, endurance, charisma, intelligence, agility, luck
-    }
-    
-    func header(_ filter: FilterType) -> String {
-        switch filter {
-        case .strength:
-            return "strength perks"
-        case .perception:
-            return "perception perks"
-        case .endurance:
-            return "endurance perks"
-        case .charisma:
-            return "charisma perks"
-        case .intelligence:
-            return "intelligence perks"
-        case .agility:
-            return "agility perks"
-        case .luck:
-            return "luck perks"
-        }
-    }
-    
-    func filteredPickedPerks(_ filter: FilterType) -> [PickedPerk] {
-        switch filter {
-        case .strength:
-            return pickedPerks.perks.filter { $0.perk.specialCategory == "Strength" }
-        case .perception:
-            return pickedPerks.perks.filter { $0.perk.specialCategory == "Perception" }
-        case .endurance:
-            return pickedPerks.perks.filter { $0.perk.specialCategory == "Endurance" }
-        case .charisma:
-            return pickedPerks.perks.filter { $0.perk.specialCategory == "Charisma" }
-        case .intelligence:
-            return pickedPerks.perks.filter { $0.perk.specialCategory == "Intelligence" }
-        case .agility:
-            return pickedPerks.perks.filter { $0.perk.specialCategory == "Agility" }
-        case .luck:
-            return pickedPerks.perks.filter { $0.perk.specialCategory == "Luck" }
-        }
-    }
-    
     var body: some View {
         NavigationView {
             Form {
@@ -64,34 +22,32 @@ struct BuildProgressView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
             
-                ForEach(FilterType.allCases, id: \.self) { filter in
-                    Section {
-                        ForEach(filteredPickedPerks(filter)) { perk in
-                            NavigationLink {
-                                ZStack {
-                                    PerkCardSummaryView(perk: perk.perk)
-                                        .padding()
-                                    
-                                    VStack {
-                                        selectDescription(perk)
-                                        
-                                        Text("\(perk.perkLevel)/\(perk.perk.maxLevel)")
-                                            .padding(.bottom)
-                                    }
+                Section {
+                    ForEach(pickedPerks) { perk in
+                        NavigationLink {
+                            ZStack {
+                                PerkCardSummaryView(perk: perk.perk)
                                     .padding()
+                                    
+                                VStack {
+                                    selectDescription(of: perk)
+                                        
+                                    Text("\(perk.perkLevel)/\(perk.perk.maxLevel)")
+                                        .padding(.bottom)
                                 }
-                            } label: {
-                                HStack {
-                                    Text(perk.perk.name)
-                                    Text("\(perk.perkLevel)")
-                                }
+                                .padding()
+                            }
+                        } label: {
+                            HStack {
+                                Text(perk.perk.name)
+                                Text("\(perk.perkLevel)")
                             }
                         }
-                    } header: {
-                        Text(header(filter))
                     }
+                    .onDelete(perform: deleteItems)
+                } header: {
+                    Text("perks")
                 }
-                .onDelete(perform: deleteItems)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -123,7 +79,7 @@ struct BuildProgressView: View {
         pickedPerks.save()
     }
     
-    func selectDescription(_ perk: PickedPerk) -> Text {
+    func selectDescription(of perk: PickedPerk) -> Text {
         switch perk.perkLevel {
         case 1:
             return Text(perk.perk.description1)
