@@ -29,14 +29,6 @@ class PickedPerks: ObservableObject {
         save()
     }
     
-    func remove(_ pickedPerk: PickedPerk) {
-        objectWillChange.send()
-        if let index = perks.firstIndex(of: pickedPerk) {
-            perks.remove(at: index)
-        }
-        save()
-    }
-    
     func save() {
         if let encodedData = try? JSONEncoder().encode(perks) {
             UserDefaults.standard.set(encodedData, forKey: saveKey)
