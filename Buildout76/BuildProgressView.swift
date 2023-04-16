@@ -73,23 +73,7 @@ struct BuildProgressView: View {
                                         .padding()
                                     
                                     VStack {
-                                        switch perk.perkLevel {
-                                        case 1:
-                                            Text(perk.perk.description1)
-                                                .padding()
-                                        case 2:
-                                            Text(perk.perk.description2 ?? "Unknown description.")
-                                                .padding()
-                                        case 3:
-                                            Text(perk.perk.description3 ?? "Unknown description.")
-                                                .padding()
-                                        case 4:
-                                            Text(perk.perk.description4 ?? "Unknown description.")
-                                                .padding()
-                                        default:
-                                            Text(perk.perk.description5 ?? "Unknown description.")
-                                                .padding()
-                                        }
+                                        selectDescription(perk)
                                         
                                         Text("\(perk.perkLevel)/\(perk.perk.maxLevel)")
                                             .padding(.bottom)
@@ -137,6 +121,21 @@ struct BuildProgressView: View {
         pickedPerks.objectWillChange.send()
         pickedPerks.perks.remove(atOffsets: offsets)
         pickedPerks.save()
+    }
+    
+    func selectDescription(_ perk: PickedPerk) -> Text {
+        switch perk.perkLevel {
+        case 1:
+            return Text(perk.perk.description1)
+        case 2:
+            return Text(perk.perk.description2 ?? "Unknown description.")
+        case 3:
+            return Text(perk.perk.description3 ?? "Unknown description.")
+        case 4:
+            return Text(perk.perk.description4 ?? "Unknown description.")
+        default:
+            return Text(perk.perk.description5 ?? "Unknown description.")
+        }
     }
 }
 
