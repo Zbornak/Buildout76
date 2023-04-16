@@ -68,7 +68,33 @@ struct BuildProgressView: View {
                     Section {
                         ForEach(filteredPickedPerks(filter)) { perk in
                             NavigationLink {
-                                PerkCardView(perk: perk.perk)
+                                ZStack {
+                                    PerkCardSummaryView(perk: perk.perk)
+                                        .padding()
+                                    
+                                    VStack {
+                                        if perk.perkLevel == 1 {
+                                            Text(perk.perk.description1)
+                                                .padding()
+                                        } else if perk.perkLevel == 2 {
+                                            Text(perk.perk.description2 ?? "Unknown description.")
+                                                .padding()
+                                        } else if perk.perkLevel == 3 {
+                                            Text(perk.perk.description3 ?? "Unknown description.")
+                                                .padding()
+                                        } else if perk.perkLevel == 4 {
+                                            Text(perk.perk.description4 ?? "Unknown description.")
+                                                .padding()
+                                        } else {
+                                            Text(perk.perk.description5 ?? "Unknown description.")
+                                                .padding()
+                                        }
+                                        
+                                        Text("\(perk.perkLevel)/\(perk.perk.maxLevel)")
+                                            .padding(.bottom)
+                                    }
+                                    .padding()
+                                }
                             } label: {
                                 HStack {
                                     Text(perk.perk.name)
