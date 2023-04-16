@@ -23,7 +23,7 @@ struct BuildProgressView: View {
                     .padding(.horizontal)
             
                 Section {
-                    ForEach(pickedPerks) { perk in
+                    ForEach(pickedPerks.perks) { perk in
                         NavigationLink {
                             ZStack {
                                 PerkCardSummaryView(perk: perk.perk)
