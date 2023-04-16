@@ -73,19 +73,20 @@ struct BuildProgressView: View {
                                         .padding()
                                     
                                     VStack {
-                                        if perk.perkLevel == 1 {
+                                        switch perk.perkLevel {
+                                        case 1:
                                             Text(perk.perk.description1)
                                                 .padding()
-                                        } else if perk.perkLevel == 2 {
+                                        case 2:
                                             Text(perk.perk.description2 ?? "Unknown description.")
                                                 .padding()
-                                        } else if perk.perkLevel == 3 {
+                                        case 3:
                                             Text(perk.perk.description3 ?? "Unknown description.")
                                                 .padding()
-                                        } else if perk.perkLevel == 4 {
+                                        case 4:
                                             Text(perk.perk.description4 ?? "Unknown description.")
                                                 .padding()
-                                        } else {
+                                        default:
                                             Text(perk.perk.description5 ?? "Unknown description.")
                                                 .padding()
                                         }
