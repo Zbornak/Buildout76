@@ -22,13 +22,13 @@ struct AllPerksView: View {
     var body: some View {
         VStack {
             HStack(spacing: 30) {
-                Text("\(build.strengthPointsRemaining)")
-                Text("\(build.perceptionPointsRemaining)")
-                Text("\(build.endurancePointsRemaining)")
-                Text("\(build.charismaPointsRemaining)")
-                Text("\(build.intelligencePointsRemaining)")
-                Text("\(build.agilityPointsRemaining)")
-                Text("\(build.luckPointsRemaining)")
+                Text("15")
+                Text("15")
+                Text("15")
+                Text("15")
+                Text("15")
+                Text("15")
+                Text("15")
             }
             
             HStack {
