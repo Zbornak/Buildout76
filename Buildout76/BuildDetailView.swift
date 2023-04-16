@@ -15,7 +15,9 @@ struct BuildDetailView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(build.perks, id: \.id) { perk in
+                ForEach(build.perks.sorted(by: { perk, otherPerk in
+                    perk.perk.name < otherPerk.perk.name
+                }), id: \.id) { perk in
                     ZStack(alignment: .bottomTrailing) {
                         PerkCardSummaryView(perk: perk.perk)
                             .frame(height: 230)
