@@ -34,5 +34,14 @@ class PickedPerks: ObservableObject {
             UserDefaults.standard.set(encodedData, forKey: saveKey)
         }
     }
+    
+    func removePerk(_ perk: PickedPerk) {
+        var indexes = IndexSet()
+        if let index = perks.firstIndex(of: perk) {
+            indexes.insert(index)
+        }
+        
+        perks.remove(atOffsets: indexes)
+    }
 }
 

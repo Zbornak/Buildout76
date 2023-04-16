@@ -15,6 +15,10 @@ struct BuildProgressView: View {
     @State var build: Build
     @State private var buildSaved = false
     
+    var sortedPickedPerks: [PickedPerk] {
+        pickedPerks.perks.sorted { $0.perk.name < $1.perk.name }
+    }
+    
     var body: some View {
         NavigationView {
             Form {
@@ -23,7 +27,7 @@ struct BuildProgressView: View {
                     .padding(.horizontal)
             
                 Section {
-                    ForEach(pickedPerks.perks) { perk in
+                    ForEach(sortedPickedPerks) { perk in
                         NavigationLink {
                             ZStack {
                                 PerkCardSummaryView(perk: perk.perk)
@@ -43,8 +47,14 @@ struct BuildProgressView: View {
                                 Text("\(perk.perkLevel)")
                             }
                         }
+                        .swipeActions {
+                            Button(role: .destructive) {
+                                pickedPerks.removePerk(perk)
+                            } label: {
+                                Image(systemName: "trash")
+                            }
+                        }
                     }
-                    .onDelete(perform: deleteItems)
                 } header: {
                     Text("perks")
                 }
@@ -71,12 +81,6 @@ struct BuildProgressView: View {
                 Button("OK", role: .cancel) { }
             }
         }
-    }
-    
-    func deleteItems(at offsets: IndexSet) {
-        pickedPerks.objectWillChange.send()
-        pickedPerks.perks.remove(atOffsets: offsets)
-        pickedPerks.save()
     }
     
     func selectDescription(of perk: PickedPerk) -> Text {
