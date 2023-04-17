@@ -19,6 +19,10 @@ struct BuildProgressView: View {
         pickedPerks.perks.sorted { $0.perk.name < $1.perk.name }
     }
     
+    enum FilterType: CaseIterable {
+        case strength, perception, endurance, charisma, intelligence, agility, luck
+    }
+    
     var body: some View {
         NavigationView {
             Form {
@@ -26,37 +30,39 @@ struct BuildProgressView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
             
-                Section {
-                    ForEach(sortedPickedPerks) { perk in
-                        NavigationLink {
-                            ZStack {
-                                PerkCardSummaryView(perk: perk.perk)
-                                    .padding()
+                ForEach(FilterType.allCases, id: \.self) { filter in
+                    Section {
+                        ForEach(filteredPickedPerks(filter)) { perk in
+                            NavigationLink {
+                                ZStack {
+                                    PerkCardSummaryView(perk: perk.perk)
+                                        .padding()
                                     
-                                VStack {
-                                    selectDescription(of: perk)
+                                    VStack {
+                                        selectDescription(of: perk)
                                         
-                                    Text("\(perk.perkLevel)/\(perk.perk.maxLevel)")
-                                        .padding(.bottom)
+                                        Text("\(perk.perkLevel)/\(perk.perk.maxLevel)")
+                                            .padding(.bottom)
+                                    }
+                                    .padding()
                                 }
-                                .padding()
-                            }
-                        } label: {
-                            HStack {
-                                Text(perk.perk.name)
-                                Text("\(perk.perkLevel)")
-                            }
-                        }
-                        .swipeActions {
-                            Button(role: .destructive) {
-                                pickedPerks.removePerk(perk)
                             } label: {
-                                Image(systemName: "trash")
+                                HStack {
+                                    Text(perk.perk.name)
+                                    Text("\(perk.perkLevel)")
+                                }
+                            }
+                            .swipeActions {
+                                Button(role: .destructive) {
+                                    pickedPerks.removePerk(perk)
+                                } label: {
+                                    Image(systemName: "trash")
+                                }
                             }
                         }
+                    } header: {
+                        Text(header(filter))
                     }
-                } header: {
-                    Text("perks")
                 }
             }
             .toolbar {
@@ -95,6 +101,44 @@ struct BuildProgressView: View {
             return Text(perk.perk.description4 ?? "Unknown description.")
         default:
             return Text(perk.perk.description5 ?? "Unknown description.")
+        }
+    }
+    
+    func header(_ filter: FilterType) -> String {
+        switch filter {
+        case .strength:
+            return "strength perks"
+        case .perception:
+            return "perception perks"
+        case .endurance:
+            return "endurance perks"
+        case .charisma:
+            return "charisma perks"
+        case .intelligence:
+            return "intelligence perks"
+        case .agility:
+            return "agility perks"
+        case .luck:
+            return "luck perks"
+        }
+    }
+    
+    func filteredPickedPerks(_ filter: FilterType) -> [PickedPerk] {
+        switch filter {
+        case .strength:
+            return pickedPerks.perks.filter { $0.perk.specialCategory == "Strength" }
+        case .perception:
+            return pickedPerks.perks.filter { $0.perk.specialCategory == "Perception" }
+        case .endurance:
+            return pickedPerks.perks.filter { $0.perk.specialCategory == "Endurance" }
+        case .charisma:
+            return pickedPerks.perks.filter { $0.perk.specialCategory == "Charisma" }
+        case .intelligence:
+            return pickedPerks.perks.filter { $0.perk.specialCategory == "Intelligence" }
+        case .agility:
+            return pickedPerks.perks.filter { $0.perk.specialCategory == "Agility" }
+        case .luck:
+            return pickedPerks.perks.filter { $0.perk.specialCategory == "Luck" }
         }
     }
 }
