@@ -10,6 +10,8 @@ import SwiftUI
 class PickedPerks: ObservableObject {
     @Published var perks: [PickedPerk]
     
+    let perkPointTotal = 56
+    
     var strengthPoints: Int {
         var points = 1
         for perk in perks {
