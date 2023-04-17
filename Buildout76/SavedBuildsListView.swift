@@ -18,7 +18,7 @@ struct SavedBuildsListView: View {
                         NavigationLink {
                             BuildDetailView(build: build)
                         } label: {
-                            Text(build.name)
+                            Text("☢️ \(build.name)")
                         }
                     }
                     .onDelete(perform: deleteItems)

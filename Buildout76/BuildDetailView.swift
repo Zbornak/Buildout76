@@ -63,19 +63,19 @@ struct BuildDetailView: View {
     func title(_ filter: FilterType) -> String {
         switch filter {
         case .strength:
-            return "⚛︎ Strength"
+            return "Strength"
         case .perception:
-            return "⚛︎ Perception"
+            return "Perception"
         case .endurance:
-            return "⚛︎ Endurance"
+            return "Endurance"
         case .charisma:
-            return "⚛︎ Charisma"
+            return "Charisma"
         case .intelligence:
-            return "⚛︎ Intelligence"
+            return "Intelligence"
         case .agility:
-            return "⚛︎ Agility"
+            return "Agility"
         case .luck:
-            return "⚛︎ Luck"
+            return "Luck"
         }
     }
     
