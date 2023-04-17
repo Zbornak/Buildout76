@@ -21,6 +21,9 @@ struct AllPerksView: View {
     
     let build: Build
     
+    @State private var legendaryPerksSheetShowing = false
+    @State private var mutationsSheetShowing = false
+    
     var body: some View {
         VStack {
             HStack(spacing: 30) {
@@ -121,7 +124,7 @@ struct AllPerksView: View {
             
             HStack {
                 Button {
-                    //legendary perks view
+                    legendaryPerksSheetShowing = true
                 } label: {
                     Label("Legendary Perks", systemImage: "plus.circle")
                 }
@@ -129,12 +132,18 @@ struct AllPerksView: View {
                 Spacer()
                 
                 Button {
-                    // mutations view
+                    mutationsSheetShowing = true
                 } label: {
                     Label("Mutations", systemImage: "plus.circle")
                 }
             }
             .padding()
+        }
+        .sheet(isPresented: $legendaryPerksSheetShowing) {
+            LegendaryPerksView()
+        }
+        .sheet(isPresented: $mutationsSheetShowing) {
+            MutationsView()
         }
     }
     
