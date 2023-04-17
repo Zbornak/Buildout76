@@ -18,7 +18,11 @@ struct BuildDetailView: View {
     
     var body: some View {
         ScrollView {
-                ForEach(FilterType.allCases, id: \.self) { filter in
+            ForEach(FilterType.allCases, id: \.self) { filter in
+                Text(title(filter))
+                    .fontWeight(.bold)
+                    .padding()
+                
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(filteredBuildPerks(filter), id: \.id) { perk in
                         ZStack(alignment: .bottomTrailing) {
@@ -59,19 +63,19 @@ struct BuildDetailView: View {
     func title(_ filter: FilterType) -> String {
         switch filter {
         case .strength:
-            return "strength perks"
+            return "⚛︎ Strength"
         case .perception:
-            return "perception perks"
+            return "⚛︎ Perception"
         case .endurance:
-            return "endurance perks"
+            return "⚛︎ Endurance"
         case .charisma:
-            return "charisma perks"
+            return "⚛︎ Charisma"
         case .intelligence:
-            return "intelligence perks"
+            return "⚛︎ Intelligence"
         case .agility:
-            return "agility perks"
+            return "⚛︎ Agility"
         case .luck:
-            return "luck perks"
+            return "⚛︎ Luck"
         }
     }
     
