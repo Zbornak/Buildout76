@@ -5,6 +5,7 @@
 //  Created by Mark Strijdom on 12/04/2023.
 //
 
+import Foundation
 import SwiftUI
 
 struct AllPerksView: View {
@@ -26,7 +27,7 @@ struct AllPerksView: View {
     
     var body: some View {
         VStack {
-            HStack(spacing: 30) {
+            HStack {
                 Text("\(pickedPerks.strengthPoints)")
                 Text("\(pickedPerks.perceptionPoints)")
                 Text("\(pickedPerks.endurancePoints)")
