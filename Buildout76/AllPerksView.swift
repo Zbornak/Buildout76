@@ -118,6 +118,23 @@ struct AllPerksView: View {
                 }
                 .padding(.horizontal)
             }
+            
+            HStack {
+                Button {
+                    //legendary perks view
+                } label: {
+                    Label("Legendary Perks", systemImage: "plus.circle")
+                }
+                
+                Spacer()
+                
+                Button {
+                    // mutations view
+                } label: {
+                    Label("Mutations", systemImage: "plus.circle")
+                }
+            }
+            .padding()
         }
     }
     
