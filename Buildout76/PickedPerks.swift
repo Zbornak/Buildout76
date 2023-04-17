@@ -10,6 +10,17 @@ import SwiftUI
 class PickedPerks: ObservableObject {
     @Published var perks: [PickedPerk]
     
+    var remainingStrengthPoints: Int {
+        var pointsRemaining = 15
+        for perk in perks {
+            if perk.perk.specialCategory.contains("Strength") {
+                pointsRemaining -= perk.perkLevel
+            }
+        }
+        
+        return pointsRemaining
+    }
+    
     private let saveKey = "PickedPerks"
     
     init() {

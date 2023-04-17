@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AllPerksView: View {
+    @EnvironmentObject var pickedPerks: PickedPerks
+    
     // load array of perk cards from Json file
     let perks: [Perk] = Bundle.main.decode("perks.json")
     
@@ -22,7 +24,7 @@ struct AllPerksView: View {
     var body: some View {
         VStack {
             HStack(spacing: 30) {
-                Text("15")
+                Text("\(pickedPerks.remainingStrengthPoints)")
                 Text("15")
                 Text("15")
                 Text("15")
@@ -136,5 +138,6 @@ struct AllPerksView: View {
 struct AllPerksView_Previews: PreviewProvider {
     static var previews: some View {
         AllPerksView(build: Build.example)
+            .environmentObject(PickedPerks())
     }
 }

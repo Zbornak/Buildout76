@@ -12,16 +12,7 @@ struct Build: Codable, Identifiable {
     let name: String
     var perks: [PickedPerk]
     
-    var remainingStrengthPoints: Int {
-        var pointsRemaining = 15
-        for perk in perks {
-            if perk.perk.specialCategory.contains("Strength") {
-                pointsRemaining -= perk.perkLevel
-            }
-        }
-        
-        return pointsRemaining
-    }
+    
     
     static let allPerks: [Perk] = Bundle.main.decode("perks.json")
     static let pickedPerk = PickedPerk(perk: allPerks[0], perkLevel: 1)
