@@ -37,7 +37,7 @@ struct BuildProgressView: View {
                                     VStack {
                                         selectDescription(of: perk)
                                         
-                                        Text("\(perk.perkLevelStarDisplay())/\(perk.perk.maxLevel)")
+                                        Text("\(perk.perkLevelStarDisplay())\(perk.remainingStars())")
                                             .padding(.bottom)
                                     }
                                     .padding()
@@ -45,7 +45,7 @@ struct BuildProgressView: View {
                             } label: {
                                 HStack {
                                     Text(perk.perk.name)
-                                    Text("\(perk.perkLevelStarDisplay())")
+                                    Text("\(perk.perkLevelStarDisplay())\(perk.remainingStars())")
                                 }
                             }
                             .swipeActions {

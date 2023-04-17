@@ -48,7 +48,7 @@ struct BuildDetailView: View {
                                 }
                                 
                                 
-                                Text("\(perk.perkLevelStarDisplay())/\(perk.perk.maxLevel)")
+                                Text("\(perk.perkLevelStarDisplay())\(perk.remainingStars())")
                                     .padding(.bottom)
                             }
                         }
