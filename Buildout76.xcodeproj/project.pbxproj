@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		19E156EC29ED4DCE00B5F36C /* LegendaryPerksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E156EB29ED4DCE00B5F36C /* LegendaryPerksView.swift */; };
 		19E156EE29ED4E5100B5F36C /* MutationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E156ED29ED4E5100B5F36C /* MutationsView.swift */; };
+		19E156F029ED98E000B5F36C /* LegendaryPerk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E156EF29ED98E000B5F36C /* LegendaryPerk.swift */; };
 		19E63ABF29E6A9BE0065155B /* Buildout76App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63ABE29E6A9BE0065155B /* Buildout76App.swift */; };
 		19E63AC129E6A9BE0065155B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63AC029E6A9BE0065155B /* ContentView.swift */; };
 		19E63AC329E6A9BF0065155B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E63AC229E6A9BF0065155B /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		19E156EB29ED4DCE00B5F36C /* LegendaryPerksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendaryPerksView.swift; sourceTree = "<group>"; };
 		19E156ED29ED4E5100B5F36C /* MutationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutationsView.swift; sourceTree = "<group>"; };
+		19E156EF29ED98E000B5F36C /* LegendaryPerk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendaryPerk.swift; sourceTree = "<group>"; };
 		19E63ABB29E6A9BE0065155B /* Buildout76.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buildout76.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E63ABE29E6A9BE0065155B /* Buildout76App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buildout76App.swift; sourceTree = "<group>"; };
 		19E63AC029E6A9BE0065155B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				19E63AE029E6EAD50065155B /* PickedPerks.swift */,
 				19E63AD229E6ABBD0065155B /* Build.swift */,
 				19E63AD629E6AE2A0065155B /* Builds.swift */,
+				19E156EF29ED98E000B5F36C /* LegendaryPerk.swift */,
 				19E63ACC29E6A9FB0065155B /* perks.json */,
 				19E63ACE29E6AA180065155B /* Bundle-Decodable.swift */,
 				19E63AC229E6A9BF0065155B /* Assets.xcassets */,
@@ -199,6 +202,7 @@
 				19E156EE29ED4E5100B5F36C /* MutationsView.swift in Sources */,
 				19E63AD129E6AA6C0065155B /* Perk.swift in Sources */,
 				19E63AD729E6AE2A0065155B /* Builds.swift in Sources */,
+				19E156F029ED98E000B5F36C /* LegendaryPerk.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
