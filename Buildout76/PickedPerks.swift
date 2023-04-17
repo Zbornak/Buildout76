@@ -21,6 +21,72 @@ class PickedPerks: ObservableObject {
         return pointsRemaining
     }
     
+    var remainingPerceptionPoints: Int {
+        var pointsRemaining = 15
+        for perk in perks {
+            if perk.perk.specialCategory.contains("Perception") {
+                pointsRemaining -= perk.perkLevel
+            }
+        }
+        
+        return pointsRemaining
+    }
+    
+    var remainingEndurancePoints: Int {
+        var pointsRemaining = 15
+        for perk in perks {
+            if perk.perk.specialCategory.contains("Endurance") {
+                pointsRemaining -= perk.perkLevel
+            }
+        }
+        
+        return pointsRemaining
+    }
+    
+    var remainingCharismaPoints: Int {
+        var pointsRemaining = 15
+        for perk in perks {
+            if perk.perk.specialCategory.contains("Charisma") {
+                pointsRemaining -= perk.perkLevel
+            }
+        }
+        
+        return pointsRemaining
+    }
+    
+    var remainingIntelligencePoints: Int {
+        var pointsRemaining = 15
+        for perk in perks {
+            if perk.perk.specialCategory.contains("Intelligence") {
+                pointsRemaining -= perk.perkLevel
+            }
+        }
+        
+        return pointsRemaining
+    }
+    
+    var remainingAgilityPoints: Int {
+        var pointsRemaining = 15
+        for perk in perks {
+            if perk.perk.specialCategory.contains("Agility") {
+                pointsRemaining -= perk.perkLevel
+            }
+        }
+        
+        return pointsRemaining
+    }
+    
+    var remainingLuckPoints: Int {
+        var pointsRemaining = 15
+        for perk in perks {
+            if perk.perk.specialCategory.contains("Luck") {
+                pointsRemaining -= perk.perkLevel
+            }
+        }
+        
+        return pointsRemaining
+    }
+    
     private let saveKey = "PickedPerks"
     
     init() {

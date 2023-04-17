@@ -25,12 +25,12 @@ struct AllPerksView: View {
         VStack {
             HStack(spacing: 30) {
                 Text("\(pickedPerks.remainingStrengthPoints)")
-                Text("15")
-                Text("15")
-                Text("15")
-                Text("15")
-                Text("15")
-                Text("15")
+                Text("\(pickedPerks.remainingPerceptionPoints)")
+                Text("\(pickedPerks.remainingEndurancePoints)")
+                Text("\(pickedPerks.remainingCharismaPoints)")
+                Text("\(pickedPerks.remainingIntelligencePoints)")
+                Text("\(pickedPerks.remainingAgilityPoints)")
+                Text("\(pickedPerks.remainingLuckPoints)")
             }
             
             HStack {
