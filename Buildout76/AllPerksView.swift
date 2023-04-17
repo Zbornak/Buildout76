@@ -24,6 +24,8 @@ struct AllPerksView: View {
     @State private var legendaryPerksSheetShowing = false
     @State private var mutationsSheetShowing = false
     
+    let perkPointTotal = 56
+    
     var body: some View {
         VStack {
             HStack(spacing: 30) {
