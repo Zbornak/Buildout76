@@ -36,6 +36,7 @@ struct BuildProgressView: View {
                                     
                                     VStack {
                                         selectDescription(of: perk)
+                                            .padding()
                                         
                                         Text("\(perk.perkLevelStarDisplay())\(perk.remainingStars())")
                                             .padding(.bottom)
