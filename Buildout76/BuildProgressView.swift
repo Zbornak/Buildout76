@@ -14,6 +14,7 @@ struct BuildProgressView: View {
     @State private var buildName = ""
     @State var build: Build
     @State private var buildSaved = false
+    @State private var clearWarningShowing = false
     
     enum FilterType: CaseIterable {
         case strength, perception, endurance, charisma, intelligence, agility, luck
@@ -63,6 +64,11 @@ struct BuildProgressView: View {
                 }
             }
             .toolbar {
+                Button("Clear") {
+                    clearWarningShowing = true
+                }
+            }
+            .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
                         let build = Build(name: buildName, perks: pickedPerks.perks)
@@ -82,6 +88,13 @@ struct BuildProgressView: View {
             .navigationTitle("⚛︎ Build in Progress")
             .alert("Build saved!", isPresented: $buildSaved) {
                 Button("OK", role: .cancel) { }
+            }
+            .alert("Are you sure you want to clear all perks and start again?", isPresented: $clearWarningShowing) {
+                Button("Yes", role: .destructive) {
+                    pickedPerks.objectWillChange.send()
+                    pickedPerks.perks.removeAll()
+                    pickedPerks.save()
+                }
             }
         }
     }
