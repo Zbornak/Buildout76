@@ -12,6 +12,21 @@ struct PickedPerk: Codable, Identifiable, Equatable {
     let perk: Perk
     let perkLevel: Int
     
+    func perkLevelStarDisplay() -> String {
+        switch perkLevel {
+        case 1:
+            return "★"
+        case 2:
+            return "★★"
+        case 3:
+            return "★★★"
+        case 4:
+            return "★★★★"
+        default:
+            return "★★★★★"
+        }
+    }
+    
     static let allPerks: [Perk] = Bundle.main.decode("perks.json")
     static let example = PickedPerk(id: UUID(), perk: allPerks[0], perkLevel: 1)
 }
