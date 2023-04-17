@@ -103,19 +103,19 @@ struct BuildProgressView: View {
     func header(_ filter: FilterType) -> String {
         switch filter {
         case .strength:
-            return "strength perks"
+            return "strength"
         case .perception:
-            return "perception perks"
+            return "perception"
         case .endurance:
-            return "endurance perks"
+            return "endurance"
         case .charisma:
-            return "charisma perks"
+            return "charisma"
         case .intelligence:
-            return "intelligence perks"
+            return "intelligence"
         case .agility:
-            return "agility perks"
+            return "agility"
         case .luck:
-            return "luck perks"
+            return "luck"
         }
     }
     
