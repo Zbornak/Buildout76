@@ -10,6 +10,8 @@ import SwiftUI
 struct SavedBuildsListView: View {
     @EnvironmentObject var builds: Builds
     
+    @State var rotation = 0.0
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -26,6 +28,14 @@ struct SavedBuildsListView: View {
                 
                 if builds.builds.isEmpty {
                     VStack {
+                        Image(systemName: "gearshape")
+                            .font(.largeTitle)
+                            .rotationEffect(.degrees(rotation))
+                            .animation(.linear(duration: 30).delay(1), value: rotation)
+                            .onAppear {
+                                rotation += 360
+                            }
+                        Spacer()
                         HStack {
                             Image(systemName: "gearshape.fill")
                             Text("Go to the Perks tab to begin!")
