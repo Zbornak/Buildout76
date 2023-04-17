@@ -10,81 +10,81 @@ import SwiftUI
 class PickedPerks: ObservableObject {
     @Published var perks: [PickedPerk]
     
-    var remainingStrengthPoints: Int {
-        var pointsRemaining = 15
+    var strengthPoints: Int {
+        var points = 1
         for perk in perks {
             if perk.perk.specialCategory.contains("Strength") {
-                pointsRemaining -= perk.perkLevel
+                points += perk.perkLevel
             }
         }
         
-        return pointsRemaining
+        return points
     }
     
-    var remainingPerceptionPoints: Int {
-        var pointsRemaining = 15
+    var perceptionPoints: Int {
+        var points = 1
         for perk in perks {
             if perk.perk.specialCategory.contains("Perception") {
-                pointsRemaining -= perk.perkLevel
+                points += perk.perkLevel
             }
         }
         
-        return pointsRemaining
+        return points
     }
     
-    var remainingEndurancePoints: Int {
-        var pointsRemaining = 15
+    var endurancePoints: Int {
+        var points = 1
         for perk in perks {
             if perk.perk.specialCategory.contains("Endurance") {
-                pointsRemaining -= perk.perkLevel
+                points += perk.perkLevel
             }
         }
         
-        return pointsRemaining
+        return points
     }
     
-    var remainingCharismaPoints: Int {
-        var pointsRemaining = 15
+    var charismaPoints: Int {
+        var points = 1
         for perk in perks {
             if perk.perk.specialCategory.contains("Charisma") {
-                pointsRemaining -= perk.perkLevel
+                points += perk.perkLevel
             }
         }
         
-        return pointsRemaining
+        return points
     }
     
-    var remainingIntelligencePoints: Int {
-        var pointsRemaining = 15
+    var intelligencePoints: Int {
+        var points = 1
         for perk in perks {
             if perk.perk.specialCategory.contains("Intelligence") {
-                pointsRemaining -= perk.perkLevel
+                points += perk.perkLevel
             }
         }
         
-        return pointsRemaining
+        return points
     }
     
-    var remainingAgilityPoints: Int {
-        var pointsRemaining = 15
+    var agilityPoints: Int {
+        var points = 1
         for perk in perks {
             if perk.perk.specialCategory.contains("Agility") {
-                pointsRemaining -= perk.perkLevel
+                points += perk.perkLevel
             }
         }
         
-        return pointsRemaining
+        return points
     }
     
-    var remainingLuckPoints: Int {
-        var pointsRemaining = 15
+    var luckPoints: Int {
+        var points = 1
         for perk in perks {
             if perk.perk.specialCategory.contains("Luck") {
-                pointsRemaining -= perk.perkLevel
+                points += perk.perkLevel
             }
         }
         
-        return pointsRemaining
+        return points
     }
     
     private let saveKey = "PickedPerks"

@@ -27,13 +27,13 @@ struct AllPerksView: View {
     var body: some View {
         VStack {
             HStack(spacing: 30) {
-                Text("\(pickedPerks.remainingStrengthPoints)")
-                Text("\(pickedPerks.remainingPerceptionPoints)")
-                Text("\(pickedPerks.remainingEndurancePoints)")
-                Text("\(pickedPerks.remainingCharismaPoints)")
-                Text("\(pickedPerks.remainingIntelligencePoints)")
-                Text("\(pickedPerks.remainingAgilityPoints)")
-                Text("\(pickedPerks.remainingLuckPoints)")
+                Text("\(pickedPerks.strengthPoints)")
+                Text("\(pickedPerks.perceptionPoints)")
+                Text("\(pickedPerks.endurancePoints)")
+                Text("\(pickedPerks.charismaPoints)")
+                Text("\(pickedPerks.intelligencePoints)")
+                Text("\(pickedPerks.agilityPoints)")
+                Text("\(pickedPerks.luckPoints)")
             }
             
             HStack {
