@@ -15,10 +15,6 @@ struct BuildProgressView: View {
     @State var build: Build
     @State private var buildSaved = false
     
-    var sortedPickedPerks: [PickedPerk] {
-        pickedPerks.perks.sorted { $0.perk.name < $1.perk.name }
-    }
-    
     enum FilterType: CaseIterable {
         case strength, perception, endurance, charisma, intelligence, agility, luck
     }

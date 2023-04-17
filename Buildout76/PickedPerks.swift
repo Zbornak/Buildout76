@@ -36,12 +36,14 @@ class PickedPerks: ObservableObject {
     }
     
     func removePerk(_ perk: PickedPerk) {
+        objectWillChange.send()
         var indexes = IndexSet()
         if let index = perks.firstIndex(of: perk) {
             indexes.insert(index)
         }
         
         perks.remove(atOffsets: indexes)
+        save()
     }
 }
 
