@@ -26,6 +26,18 @@ struct BuildProgressView: View {
                 TextField("Enter build name", text: $buildName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
+                
+                Section {
+                    // list of legendary perks
+                } header: {
+                    Text("legendary")
+                }
+                
+                Section {
+                    // list of mutations
+                } header: {
+                    Text("mutations")
+                }
             
                 ForEach(FilterType.allCases, id: \.self) { filter in
                     Section {
