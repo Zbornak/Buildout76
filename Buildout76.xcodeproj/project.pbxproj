@@ -32,6 +32,8 @@
 		19FC8F7629EE96EA00A94C9B /* mutations.json in Resources */ = {isa = PBXBuildFile; fileRef = 19FC8F7529EE96EA00A94C9B /* mutations.json */; };
 		19FC8F7829EEA6D200A94C9B /* LegendaryPerks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC8F7729EEA6D200A94C9B /* LegendaryPerks.swift */; };
 		19FC8F7A29EEA6F600A94C9B /* Mutations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC8F7929EEA6F600A94C9B /* Mutations.swift */; };
+		19FC8F7C29EEBB7500A94C9B /* LegendaryPerkCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC8F7B29EEBB7500A94C9B /* LegendaryPerkCardView.swift */; };
+		19FC8F7E29EEBBA200A94C9B /* MutationsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC8F7D29EEBBA200A94C9B /* MutationsCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		19FC8F7529EE96EA00A94C9B /* mutations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mutations.json; sourceTree = "<group>"; };
 		19FC8F7729EEA6D200A94C9B /* LegendaryPerks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendaryPerks.swift; sourceTree = "<group>"; };
 		19FC8F7929EEA6F600A94C9B /* Mutations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutations.swift; sourceTree = "<group>"; };
+		19FC8F7B29EEBB7500A94C9B /* LegendaryPerkCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendaryPerkCardView.swift; sourceTree = "<group>"; };
+		19FC8F7D29EEBBA200A94C9B /* MutationsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutationsCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +106,9 @@
 				19E7B77F29E859F200A00469 /* PerkCardSummaryView.swift */,
 				19E63ADE29E6BE990065155B /* BuildProgressView.swift */,
 				19E156EB29ED4DCE00B5F36C /* AllLegendaryPerksView.swift */,
+				19FC8F7B29EEBB7500A94C9B /* LegendaryPerkCardView.swift */,
 				19E156ED29ED4E5100B5F36C /* AllMutationsView.swift */,
+				19FC8F7D29EEBBA200A94C9B /* MutationsCardView.swift */,
 				19E63AD029E6AA6C0065155B /* Perk.swift */,
 				19E63AD429E6AC250065155B /* PickedPerk.swift */,
 				19E63AE029E6EAD50065155B /* PickedPerks.swift */,
@@ -214,7 +220,9 @@
 				19E63ABF29E6A9BE0065155B /* Buildout76App.swift in Sources */,
 				19E63ADF29E6BE990065155B /* BuildProgressView.swift in Sources */,
 				19E63AD329E6ABBD0065155B /* Build.swift in Sources */,
+				19FC8F7E29EEBBA200A94C9B /* MutationsCardView.swift in Sources */,
 				19E63AD929E6B1110065155B /* PerkCardView.swift in Sources */,
+				19FC8F7C29EEBB7500A94C9B /* LegendaryPerkCardView.swift in Sources */,
 				19E63ACF29E6AA180065155B /* Bundle-Decodable.swift in Sources */,
 				19E7B78029E859F200A00469 /* PerkCardSummaryView.swift in Sources */,
 				19E156EE29ED4E5100B5F36C /* AllMutationsView.swift in Sources */,
