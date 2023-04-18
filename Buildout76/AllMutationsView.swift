@@ -8,13 +8,31 @@
 import SwiftUI
 
 struct AllMutationsView: View {
+    @EnvironmentObject var mutations: Mutations
+    
+    let allMutations: [Mutation] = Bundle.main.decode("mutations.json")
+    
+    let columns = [GridItem(.adaptive(minimum: 150))]
+    
+    let mutation: Mutation
+    
     var body: some View {
-        Text("Choose your mutations.")
+        VStack {
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 20) {
+                    ForEach(allMutations, id: \.id) { mutation in
+                        MutationsCardView(mutation: mutation)
+                    }
+                }
+                .padding()
+            }
+        }
     }
 }
 
 struct AllMutationsView_Previews: PreviewProvider {
     static var previews: some View {
-        AllMutationsView()
+        AllMutationsView(mutation: Mutation.example)
+            .environmentObject(Mutations())
     }
 }

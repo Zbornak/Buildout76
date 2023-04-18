@@ -1,95 +1,114 @@
 [
     {
+        "id": "egg-head",
         "name": "Egg Head",
         "descriptionPositive": "INT +6",
         "descriptionNegative": "STR -3, END -3"
     },
     {
+        "id": "eagle-eyes",
         "name": "Eagle Eyes",
         "descriptionPositive": "Critical damage +60%, PER +4",
         "descriptionNegative": "STR -4"
     },
     {
+        "id": "bird-bones",
         "name": "Bird Bones",
         "descriptionPositive": "AGI +4, fall from heights more gradual",
         "descriptionNegative": "STR -4"
     },
     {
+        "id": "marsupial",
         "name": "Marsupial",
         "descriptionPositive": "Carry weight +20, +jump height",
         "descriptionNegative": "INT -4"
     },
     {
+        "id": "adrenal-reaction",
         "name": "Adrenal Reaction",
         "descriptionPositive": "+Weapon DMG at low HP",
         "descriptionNegative": "Max HP -50"
     },
     {
+        "id": "chameleon",
         "name": "Chameleon",
         "descriptionPositive": "Invisibility while unarmored and standing still",
         "descriptionNegative": "Must be unarmored and stationary for effect to work"
     },
     {
+        "id": "healing-factor",
         "name": "Healing Factor",
         "descriptionPositive": "Health regeneration +300%",
         "descriptionNegative": "Chem Effects -55%"
     },
     {
+        "id": "speed-demon",
         "name": "Speed Demon",
         "descriptionPositive": "Movement speed +20%, faster reload +20%",
         "descriptionNegative": "+50% drain on hunger and thirst while moving"
     },
     {
+        "id": "scaly-skin",
         "name": "Scaly Skin",
         "descriptionPositive": "Damage and energy resistance +50",
         "descriptionNegative": "AP -50"
     },
     {
+        "id": "grounded",
         "name": "Grounded",
         "descriptionPositive": "Energy resistance +100",
         "descriptionNegative": "Energy damage -50%"
     },
     {
+        "id": "talons",
         "name": "Talons",
         "descriptionPositive": "Punching attacks do 25% more damage + bleed damage",
         "descriptionNegative": "AGI -4"
     },
     {
+        "id": "twisted-muscles",
         "name": "Twisted Muscles",
         "descriptionPositive": "Melee damage +25%, better chance to cripple limbs",
         "descriptionNegative": "Gun accuracy -50%"
     },
     {
+        "id": "empath",
         "name": "Empath",
         "descriptionPositive": "Teammates take 25% less damage",
         "descriptionNegative": "Player takes 25% more damage"
     },
     {
+        "id": "herd-mentality",
         "name": "Herd Mentality",
         "descriptionPositive": "All SPECIAL stats +2 when grouped",
         "descriptionNegative": "All SPECIAL stats -2 when solo"
     },
     {
+        "id": "carnivore",
         "name": "Carnivore",
         "descriptionPositive": "No disease from meat and 2x bonus to food from eating meat products",
         "descriptionNegative": "Eating fruits and vegetables does not satisfy hunger"
     },
     {
+        "id": "herbivore",
         "name": "Herbivore",
         "descriptionPositive": "Vegetables provide x2 benefit and no disease",
         "descriptionNegative": "Eating meat doesn't satisfy hunger"
     },
     {
+        "id": "plague-walker",
         "name": "Plague Walker",
         "descriptionPositive": "Poison aura scaling with your diseases",
         "descriptionNegative": "Poison"
     },
     {
+        "id": "electrically-charged",
         "name": "Electrically Charged",
         "descriptionPositive": "Chance to shock melee attackers",
         "descriptionNegative": "Small amount of damage done to player"
     },
     {
+        "id": "unstable-isotope",
         "name": "Unstable Isotope",
         "descriptionPositive": "Medium chance to release a radiation blast when struck in melee",
         "descriptionNegative": "Minor damage to player during the radiation blast"
