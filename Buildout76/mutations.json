@@ -1,98 +1,98 @@
 [
     {
-        "name": "Gladiator",
-        "descriptionPositive": "",
+        "name": "Egg Head",
+        "descriptionPositive": "INT +6",
+        "descriptionNegative": "STR -3, END -3"
+    },
+    {
+        "name": "Egg Head",
+        "descriptionPositive": "Critical damage +60%, PER +4",
+        "descriptionNegative": "STR -4"
+    },
+    {
+        "name": "Bird Bones",
+        "descriptionPositive": "AGI +4, fall from heights more gradual",
+        "descriptionNegative": "STR -4"
+    },
+    {
+        "name": "Marsupial",
+        "descriptionPositive": "Carry weight +20, +jump height",
+        "descriptionNegative": "INT -4"
+    },
+    {
+        "name": "Adrenal Reaction",
+        "descriptionPositive": "+Weapon DMG at low HP",
+        "descriptionNegative": "Max HP -50"
+    },
+    {
+        "name": "Chameleon",
+        "descriptionPositive": "Invisibility while unarmored and standing still",
+        "descriptionNegative": "Must be unarmored and stationary for effect to work"
+    },
+    {
+        "name": "Healing Factor",
+        "descriptionPositive": "Health regeneration +300%",
+        "descriptionNegative": "Chem Effects -55%"
+    },
+    {
+        "name": "Speed Demon",
+        "descriptionPositive": "Movement speed +20%, faster reload +20%",
+        "descriptionNegative": "+50% drain on hunger and thirst while moving"
+    },
+    {
+        "name": "Scaly Skin",
+        "descriptionPositive": "Damage and energy resistance +50",
+        "descriptionNegative": "AP -50"
+    },
+    {
+        "name": "Grounded",
+        "descriptionPositive": "Energy resistance +100",
+        "descriptionNegative": "Energy damage -50%"
+    },
+    {
+        "name": "Talons",
+        "descriptionPositive": "Punching attacks do 25% more damage + bleed damage",
+        "descriptionNegative": "AGI -4"
+    },
+    {
+        "name": "Twisted Muscles",
+        "descriptionPositive": "Melee damage +25%, better chance to cripple limbs",
+        "descriptionNegative": "Gun accuracy -50%"
+    },
+    {
+        "name": "Empath",
+        "descriptionPositive": "Teammates take 25% less damage",
+        "descriptionNegative": "Player takes 25% more damage"
+    },
+    {
+        "name": "Herd Mentality",
+        "descriptionPositive": "All SPECIAL stats +2 when grouped",
+        "descriptionNegative": "All SPECIAL stats -2 when solo"
+    },
+    {
+        "name": "Carnivore",
+        "descriptionPositive": "No disease from meat and 2x bonus to food from eating meat products",
+        "descriptionNegative": "Eating fruits and vegetables does not satisfy hunger"
+    },
+    {
+        "name": "Herbivore",
+        "descriptionPositive": "Vegetables provide x2 benefit and no disease",
+        "descriptionNegative": "Eating meat doesn't satisfy hunger"
+    },
+    {
+        "name": "Plague Walker",
+        "descriptionPositive": "Poison aura scaling with your diseases",
         "descriptionNegative": ""
     },
     {
-        "name": "Master Gunslinger",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
+        "name": "Electrically Charged",
+        "descriptionPositive": "Chance to shock melee attackers",
+        "descriptionNegative": "Small amount of damage done to player"
     },
     {
-        "name": "Master Gunslinger",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
-    },
-    {
-        "name": "Master Gunslinger",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
-    },
-    {
-        "name": "Master Gunslinger",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
-    },
-    {
-        "name": "Master Gunslinger",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
-    },
-    {
-        "name": "Master Gunslinger",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
-    },
-    {
-        "name": "Master Guerilla",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
-    },
-    {
-        "name": "Dodgy",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
-    },
-    {
-        "name": "Secret Agent",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
-    },
-    {
-        "name": "Adrenaline",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
-    },
-    {
-        "name": "Gun Fu",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
-    },
-    {
-        "name": "Pharma Farma",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
-    },
-    {
-        "name": "Scrounger",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
-    },
-    {
-        "name": "Serendipity",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
-    },
-    {
-        "name": "Can Do!",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
-    },
-    {
-        "name": "Mystery Meat",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
-    },
-    {
-        "name": "Luck Of The Draw",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
-    },
-    {
-        "name": "Super Duper",
-        "descriptionPositive": "",
-        "descriptionNegative": ""
+        "name": "Unstable Isotope",
+        "descriptionPositive": "Medium chance to release a radiation blast when struck in melee",
+        "descriptionNegative": "Minor damage to player during the radiation blast"
     }
 ]
 
