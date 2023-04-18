@@ -66,17 +66,19 @@ struct PerkCardView: View {
                     Text("Level")
                     Text("\(perk.levelAvailable)")
                     Spacer()
-                    Button("+") {
-                        withAnimation {
-                            //add perk to array of pickedPerks (including level)
-                            let newPickedPerk = PickedPerk(perk: perk, perkLevel: perkCardLevel)
-                            
-                            if pickedPerks.perks.firstIndex(where: { $0.perk.name == perk.name }) == nil {
-                                pickedPerks.add(newPickedPerk)
+                    if pickedPerks.totalPerkPoints > 0 {
+                        Button("+") {
+                            withAnimation {
+                                //add perk to array of pickedPerks (including level)
+                                let newPickedPerk = PickedPerk(perk: perk, perkLevel: perkCardLevel)
+                                
+                                if pickedPerks.perks.firstIndex(where: { $0.perk.name == perk.name }) == nil {
+                                    pickedPerks.add(newPickedPerk)
+                                }
                             }
                         }
+                        .buttonStyle(.borderedProminent)
                     }
-                    .buttonStyle(.borderedProminent)
                 }
             }
             .padding()
