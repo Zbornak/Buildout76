@@ -1,184 +1,184 @@
 [
 	{
-		"name": "Gladiator",
-        "description1": "",
-        "description2": "",
-		"description3": "",
-        "description4": ""
+		"name": "Ammo Factory",
+        "description1": "Produce 50% more rounds when crafting ammunition.",
+        "description2": "Produce 75% more rounds when crafting ammunition.",
+		"description3": "Produce 100% more rounds when crafting ammunition.",
+        "description4": "Produce 150% more rounds when crafting ammunition."
 	},
     {
-        "name": "Master Gunslinger",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Funky Duds",
+        "description1": "+50 poison damage when wearing a matching set of armor.",
+        "description2": "+100 poison damage when wearing a matching set of armor.",
+        "description3": "+150 poison damage when wearing a matching set of armor.",
+        "description4": "+200 poison damage when wearing a matching set of armor."
     },
     {
-        "name": "Master Gunslinger",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Hack And Slash",
+        "description1": "20% chance for melee V.A.T.S. attacks to do area damage.",
+        "description2": "30% chance for melee V.A.T.S. attacks to do area damage.",
+        "description3": "40% chance for melee V.A.T.S. attacks to do area damage.",
+        "description4": "50% chance for melee V.A.T.S. attacks to do area damage."
     },
     {
-        "name": "Master Gunslinger",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Sizzling Style",
+        "description1": "+50 fire damage resist when wearing a matching set of armor.",
+        "description2": "+100 fire damage resist when wearing a matching set of armor.",
+        "description3": "+150 fire damage resist when wearing a matching set of armor.",
+        "description4": "+200 fire damage resist when wearing a matching set of armor."
     },
     {
-        "name": "Master Gunslinger",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Legendary Agility",
+        "description1": "+1 AGI and +1 AGI perk points. Perk points cap at 15.",
+        "description2": "+2 AGI and +2 AGI perk points. Perk points cap at 15.",
+        "description3": "+3 AGI and +3 AGI perk points. Perk points cap at 15.",
+        "description4": "+5 AGI and +5 AGI perk points. Perk points cap at 15."
     },
     {
-        "name": "Master Gunslinger",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Legendary Charisma",
+        "description1": "+1 CHR and +1 CHR perk points. Perk points cap at 15.",
+        "description2": "+2 CHR and +2 CHR perk points. Perk points cap at 15.",
+        "description3": "+3 CHR and +3 CHR perk points. Perk points cap at 15.",
+        "description4": "+5 CHR and +5 CHR perk points. Perk points cap at 15."
     },
     {
-        "name": "Master Gunslinger",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Legendary Endurance",
+        "description1": "+1 END and +1 END perk points. Perk points cap at 15.",
+        "description2": "+2 END and +2 END perk points. Perk points cap at 15.",
+        "description3": "+3 END and +3 END perk points. Perk points cap at 15.",
+        "description4": "+5 END and +5 END perk points. Perk points cap at 15."
     },
     {
-        "name": "Master Guerilla",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Legendary Intelligence",
+        "description1": "+1 INT and +1 INT perk points. Perk points cap at 15.",
+        "description2": "+2 INT and +2 INT perk points. Perk points cap at 15.",
+        "description3": "+3 INT and +3 INT perk points. Perk points cap at 15.",
+        "description4": "+5 INT and +5 INT perk points. Perk points cap at 15."
     },
     {
-        "name": "Dodgy",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Legendary Luck",
+        "description1": "+1 LCK and +1 LCK perk points. Perk points cap at 15.",
+        "description2": "+2 LCK and +2 LCK perk points. Perk points cap at 15.",
+        "description3": "+3 LCK and +3 LCK perk points. Perk points cap at 15.",
+        "description4": "+5 LCK and +5 LCK perk points. Perk points cap at 15."
     },
     {
-        "name": "Secret Agent",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Legendary Perception",
+        "description1": "+1 PER and +1 PER perk points. Perk points cap at 15.",
+        "description2": "+2 PER and +2 PER perk points. Perk points cap at 15.",
+        "description3": "+3 PER and +3 PER perk points. Perk points cap at 15.",
+        "description4": "+5 PER and +5 PER perk points. Perk points cap at 15."
     },
     {
-        "name": "Adrenaline",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Legendary Strength",
+        "description1": "+1 STR and +1 STR perk points. Perk points cap at 15.",
+        "description2": "+2 STR and +2 STR perk points. Perk points cap at 15.",
+        "description3": "+3 STR and +3 STR perk points. Perk points cap at 15.",
+        "description4": "+5 STR and +5 STR perk points. Perk points cap at 15."
     },
     {
-        "name": "Gun Fu",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Master Infiltrator",
+        "description1": "Auto-unlock skill 0 terminals and locks. +3 lockpick and hacking skills.",
+        "description2": "Auto-unlock skill 1 terminals and locks. +3 lockpick and hacking skills.",
+        "description3": "Auto-unlock skill 2 terminals and locks. +3 lockpick and hacking skills.",
+        "description4": "Auto-unlock skill 3 terminals and locks. +3 lockpick and hacking skills."
     },
     {
-        "name": "Pharma Farma",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Power Sprinter",
+        "description1": "While in power armor, sprinting consumes 20% fewer action points.",
+        "description2": "While in power armor, sprinting consumes 30% fewer action points.",
+        "description3": "While in power armor, sprinting consumes 40% fewer action points.",
+        "description4": "While in power armor, sprinting consumes 50% fewer action points."
     },
     {
-        "name": "Scrounger",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Survival Shortcut",
+        "description1": "Generate 1 survival aiding chem every 30 minutes. Up to a max of 5.",
+        "description2": "Generate 1 survival aiding chem every 25 minutes. Up to a max of 6.",
+        "description3": "Generate 1 survival aiding chem every 20 minutes. Up to a max of 7.",
+        "description4": "Generate 2 survival aiding chem every 20 minutes. Up to a max of 10."
     },
     {
-        "name": "Serendipity",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Blood Sacrifice",
+        "description1": "When you die, teammates gain +25 DR and heal 40 HP over 8 seconds.",
+        "description2": "When you die, teammates gain +30 DR and heal 50 HP over 10 seconds.",
+        "description3": "When you die, teammates gain +35 DR and heal 60 HP over 12 seconds.",
+        "description4": "When you die, teammates gain +40 DR and heal 70 HP over 14 seconds."
     },
     {
-        "name": "Can Do!",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Brawling Chemist",
+        "description1": "Generate 1 combat enhancing chem every hour. Up to a max of 3.",
+        "description2": "Generate 1 combat enhancing chem every 50 minutes. Up to a max of 4.",
+        "description3": "Generate 1 combat enhancing chem every 40 minutes. Up to a max of 5.",
+        "description4": "Generate 2 combat enhancing chem every 40 minutes. Up to a max of 5."
     },
     {
-        "name": "Good With Salt",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Collateral Damage",
+        "description1": "Enemies killed with a melee weapon have a 10% chance to explode.",
+        "description2": "Enemies killed with a melee weapon have a 13% chance to explode.",
+        "description3": "Enemies killed with a melee weapon have a 16% chance to explode.",
+        "description4": "Enemies killed with a melee weapon have a 20% chance to explode."
     },
     {
-        "name": "Junk Shield",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Detonation Contagion",
+        "description1": "Enemies killed with a thrown explosive have a 20% chance to explode.",
+        "description2": "Enemies killed with a thrown explosive have a 30% chance to explode.",
+        "description3": "Enemies killed with a thrown explosive have a 40% chance to explode.",
+        "description4": "Enemies killed with a thrown explosive have a 50% chance to explode."
     },
     {
-        "name": "Mystery Meat",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Electric Absorption",
+        "description1": "10% chance enemy energy attacks recharge your power armor's fusion core.",
+        "description2": "13% chance enemy energy attacks recharge your power armor's fusion core.",
+        "description3": "16% chance enemy energy attacks recharge your power armor's fusion core.",
+        "description4": "20% chance enemy energy attacks recharge your power armor's fusion core."
     },
     {
-        "name": "Luck Of The Draw",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Exploding Palm",
+        "description1": "While unarmed, 5% chance of triggering an explosion on attack hits.",
+        "description2": "While unarmed, 10% chance of triggering an explosion on attack hits.",
+        "description3": "While unarmed, 15% chance of triggering an explosion on attack hits.",
+        "description4": "While unarmed, 20% chance of triggering an explosion on attack hits."
     },
     {
-        "name": "Cap Collector",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Far-Flung Fireworks",
+        "description1": "Enemies killed with a ranged weapon have a 10% chance to explode.",
+        "description2": "Enemies killed with a ranged weapon have a 13% chance to explode.",
+        "description3": "Enemies killed with a ranged weapon have a 16% chance to explode.",
+        "description4": "Enemies killed with a ranged weapon have a 20% chance to explode."
     },
     {
-        "name": "Woodchucker",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Follow Through",
+        "description1": "Ranged sneak damage increases damage to target by 10% for 30 seconds.",
+        "description2": "Ranged sneak damage increases damage to target by 20% for 30 seconds.",
+        "description3": "Ranged sneak damage increases damage to target by 30% for 60 seconds.",
+        "description4": "Ranged sneak damage increases damage to target by 40% for 60 seconds."
     },
     {
-        "name": "Curator",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Power Armor Reboot",
+        "description1": "15% chance to auto-revive with full health if you're downed in power armor.",
+        "description2": "20% chance to auto-revive with full health if you're downed in power armor.",
+        "description3": "30% chance to auto-revive with full health if you're downed in power armor.",
+        "description4": "40% chance to auto-revive with full health if you're downed in power armor."
     },
     {
-        "name": "Psycopath",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Retribution",
+        "description1": "Blocking a melee attack restores 1 HP and 1 AP for 15 seconds.",
+        "description2": "Blocking a melee attack restores 2 HP and 2 AP for 15 seconds.",
+        "description3": "Blocking a melee attack restores 3 HP and 3 AP for 15 seconds.",
+        "description4": "Blocking a melee attack restores 4 HP and 4 AP for 15 seconds."
     },
     {
-        "name": "Dry Nurse",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "Taking One For The Team",
+        "description1": "Enemies take 10% more damage when they attack you, if you're on a team.",
+        "description2": "Enemies take 20% more damage when they attack you, if you're on a team.",
+        "description3": "Enemies take 30% more damage when they attack you, if you're on a team.",
+        "description4": "Enemies take 40% more damage when they attack you, if you're on a team."
     },
     {
-        "name": "Super Duper",
-        "description1": "",
-        "description2": "",
-        "description3": "",
-        "description4": ""
+        "name": "What Rads?",
+        "description1": "+50 rad resist, restore 1 rad per second.",
+        "description2": "+75 rad resist, restore 1 rad per second.",
+        "description3": "+100 rad resist, restore 1 rad per second.",
+        "description4": "+300 rad resist, restore 1 rad per second."
 	}
 ]
