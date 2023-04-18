@@ -28,77 +28,88 @@ struct AllPerksView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("\(pickedPerks.strengthPoints)")
-                Text("\(pickedPerks.perceptionPoints)")
-                Text("\(pickedPerks.endurancePoints)")
-                Text("\(pickedPerks.charismaPoints)")
-                Text("\(pickedPerks.intelligencePoints)")
-                Text("\(pickedPerks.agilityPoints)")
-                Text("\(pickedPerks.luckPoints)")
-            }
-            
-            HStack {
-                Button {
-                    filteredResults.removeAll()
-                    filterPerks(special: "Strength")
-                } label: {
-                    Image(systemName: "s.square")
-                        .font(.largeTitle)
-                        .foregroundColor(.green)
+                VStack {
+                    Text("\(pickedPerks.strengthPoints)")
+                    Button {
+                        filteredResults.removeAll()
+                        filterPerks(special: "Strength")
+                    } label: {
+                        Image(systemName: "s.square")
+                            .font(.largeTitle)
+                            .foregroundColor(.green)
+                    }
                 }
                 
-                Button {
-                    filteredResults.removeAll()
-                    filterPerks(special: "Perception")
-                } label: {
-                    Image(systemName: "p.square")
-                        .font(.largeTitle)
-                        .foregroundColor(.brown)
+                VStack {
+                    Text("\(pickedPerks.perceptionPoints)")
+                    Button {
+                        filteredResults.removeAll()
+                        filterPerks(special: "Perception")
+                    } label: {
+                        Image(systemName: "p.square")
+                            .font(.largeTitle)
+                            .foregroundColor(.brown)
+                    }
                 }
                 
-                Button {
-                    filteredResults.removeAll()
-                    filterPerks(special: "Endurance")
-                } label: {
-                    Image(systemName: "e.square")
-                        .font(.largeTitle)
-                        .foregroundColor(.blue)
+                VStack {
+                    Text("\(pickedPerks.endurancePoints)")
+                    Button {
+                        filteredResults.removeAll()
+                        filterPerks(special: "Endurance")
+                    } label: {
+                        Image(systemName: "e.square")
+                            .font(.largeTitle)
+                            .foregroundColor(.blue)
+                    }
                 }
                 
-                Button {
-                    filteredResults.removeAll()
-                    filterPerks(special: "Charisma")
-                } label: {
-                    Image(systemName: "c.square")
-                        .font(.largeTitle)
-                        .foregroundColor(.orange)
+                VStack {
+                    Text("\(pickedPerks.charismaPoints)")
+                    Button {
+                        filteredResults.removeAll()
+                        filterPerks(special: "Charisma")
+                    } label: {
+                        Image(systemName: "c.square")
+                            .font(.largeTitle)
+                            .foregroundColor(.orange)
+                    }
                 }
                 
-                Button {
-                    filteredResults.removeAll()
-                    filterPerks(special: "Intelligence")
-                } label: {
-                    Image(systemName: "i.square")
-                        .font(.largeTitle)
-                        .foregroundColor(.gray)
+                VStack {
+                    Text("\(pickedPerks.intelligencePoints)")
+                    Button {
+                        filteredResults.removeAll()
+                        filterPerks(special: "Intelligence")
+                    } label: {
+                        Image(systemName: "i.square")
+                            .font(.largeTitle)
+                            .foregroundColor(.gray)
+                    }
                 }
                 
-                Button {
-                    filteredResults.removeAll()
-                    filterPerks(special: "Agility")
-                } label: {
-                    Image(systemName: "a.square")
-                        .font(.largeTitle)
-                        .foregroundColor(.orange.opacity(0.5))
+                VStack {
+                    Text("\(pickedPerks.agilityPoints)")
+                    Button {
+                        filteredResults.removeAll()
+                        filterPerks(special: "Agility")
+                    } label: {
+                        Image(systemName: "a.square")
+                            .font(.largeTitle)
+                            .foregroundColor(.orange.opacity(0.5))
+                    }
                 }
                 
-                Button {
-                    filteredResults.removeAll()
-                    filterPerks(special: "Luck")
-                } label: {
-                    Image(systemName: "l.square")
-                        .font(.largeTitle)
-                        .foregroundColor(.purple)
+                VStack {
+                    Text("\(pickedPerks.luckPoints)")
+                    Button {
+                        filteredResults.removeAll()
+                        filterPerks(special: "Luck")
+                    } label: {
+                        Image(systemName: "l.square")
+                            .font(.largeTitle)
+                            .foregroundColor(.purple)
+                    }
                 }
             }
             
