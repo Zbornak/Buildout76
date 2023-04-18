@@ -162,10 +162,10 @@ struct AllPerksView: View {
             .padding()
         }
         .sheet(isPresented: $legendaryPerksSheetShowing) {
-            LegendaryPerksView()
+            AllLegendaryPerksView()
         }
         .sheet(isPresented: $mutationsSheetShowing) {
-            MutationsView()
+            AllMutationsView()
         }
     }
     
