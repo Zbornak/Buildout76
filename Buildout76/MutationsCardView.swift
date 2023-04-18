@@ -19,7 +19,7 @@ struct MutationsCardView: View {
                 .foregroundColor(.gray)
             
             RoundedRectangle(cornerRadius: 20)
-                .stroke(lineWidth: 1)
+                .stroke(lineWidth: mutations.mutations.contains(mutation) ? 4 : 1)
                 
             VStack(alignment: .center) {
                 Text(mutation.name)
@@ -39,7 +39,7 @@ struct MutationsCardView: View {
                     Spacer()
                     Button("+") {
                         withAnimation {
-                            // add chosen mutation to mutations array
+                            mutations.add(mutation)
                         }
                     }
                     .buttonStyle(.borderedProminent)
