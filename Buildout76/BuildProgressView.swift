@@ -10,6 +10,7 @@ import SwiftUI
 struct BuildProgressView: View {
     @EnvironmentObject var pickedPerks: PickedPerks
     @EnvironmentObject var builds: Builds
+    @EnvironmentObject var mutations: Mutations
     
     @State private var buildName = ""
     @State var build: Build
@@ -170,5 +171,6 @@ struct BuildProgressView_Previews: PreviewProvider {
         BuildProgressView(build: Build.example)
             .environmentObject(PickedPerks())
             .environmentObject(Builds())
+            .environmentObject(Mutations())
     }
 }
