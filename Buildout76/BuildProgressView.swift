@@ -35,7 +35,7 @@ struct BuildProgressView: View {
                 }
                 
                 Section {
-//                    ForEach(mutations) { mutation in
+//                    ForEach(mutations, id: \.id) { mutation in
 //                        NavigationLink {
 //                                MutationsCardView(mutation: mutation)
 //                        } label: {
