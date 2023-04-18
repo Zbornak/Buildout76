@@ -35,7 +35,20 @@ struct BuildProgressView: View {
                 }
                 
                 Section {
-                    // list of mutations
+//                    ForEach(mutations) { mutation in
+//                        NavigationLink {
+//                                MutationsCardView(mutation: mutation)
+//                        } label: {
+//                            Text(mutation.name)
+//                        }
+//                        .swipeActions {
+//                            Button(role: .destructive) {
+//                                mutations.remove(mutation)
+//                            } label: {
+//                                Image(systemName: "trash")
+//                            }
+//                        }
+//                    }
                 } header: {
                     Text("mutations")
                 }
