@@ -138,12 +138,18 @@ struct AllPerksView: View {
                 Button {
                     legendaryPerksSheetShowing = true
                 } label: {
-                    Label("Legendary Perks", systemImage: "plus.circle")
+                    Label("Legendary", systemImage: "plus.circle")
                 }
                 
                 Spacer()
                 
                 Text("\(pickedPerks.totalPerkPoints)")
+                    .fontWeight(.bold)
+                    .padding(10)
+                    .overlay(
+                            RoundedRectangle(cornerRadius: 25)
+                                .stroke(.black, lineWidth: 1)
+                        )
                 
                 Spacer()
                 
