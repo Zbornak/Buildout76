@@ -29,6 +29,7 @@
 		19E7B77E29E84B6600A00469 /* BuildDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E7B77D29E84B6600A00469 /* BuildDetailView.swift */; };
 		19E7B78029E859F200A00469 /* PerkCardSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E7B77F29E859F200A00469 /* PerkCardSummaryView.swift */; };
 		19FC8F7429EE941100A94C9B /* legendaryPerks.json in Resources */ = {isa = PBXBuildFile; fileRef = 19FC8F7329EE941100A94C9B /* legendaryPerks.json */; };
+		19FC8F7629EE96EA00A94C9B /* mutations.json in Resources */ = {isa = PBXBuildFile; fileRef = 19FC8F7529EE96EA00A94C9B /* mutations.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		19E7B77D29E84B6600A00469 /* BuildDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildDetailView.swift; sourceTree = "<group>"; };
 		19E7B77F29E859F200A00469 /* PerkCardSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkCardSummaryView.swift; sourceTree = "<group>"; };
 		19FC8F7329EE941100A94C9B /* legendaryPerks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = legendaryPerks.json; sourceTree = "<group>"; };
+		19FC8F7529EE96EA00A94C9B /* mutations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mutations.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				19E156F129ED9B8200B5F36C /* Mutation.swift */,
 				19E63ACC29E6A9FB0065155B /* perks.json */,
 				19FC8F7329EE941100A94C9B /* legendaryPerks.json */,
+				19FC8F7529EE96EA00A94C9B /* mutations.json */,
 				19E63ACE29E6AA180065155B /* Bundle-Decodable.swift */,
 				19E63AC229E6A9BF0065155B /* Assets.xcassets */,
 				19E63AC429E6A9BF0065155B /* Preview Content */,
@@ -183,6 +186,7 @@
 				19E63AC329E6A9BF0065155B /* Assets.xcassets in Resources */,
 				19E63ACD29E6A9FB0065155B /* perks.json in Resources */,
 				19FC8F7429EE941100A94C9B /* legendaryPerks.json in Resources */,
+				19FC8F7629EE96EA00A94C9B /* mutations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
