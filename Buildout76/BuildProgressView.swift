@@ -52,7 +52,7 @@ struct BuildProgressView: View {
                             }
                             .swipeActions {
                                 Button(role: .destructive) {
-                                    pickedPerks.removePerk(perk)
+                                    pickedPerks.remove(perk)
                                 } label: {
                                     Image(systemName: "trash")
                                 }
