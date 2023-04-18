@@ -143,6 +143,10 @@ struct AllPerksView: View {
                 
                 Spacer()
                 
+                Text("\(pickedPerks.totalPerkPoints)")
+                
+                Spacer()
+                
                 Button {
                     mutationsSheetShowing = true
                 } label: {

@@ -10,10 +10,17 @@ import SwiftUI
 class PickedPerks: ObservableObject {
     @Published var perks: [PickedPerk]
     
-    let perkPointTotal = 56
+    var totalPerkPoints: Int {
+        var points = 56
+        for perk in perks {
+            points -= perk.perkLevel
+        }
+        
+        return points
+    }
     
     var strengthPoints: Int {
-        var points = 1
+        var points = 0
         for perk in perks {
             if perk.perk.specialCategory.contains("Strength") {
                 points += perk.perkLevel
@@ -24,7 +31,7 @@ class PickedPerks: ObservableObject {
     }
     
     var perceptionPoints: Int {
-        var points = 1
+        var points = 0
         for perk in perks {
             if perk.perk.specialCategory.contains("Perception") {
                 points += perk.perkLevel
@@ -35,7 +42,7 @@ class PickedPerks: ObservableObject {
     }
     
     var endurancePoints: Int {
-        var points = 1
+        var points = 0
         for perk in perks {
             if perk.perk.specialCategory.contains("Endurance") {
                 points += perk.perkLevel
@@ -46,7 +53,7 @@ class PickedPerks: ObservableObject {
     }
     
     var charismaPoints: Int {
-        var points = 1
+        var points = 0
         for perk in perks {
             if perk.perk.specialCategory.contains("Charisma") {
                 points += perk.perkLevel
@@ -57,7 +64,7 @@ class PickedPerks: ObservableObject {
     }
     
     var intelligencePoints: Int {
-        var points = 1
+        var points = 0
         for perk in perks {
             if perk.perk.specialCategory.contains("Intelligence") {
                 points += perk.perkLevel
@@ -68,7 +75,7 @@ class PickedPerks: ObservableObject {
     }
     
     var agilityPoints: Int {
-        var points = 1
+        var points = 0
         for perk in perks {
             if perk.perk.specialCategory.contains("Agility") {
                 points += perk.perkLevel
@@ -79,7 +86,7 @@ class PickedPerks: ObservableObject {
     }
     
     var luckPoints: Int {
-        var points = 1
+        var points = 0
         for perk in perks {
             if perk.perk.specialCategory.contains("Luck") {
                 points += perk.perkLevel
