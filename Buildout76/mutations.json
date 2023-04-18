@@ -5,7 +5,7 @@
         "descriptionNegative": "STR -3, END -3"
     },
     {
-        "name": "Egg Head",
+        "name": "Eagle Eyes",
         "descriptionPositive": "Critical damage +60%, PER +4",
         "descriptionNegative": "STR -4"
     },
@@ -82,7 +82,7 @@
     {
         "name": "Plague Walker",
         "descriptionPositive": "Poison aura scaling with your diseases",
-        "descriptionNegative": ""
+        "descriptionNegative": "Poison"
     },
     {
         "name": "Electrically Charged",
