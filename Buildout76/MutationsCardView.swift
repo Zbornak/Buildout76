@@ -8,13 +8,52 @@
 import SwiftUI
 
 struct MutationsCardView: View {
+    let mutation: Mutation
+    
+    @EnvironmentObject var mutations: Mutations
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            RoundedRectangle(cornerRadius: 20)
+                .fill()
+                .foregroundColor(.gray)
+            
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(lineWidth: 1)
+                
+            VStack(alignment: .center) {
+                Text(mutation.name)
+                    .fontWeight(.bold)
+                
+                Spacer()
+                
+                Text(mutation.descriptionPositive)
+                    .padding(.bottom)
+                
+                Text(mutation.descriptionNegative)
+                
+                
+                Spacer()
+                
+                HStack {
+                    Spacer()
+                    Button("+") {
+                        withAnimation {
+                            // add chosen mutation to mutations array
+                        }
+                    }
+                    .buttonStyle(.borderedProminent)
+                }
+            }
+            .padding()
+        }
+        .shadow(radius: 20)
     }
 }
 
 struct MutationsCardView_Previews: PreviewProvider {
     static var previews: some View {
-        MutationsCardView()
+        MutationsCardView(mutation: Mutation.example)
+            .environmentObject(Mutations())
     }
 }
