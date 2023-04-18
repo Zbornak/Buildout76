@@ -165,7 +165,7 @@ struct AllPerksView: View {
             //AllLegendaryPerksView()
         }
         .sheet(isPresented: $mutationsSheetShowing) {
-            //AllMutationsView()
+            AllMutationsView()
         }
     }
     

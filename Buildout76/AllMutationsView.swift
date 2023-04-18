@@ -14,8 +14,6 @@ struct AllMutationsView: View {
     
     let columns = [GridItem(.adaptive(minimum: 150))]
     
-    let mutation: Mutation
-    
     var body: some View {
         VStack {
             ScrollView {
@@ -32,7 +30,7 @@ struct AllMutationsView: View {
 
 struct AllMutationsView_Previews: PreviewProvider {
     static var previews: some View {
-        AllMutationsView(mutation: Mutation.example)
+        AllMutationsView()
             .environmentObject(Mutations())
     }
 }
