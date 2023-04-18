@@ -9,20 +9,32 @@ import SwiftUI
 
 struct AllMutationsView: View {
     @EnvironmentObject var mutations: Mutations
+    @Environment(\.dismiss) var dismiss
     
     let allMutations: [Mutation] = Bundle.main.decode("mutations.json")
     
     let columns = [GridItem(.adaptive(minimum: 150))]
     
     var body: some View {
-        VStack {
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(allMutations, id: \.id) { mutation in
-                        MutationsCardView(mutation: mutation)
+        NavigationView {
+            VStack {
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 20) {
+                        ForEach(allMutations, id: \.id) { mutation in
+                            MutationsCardView(mutation: mutation)
+                        }
                     }
+                    .padding()
                 }
-                .padding()
+            }
+            .toolbar {
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "multiply")
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
+                }
             }
         }
     }
