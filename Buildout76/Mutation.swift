@@ -13,5 +13,7 @@ struct Mutation: Codable, Identifiable, Equatable {
     let descriptionPositive: String
     let descriptionNegative: String
     
+    private enum CodingKeys : String, CodingKey { case name, descriptionPositive, descriptionNegative }
+    
     static let example = Mutation(name: "Egg Head", descriptionPositive: "INT +6", descriptionNegative: "STR -3, END -3")
 }
