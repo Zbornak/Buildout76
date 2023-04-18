@@ -35,7 +35,7 @@ class Mutations: ObservableObject {
         }
     }
     
-    func removePerk(_ mutation: Mutation) {
+    func remove(_ mutation: Mutation) {
         objectWillChange.send()
         var indexes = IndexSet()
         if let index = mutations.firstIndex(of: mutation) {

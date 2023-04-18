@@ -35,7 +35,7 @@ class LegendaryPerks: ObservableObject {
         }
     }
     
-    func removePerk(_ legendaryPerk: LegendaryPerk) {
+    func remove(_ legendaryPerk: LegendaryPerk) {
         objectWillChange.send()
         var indexes = IndexSet()
         if let index = legendaryPerks.firstIndex(of: legendaryPerk) {
