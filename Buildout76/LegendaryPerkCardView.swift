@@ -20,7 +20,7 @@ struct LegendaryPerkCardView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
                 .fill()
-                .foregroundColor(.gray)
+                .foregroundColor(.blue.opacity(0.3))
             
             RoundedRectangle(cornerRadius: 20)
                 .stroke(lineWidth: pickedLegendaryPerks.pickedLegendaryPerks.contains(where: { $0.perk.name == legendaryPerk.name }) ? 4 : 1)
