@@ -126,7 +126,7 @@ struct BuildProgressView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        let build = Build(name: buildName, perks: pickedPerks.perks, mutations: mutations.mutations)
+                        let build = Build(name: buildName, perks: pickedPerks.perks, mutations: mutations.mutations, legendaryPerks: pickedLegendaryPerks.pickedLegendaryPerks)
                         pickedPerks.objectWillChange.send()
                         builds.objectWillChange.send()
                         mutations.objectWillChange.send()

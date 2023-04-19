@@ -23,6 +23,36 @@ struct BuildDetailView: View {
                 .fontWeight(.bold)
                 .padding()
             
+//            LazyVGrid(columns: columns, spacing: 20) {
+//                ForEach(filteredBuildPerks(filter), id: \.id) { perk in
+//                    ZStack(alignment: .bottomTrailing) {
+//                        PerkCardSummaryView(perk: perk.perk)
+//                            .frame(height: 250)
+//                        
+//                        VStack {
+//                            if perk.perkLevel == 1 {
+//                                Text(perk.perk.description1)
+//                                    .padding()
+//                            } else if perk.perkLevel == 2 {
+//                                Text(perk.perk.description2)
+//                                    .padding()
+//                            } else if perk.perkLevel == 3 {
+//                                Text(perk.perk.description3)
+//                                    .padding()
+//                            } else {
+//                                Text(perk.perk.description4)
+//                                    .padding()
+//                            }
+//                            
+//                            
+//                            Text("\(perk.perkLevelStarDisplay())\(perk.remainingStars())")
+//                                .padding(.bottom)
+//                        }
+//                    }
+//                }
+//            }
+//            .padding(.horizontal)
+            
             Text("Mutations")
                 .font(.title2)
                 .fontWeight(.bold)
