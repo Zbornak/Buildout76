@@ -119,12 +119,15 @@ struct BuildProgressView: View {
                         pickedPerks.objectWillChange.send()
                         builds.objectWillChange.send()
                         mutations.objectWillChange.send()
+                        pickedLegendaryPerks.objectWillChange.send()
                         builds.add(build)
                         pickedPerks.perks.removeAll()
                         mutations.mutations.removeAll()
+                        pickedLegendaryPerks.pickedLegendaryPerks.removeAll()
                         builds.save()
                         pickedPerks.save()
                         mutations.save()
+                        pickedLegendaryPerks.save()
                         buildName = ""
                         buildSaved = true
                     } label: {
@@ -144,6 +147,9 @@ struct BuildProgressView: View {
                     mutations.objectWillChange.send()
                     mutations.mutations.removeAll()
                     mutations.save()
+                    pickedLegendaryPerks.objectWillChange.send()
+                    pickedLegendaryPerks.pickedLegendaryPerks.removeAll()
+                    pickedLegendaryPerks.save()
                 }
             }
         }
