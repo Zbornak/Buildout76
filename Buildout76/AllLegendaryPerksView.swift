@@ -31,7 +31,7 @@ struct AllLegendaryPerksView: View {
                 Button {
                     dismiss()
                 } label: {
-                    Image(systemName: "multiply")
+                    Image(systemName: "chevron.down")
                         .fontWeight(.bold)
                         .foregroundColor(.black)
                 }
