@@ -120,6 +120,9 @@ struct BuildProgressView: View {
                     pickedPerks.objectWillChange.send()
                     pickedPerks.perks.removeAll()
                     pickedPerks.save()
+                    mutations.objectWillChange.send()
+                    mutations.mutations.removeAll()
+                    mutations.save()
                 }
             }
         }
