@@ -32,7 +32,7 @@ struct BuildProgressView: View {
                 Section {
                     ForEach(pickedLegendaryPerks.pickedLegendaryPerks, id: \.id) { pickedLegendaryPerk in
                         NavigationLink {
-                            LegendaryPerkCardView(legendaryPerk: pickedLegendaryPerk.perk)
+                            LegendaryPerkCardSummaryView(legendaryPerk: pickedLegendaryPerk.perk)
                         } label: {
                             HStack {
                             Text(pickedLegendaryPerk.perk.name)
