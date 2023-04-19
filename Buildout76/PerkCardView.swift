@@ -39,7 +39,7 @@ struct PerkCardView: View {
                 .foregroundColor(setPerkCardColor)
             
             RoundedRectangle(cornerRadius: 20)
-                .stroke(lineWidth: pickedPerks.perks.contains(where: { $0.perk.name == perk.name}) ? 4 : 1)
+                .stroke(lineWidth: pickedPerks.perks.contains(where: { $0.perk.name == perk.name }) ? 4 : 1)
                 
             VStack(alignment: .center) {
                 Stepper("Lvl \(perkCardLevel)", value: $perkCardLevel, in: 1...perk.maxLevel)

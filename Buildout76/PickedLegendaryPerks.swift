@@ -8,41 +8,41 @@
 import SwiftUI
 
 class PickedLegendaryPerks: ObservableObject {
-    @Published var legendaryPerks: [LegendaryPerk]
+    @Published var pickedLegendaryPerks: [PickedLegendaryPerk]
     
-    private let saveKey = "LegendaryPerks"
+    private let saveKey = "PickedLegendaryPerks"
     
     init() {
         if let data = UserDefaults.standard.data(forKey: saveKey) {
-            if let decodedData = try? JSONDecoder().decode([LegendaryPerk].self, from: data) {
-                legendaryPerks = decodedData
+            if let decodedData = try? JSONDecoder().decode([PickedLegendaryPerk].self, from: data) {
+                pickedLegendaryPerks = decodedData
                 return
             }
         }
         
-        legendaryPerks = []
+        pickedLegendaryPerks = []
     }
     
-    func add(_ legendaryPerk: LegendaryPerk) {
+    func add(_ pickedLegendaryPerk: PickedLegendaryPerk) {
         objectWillChange.send()
-        legendaryPerks.append(legendaryPerk)
+        pickedLegendaryPerks.append(pickedLegendaryPerk)
         save()
     }
     
     func save() {
-        if let encodedData = try? JSONEncoder().encode(legendaryPerks) {
+        if let encodedData = try? JSONEncoder().encode(pickedLegendaryPerks) {
             UserDefaults.standard.set(encodedData, forKey: saveKey)
         }
     }
     
-    func remove(_ legendaryPerk: LegendaryPerk) {
+    func remove(_ pickedLegendaryPerk: PickedLegendaryPerk) {
         objectWillChange.send()
         var indexes = IndexSet()
-        if let index = legendaryPerks.firstIndex(of: legendaryPerk) {
+        if let index = pickedLegendaryPerks.firstIndex(of: pickedLegendaryPerk) {
             indexes.insert(index)
         }
         
-        legendaryPerks.remove(atOffsets: indexes)
+        pickedLegendaryPerks.remove(atOffsets: indexes)
         save()
     }
 }

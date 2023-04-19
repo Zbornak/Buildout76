@@ -23,7 +23,7 @@ struct LegendaryPerkCardView: View {
                 .foregroundColor(.gray)
             
             RoundedRectangle(cornerRadius: 20)
-                .stroke(lineWidth: 1)
+                .stroke(lineWidth: pickedLegendaryPerks.pickedLegendaryPerks.contains(where: { $0.perk.name == legendaryPerk.name }) ? 4 : 1)
                 
             VStack(alignment: .center) {
                 Stepper("Lvl \(legendaryPerkCardLevel)", value: $legendaryPerkCardLevel, in: 1...legendaryPerk.maxLevel)
@@ -49,6 +49,11 @@ struct LegendaryPerkCardView: View {
                     Button("+") {
                         withAnimation {
                             // add chosen legendary perk to legendaryperks array
+                            let newPickedLegendaryPerk = PickedLegendaryPerk(perk: legendaryPerk, perkLevel: legendaryPerkCardLevel)
+                                
+                            if pickedLegendaryPerks.pickedLegendaryPerks.firstIndex(where: { $0.perk.name == legendaryPerk.name }) == nil {
+                                pickedLegendaryPerks.add(newPickedLegendaryPerk)
+                            }
                         }
                     }
                     .buttonStyle(.borderedProminent)
