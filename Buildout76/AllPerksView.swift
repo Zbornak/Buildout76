@@ -10,6 +10,8 @@ import SwiftUI
 
 struct AllPerksView: View {
     @EnvironmentObject var pickedPerks: PickedPerks
+    @EnvironmentObject var pickedLegendaryPerks: PickedLegendaryPerks
+    @EnvironmentObject var mutations: Mutations
     
     // load array of perk cards from Json file
     let perks: [Perk] = Bundle.main.decode("perks.json")
@@ -187,5 +189,7 @@ struct AllPerksView_Previews: PreviewProvider {
     static var previews: some View {
         AllPerksView(build: Build.example)
             .environmentObject(PickedPerks())
+            .environmentObject(PickedLegendaryPerks())
+            .environmentObject(Mutations())
     }
 }
