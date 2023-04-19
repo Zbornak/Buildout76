@@ -11,6 +11,7 @@ struct BuildProgressView: View {
     @EnvironmentObject var pickedPerks: PickedPerks
     @EnvironmentObject var builds: Builds
     @EnvironmentObject var mutations: Mutations
+    @EnvironmentObject var pickedLegendaryPerks: PickedLegendaryPerks
     
     @State private var buildName = ""
     @State var build: Build
@@ -29,7 +30,24 @@ struct BuildProgressView: View {
                     .padding(.horizontal)
                 
                 Section {
-                    // list of legendary perks
+                    ForEach(pickedLegendaryPerks.pickedLegendaryPerks, id: \.id) { pickedLegendaryPerk in
+                        NavigationLink {
+                            LegendaryPerkCardView(legendaryPerk: pickedLegendaryPerk.perk)
+                        } label: {
+                            HStack {
+                            Text(pickedLegendaryPerk.perk.name)
+                            Text("\(pickedLegendaryPerk.perkLevelStarDisplay())\(pickedLegendaryPerk.remainingStars())")
+                                    .padding(.bottom)
+                            }
+                        }
+                        .swipeActions {
+                            Button(role: .destructive) {
+                                pickedLegendaryPerks.remove(pickedLegendaryPerk)
+                            } label: {
+                                Image(systemName: "trash")
+                            }
+                        }
+                    }
                 } header: {
                     Text("legendary")
                 }
@@ -191,5 +209,6 @@ struct BuildProgressView_Previews: PreviewProvider {
             .environmentObject(PickedPerks())
             .environmentObject(Builds())
             .environmentObject(Mutations())
+            .environmentObject(PickedLegendaryPerks())
     }
 }
