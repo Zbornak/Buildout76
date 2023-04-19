@@ -31,7 +31,7 @@
 		19E7B78029E859F200A00469 /* PerkCardSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E7B77F29E859F200A00469 /* PerkCardSummaryView.swift */; };
 		19FC8F7429EE941100A94C9B /* legendaryPerks.json in Resources */ = {isa = PBXBuildFile; fileRef = 19FC8F7329EE941100A94C9B /* legendaryPerks.json */; };
 		19FC8F7629EE96EA00A94C9B /* mutations.json in Resources */ = {isa = PBXBuildFile; fileRef = 19FC8F7529EE96EA00A94C9B /* mutations.json */; };
-		19FC8F7829EEA6D200A94C9B /* LegendaryPerks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC8F7729EEA6D200A94C9B /* LegendaryPerks.swift */; };
+		19FC8F7829EEA6D200A94C9B /* PickedLegendaryPerks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC8F7729EEA6D200A94C9B /* PickedLegendaryPerks.swift */; };
 		19FC8F7A29EEA6F600A94C9B /* Mutations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC8F7929EEA6F600A94C9B /* Mutations.swift */; };
 		19FC8F7C29EEBB7500A94C9B /* LegendaryPerkCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC8F7B29EEBB7500A94C9B /* LegendaryPerkCardView.swift */; };
 		19FC8F7E29EEBBA200A94C9B /* MutationsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC8F7D29EEBBA200A94C9B /* MutationsCardView.swift */; };
@@ -63,7 +63,7 @@
 		19E7B77F29E859F200A00469 /* PerkCardSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkCardSummaryView.swift; sourceTree = "<group>"; };
 		19FC8F7329EE941100A94C9B /* legendaryPerks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = legendaryPerks.json; sourceTree = "<group>"; };
 		19FC8F7529EE96EA00A94C9B /* mutations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mutations.json; sourceTree = "<group>"; };
-		19FC8F7729EEA6D200A94C9B /* LegendaryPerks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendaryPerks.swift; sourceTree = "<group>"; };
+		19FC8F7729EEA6D200A94C9B /* PickedLegendaryPerks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickedLegendaryPerks.swift; sourceTree = "<group>"; };
 		19FC8F7929EEA6F600A94C9B /* Mutations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutations.swift; sourceTree = "<group>"; };
 		19FC8F7B29EEBB7500A94C9B /* LegendaryPerkCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendaryPerkCardView.swift; sourceTree = "<group>"; };
 		19FC8F7D29EEBBA200A94C9B /* MutationsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutationsCardView.swift; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 				19E63AD629E6AE2A0065155B /* Builds.swift */,
 				19E156EF29ED98E000B5F36C /* LegendaryPerk.swift */,
 				1975BDFB29EFF4A50079A938 /* PickedLegendaryPerk.swift */,
-				19FC8F7729EEA6D200A94C9B /* LegendaryPerks.swift */,
+				19FC8F7729EEA6D200A94C9B /* PickedLegendaryPerks.swift */,
 				19E156F129ED9B8200B5F36C /* Mutation.swift */,
 				19FC8F7929EEA6F600A94C9B /* Mutations.swift */,
 				19E63ACC29E6A9FB0065155B /* perks.json */,
@@ -212,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19FC8F7829EEA6D200A94C9B /* LegendaryPerks.swift in Sources */,
+				19FC8F7829EEA6D200A94C9B /* PickedLegendaryPerks.swift in Sources */,
 				19E63AC129E6A9BE0065155B /* ContentView.swift in Sources */,
 				19E156EC29ED4DCE00B5F36C /* AllLegendaryPerksView.swift in Sources */,
 				19E7B77E29E84B6600A00469 /* BuildDetailView.swift in Sources */,

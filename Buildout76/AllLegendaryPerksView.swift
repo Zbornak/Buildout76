@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AllLegendaryPerksView: View {
-    @EnvironmentObject var legendaryPerks: LegendaryPerks
+    @EnvironmentObject var pickedLegendaryPerks: PickedLegendaryPerks
     @Environment(\.dismiss) var dismiss
     
     let allLegendaryPerks : [LegendaryPerk] = Bundle.main.decode("legendaryPerks.json")
@@ -43,6 +43,6 @@ struct AllLegendaryPerksView: View {
 struct AllLegendaryPerksView_Previews: PreviewProvider {
     static var previews: some View {
         AllLegendaryPerksView()
-            .environmentObject(LegendaryPerks())
+            .environmentObject(PickedLegendaryPerks())
     }
 }

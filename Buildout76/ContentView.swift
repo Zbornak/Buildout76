@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var builds = Builds()
     @StateObject var pickedPerks = PickedPerks()
-    @StateObject var legendaryPerks = LegendaryPerks()
+    @StateObject var pickedLegendaryPerks = PickedLegendaryPerks()
     @StateObject var mutations = Mutations()
     
     var body: some View {
@@ -32,7 +32,7 @@ struct ContentView: View {
         }
         .environmentObject(builds)
         .environmentObject(pickedPerks)
-        .environmentObject(legendaryPerks)
+        .environmentObject(pickedLegendaryPerks)
         .environmentObject(mutations)
     }
 }

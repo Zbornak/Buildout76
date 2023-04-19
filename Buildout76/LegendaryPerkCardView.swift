@@ -12,7 +12,7 @@ struct LegendaryPerkCardView: View {
     
     @State private var legendaryPerkCardLevel = 1
     
-    @EnvironmentObject var legendaryPerks: LegendaryPerks
+    @EnvironmentObject var pickedLegendaryPerks: PickedLegendaryPerks
     
     
     
@@ -63,6 +63,6 @@ struct LegendaryPerkCardView: View {
 struct LegendaryPerkCardView_Previews: PreviewProvider {
     static var previews: some View {
         LegendaryPerkCardView(legendaryPerk: LegendaryPerk.example)
-            .environmentObject(LegendaryPerks())
+            .environmentObject(PickedLegendaryPerks())
     }
 }

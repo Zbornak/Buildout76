@@ -1,5 +1,5 @@
 //
-//  LegendaryPerks.swift
+//  PickedLegendaryPerks.swift
 //  Buildout76
 //
 //  Created by Mark Strijdom on 18/04/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class LegendaryPerks: ObservableObject {
+class PickedLegendaryPerks: ObservableObject {
     @Published var legendaryPerks: [LegendaryPerk]
     
     private let saveKey = "LegendaryPerks"
