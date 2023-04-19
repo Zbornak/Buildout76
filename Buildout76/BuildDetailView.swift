@@ -19,15 +19,30 @@ struct BuildDetailView: View {
     var body: some View {
         ScrollView {
             Text("Legendary")
+                .font(.title2)
                 .fontWeight(.bold)
                 .padding()
             
             Text("Mutations")
+                .font(.title2)
                 .fontWeight(.bold)
                 .padding()
             
+            ForEach(build.mutations, id: \.id) { mutation in
+                VStack {
+                    Text("⚛︎ \(mutation.name)")
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Text(" (\(mutation.descriptionPositive), \(mutation.descriptionNegative))")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .padding()
+            }
+            
+            
             ForEach(FilterType.allCases, id: \.self) { filter in
                 Text(title(filter))
+                    .font(.title2)
                     .fontWeight(.bold)
                     .padding()
                 
@@ -35,7 +50,7 @@ struct BuildDetailView: View {
                     ForEach(filteredBuildPerks(filter), id: \.id) { perk in
                         ZStack(alignment: .bottomTrailing) {
                             PerkCardSummaryView(perk: perk.perk)
-                                .frame(height: 230)
+                                .frame(height: 250)
                             
                             VStack {
                                 if perk.perkLevel == 1 {
