@@ -10,6 +10,7 @@ import SwiftUI
 struct LegendaryPerk: Codable, Identifiable, Equatable {
     var id = UUID()
     let name: String
+    var maxLevel = 4
     let description1: String
     let description2: String
     let description3: String

@@ -26,7 +26,7 @@ struct LegendaryPerkCardView: View {
                 .stroke(lineWidth: 1)
                 
             VStack(alignment: .center) {
-                Stepper("Lvl \(legendaryPerkCardLevel)", value: $legendaryPerkCardLevel, in: 1...4)
+                Stepper("Lvl \(legendaryPerkCardLevel)", value: $legendaryPerkCardLevel, in: 1...legendaryPerk.maxLevel)
                 Text(legendaryPerk.name)
                     .fontWeight(.bold)
                 
