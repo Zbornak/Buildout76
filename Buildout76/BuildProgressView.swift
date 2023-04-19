@@ -33,6 +33,16 @@ struct BuildProgressView: View {
                     ForEach(pickedLegendaryPerks.pickedLegendaryPerks, id: \.id) { pickedLegendaryPerk in
                         NavigationLink {
                             LegendaryPerkCardSummaryView(legendaryPerk: pickedLegendaryPerk.perk)
+                            
+                            VStack {
+                                selectLegendaryDescription(of: pickedLegendaryPerk)
+                                    .padding()
+                                
+                                Text("\(pickedLegendaryPerk.perkLevelStarDisplay())\(pickedLegendaryPerk.remainingStars())")
+                                    .padding(.bottom)
+                            }
+                            .padding()
+                            
                         } label: {
                             HStack {
                             Text(pickedLegendaryPerk.perk.name)
@@ -167,6 +177,19 @@ struct BuildProgressView: View {
             return Text(perk.perk.description4 ?? "Unknown description.")
         default:
             return Text(perk.perk.description5 ?? "Unknown description.")
+        }
+    }
+    
+    func selectLegendaryDescription(of legendaryPerk: PickedLegendaryPerk) -> Text {
+        switch legendaryPerk.perkLevel {
+        case 1:
+            return Text(legendaryPerk.perk.description1)
+        case 2:
+            return Text(legendaryPerk.perk.description2)
+        case 3:
+            return Text(legendaryPerk.perk.description3)
+        default:
+            return Text(legendaryPerk.perk.description4)
         }
     }
     
