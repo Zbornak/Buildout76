@@ -19,6 +19,5 @@ struct Perk: Codable, Identifiable, Equatable {
     let description4: String?
     let description5: String?
     
-    static let allPerks: [Perk] = Bundle.main.decode("perks.json")
-    static let example = allPerks[0]
+    static let example = Perk(id: "super-dingus", name: "Super Dingus", specialCategory: "Strength", levelAvailable: 1, maxLevel: 3, description1: "Your dingus is now 10% better.", description2: "Your dingus is now 20% better.", description3: "Your dingus is now 30% better.", description4: "Your dingus is now 40% better.", description5: "Your dingus is now 50% better.")
 }
