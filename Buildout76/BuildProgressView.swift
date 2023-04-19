@@ -32,17 +32,18 @@ struct BuildProgressView: View {
                 Section {
                     ForEach(pickedLegendaryPerks.pickedLegendaryPerks, id: \.id) { pickedLegendaryPerk in
                         NavigationLink {
-                            LegendaryPerkCardSummaryView(legendaryPerk: pickedLegendaryPerk.perk)
-                            
-                            VStack {
-                                selectLegendaryDescription(of: pickedLegendaryPerk)
-                                    .padding()
+                            ZStack {
+                                LegendaryPerkCardSummaryView(legendaryPerk: pickedLegendaryPerk.perk)
                                 
-                                Text("\(pickedLegendaryPerk.perkLevelStarDisplay())\(pickedLegendaryPerk.remainingStars())")
-                                    .padding(.bottom)
+                                VStack {
+                                    selectLegendaryDescription(of: pickedLegendaryPerk)
+                                        .padding()
+                                    
+                                    Text("\(pickedLegendaryPerk.perkLevelStarDisplay())\(pickedLegendaryPerk.remainingStars())")
+                                        .padding(.bottom)
+                                }
+                                .padding()
                             }
-                            .padding()
-                            
                         } label: {
                             HStack {
                             Text(pickedLegendaryPerk.perk.name)
