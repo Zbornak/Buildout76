@@ -23,35 +23,34 @@ struct BuildDetailView: View {
                 .fontWeight(.bold)
                 .padding()
             
-//            LazyVGrid(columns: columns, spacing: 20) {
-//                ForEach(filteredBuildPerks(filter), id: \.id) { perk in
-//                    ZStack(alignment: .bottomTrailing) {
-//                        PerkCardSummaryView(perk: perk.perk)
-//                            .frame(height: 250)
-//                        
-//                        VStack {
-//                            if perk.perkLevel == 1 {
-//                                Text(perk.perk.description1)
-//                                    .padding()
-//                            } else if perk.perkLevel == 2 {
-//                                Text(perk.perk.description2)
-//                                    .padding()
-//                            } else if perk.perkLevel == 3 {
-//                                Text(perk.perk.description3)
-//                                    .padding()
-//                            } else {
-//                                Text(perk.perk.description4)
-//                                    .padding()
-//                            }
-//                            
-//                            
-//                            Text("\(perk.perkLevelStarDisplay())\(perk.remainingStars())")
-//                                .padding(.bottom)
-//                        }
-//                    }
-//                }
-//            }
-//            .padding(.horizontal)
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(build.legendaryPerks, id: \.id) { legendaryPerk in
+                    ZStack(alignment: .bottomTrailing) {
+                        LegendaryPerkCardSummaryView(legendaryPerk: legendaryPerk.perk)
+                            .frame(height: 250)
+
+                        VStack {
+                            if legendaryPerk.perkLevel == 1 {
+                                Text(legendaryPerk.perk.description1)
+                                    .padding()
+                            } else if legendaryPerk.perkLevel == 2 {
+                                Text(legendaryPerk.perk.description2)
+                                    .padding()
+                            } else if legendaryPerk.perkLevel == 3 {
+                                Text(legendaryPerk.perk.description3)
+                                    .padding()
+                            } else {
+                                Text(legendaryPerk.perk.description4)
+                                    .padding()
+                            }
+
+                            Text("\(legendaryPerk.perkLevelStarDisplay())\(legendaryPerk.remainingStars())")
+                                .padding(.bottom)
+                        }
+                    }
+                }
+            }
+            .padding(.horizontal)
             
             Text("Mutations")
                 .font(.title2)
@@ -63,7 +62,7 @@ struct BuildDetailView: View {
                     Text("⚛︎ \(mutation.name)")
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    Text(" (\(mutation.descriptionPositive), \(mutation.descriptionNegative))")
+                    Text("\(mutation.descriptionPositive), \(mutation.descriptionNegative).")
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding()
