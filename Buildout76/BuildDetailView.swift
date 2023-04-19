@@ -18,6 +18,14 @@ struct BuildDetailView: View {
     
     var body: some View {
         ScrollView {
+            Text("Legendary")
+                .fontWeight(.bold)
+                .padding()
+            
+            Text("Mutations")
+                .fontWeight(.bold)
+                .padding()
+            
             ForEach(FilterType.allCases, id: \.self) { filter in
                 Text(title(filter))
                     .fontWeight(.bold)
