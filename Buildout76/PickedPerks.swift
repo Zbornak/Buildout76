@@ -19,6 +19,69 @@ class PickedPerks: ObservableObject {
         return points
     }
     
+    var totalStrengthPerkPoints: Int {
+        var points = 15
+        for perk in perks {
+            points -= perk.perkLevel
+        }
+        
+        return points
+    }
+    
+    var totalPerceptionPerkPoints: Int {
+        var points = 15
+        for perk in perks {
+            points -= perk.perkLevel
+        }
+        
+        return points
+    }
+    
+    var totalEndurancePerkPoints: Int {
+        var points = 15
+        for perk in perks {
+            points -= perk.perkLevel
+        }
+        
+        return points
+    }
+    
+    var totalCharismaPerkPoints: Int {
+        var points = 15
+        for perk in perks {
+            points -= perk.perkLevel
+        }
+        
+        return points
+    }
+    
+    var totalIntelligencePerkPoints: Int {
+        var points = 15
+        for perk in perks {
+            points -= perk.perkLevel
+        }
+        
+        return points
+    }
+    
+    var totalAgilityPerkPoints: Int {
+        var points = 15
+        for perk in perks {
+            points -= perk.perkLevel
+        }
+        
+        return points
+    }
+    
+    var totalLuckPerkPoints: Int {
+        var points = 15
+        for perk in perks {
+            points -= perk.perkLevel
+        }
+        
+        return points
+    }
+    
     var strengthPoints: Int {
         var points = 0
         for perk in perks {
