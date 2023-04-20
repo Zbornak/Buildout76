@@ -72,33 +72,35 @@ struct PerkCardView: View {
                             let newPickedPerk = PickedPerk(perk: perk, perkLevel: perkCardLevel)
                                 
                             if pickedPerks.perks.firstIndex(where: { $0.perk.name == perk.name }) == nil {
-                                switch newPickedPerk.perk.specialCategory {
-                                case "Strength":
-                                    if pickedPerks.totalPerkPoints >= perkCardLevel && pickedPerks.totalStrengthPerkPoints >= perkCardLevel {
-                                    pickedPerks.add(newPickedPerk)
+                                if pickedPerks.totalPerkPoints >= perkCardLevel {
+                                    switch newPickedPerk.perk.specialCategory {
+                                    case "Strength":
+                                        if pickedPerks.totalStrengthPerkPoints >= perkCardLevel {
+                                            pickedPerks.add(newPickedPerk)
+                                        }
+                                    case "Perception":
+                                        if pickedPerks.totalPerceptionPerkPoints >= perkCardLevel {
+                                            pickedPerks.add(newPickedPerk)
+                                        }
+                                    case "Endurance":
+                                        if pickedPerks.totalEndurancePerkPoints >= perkCardLevel {
+                                            pickedPerks.add(newPickedPerk)
+                                        }
+                                    case "Charisma":
+                                        if pickedPerks.totalCharismaPerkPoints >= perkCardLevel {
+                                            pickedPerks.add(newPickedPerk)
+                                        }
+                                    case "Intelligence":
+                                        if pickedPerks.totalIntelligencePerkPoints >= perkCardLevel {
+                                            pickedPerks.add(newPickedPerk)
+                                        }
+                                    case "Agility":
+                                        if pickedPerks.totalLuckPerkPoints >= perkCardLevel {
+                                            pickedPerks.add(newPickedPerk)
+                                        }
+                                    default:
+                                        pickedPerks.add(newPickedPerk)
                                     }
-                                case "Perception":
-                                    if pickedPerks.totalPerkPoints >= perkCardLevel && pickedPerks.totalPerceptionPerkPoints >= perkCardLevel {
-                                    pickedPerks.add(newPickedPerk)
-                                    }
-                                case "Endurance":
-                                    if pickedPerks.totalPerkPoints >= perkCardLevel && pickedPerks.totalEndurancePerkPoints >= perkCardLevel {
-                                    pickedPerks.add(newPickedPerk)
-                                    }
-                                case "Charisma":
-                                    if pickedPerks.totalPerkPoints >= perkCardLevel && pickedPerks.totalCharismaPerkPoints >= perkCardLevel {
-                                    pickedPerks.add(newPickedPerk)
-                                    }
-                                case "Intelligence":
-                                    if pickedPerks.totalPerkPoints >= perkCardLevel && pickedPerks.totalIntelligencePerkPoints >= perkCardLevel {
-                                    pickedPerks.add(newPickedPerk)
-                                    }
-                                case "Agility":
-                                    if pickedPerks.totalPerkPoints >= perkCardLevel && pickedPerks.totalLuckPerkPoints >= perkCardLevel {
-                                    pickedPerks.add(newPickedPerk)
-                                    }
-                                default:
-                                    pickedPerks.add(newPickedPerk)
                                 }
                             }
                         }
