@@ -29,6 +29,11 @@ struct ContentView: View {
                 .tabItem {
                     Label("In Progress", systemImage: "gearshape.2")
                 }
+            
+            EquipmentMainView()
+                .tabItem {
+                    Label("Equipment", systemImage: "backpack.circle.fill")
+                }
         }
         .environmentObject(builds)
         .environmentObject(pickedPerks)
