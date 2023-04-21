@@ -18,6 +18,12 @@ struct SavedEquipmentView: View {
                         .fontWeight(.bold)
                     Text("🔫")
                         .font(.largeTitle)
+                    Text(equipment.selectedRangedPrefix1)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Text(equipment.selectedRangedPrefix2)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Text(equipment.selectedRangedPrefix3)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(.horizontal)
                 
@@ -26,6 +32,12 @@ struct SavedEquipmentView: View {
                         .fontWeight(.bold)
                     Text("🦴")
                         .font(.largeTitle)
+                    Text(equipment.selectedMeleePrefix1)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Text(equipment.selectedMeleePrefix2)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Text(equipment.selectedMeleePrefix3)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(.horizontal)
             }
@@ -35,30 +47,25 @@ struct SavedEquipmentView: View {
                     .fontWeight(.bold)
                 Text("👙")
                     .font(.largeTitle)
+                Text(equipment.selectedUnderarmor)
                     .padding(.bottom)
                 
                 Text("Armor")
                     .fontWeight(.bold)
                 Text("👨")
                     .font(.largeTitle)
-                
-                HStack {
-                    Text("💪")
-                        .font(.largeTitle)
-                    Text("👕")
-                        .font(.system(size: 50))
-                    Text("💪")
-                            .font(.largeTitle)
-                            .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                }
-                HStack {
-                    Text("🦵")
-                        .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                        .font(.system(size: 50))
-                    
-                    Text("🦵")
-                        .font(.system(size: 50))
-                }
+                Text("💪")
+                    .font(.largeTitle)
+                Text("👕")
+                    .font(.system(size: 50))
+                Text("💪")
+                    .font(.largeTitle)
+                    .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+                Text("🦵")
+                    .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+                    .font(.system(size: 50))
+                Text("🦵")
+                    .font(.system(size: 50))
             }
             .padding()
             
