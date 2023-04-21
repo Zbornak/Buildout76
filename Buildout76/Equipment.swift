@@ -8,24 +8,23 @@
 import SwiftUI
 
 class Equipment: ObservableObject {
-    @Published var rangedWeapons: [String]
-    @Published var underarmors: [String]
-    @Published var meleeWeapons: [String]
+    let rangedWeapons: [String]
+    let underarmors: [String]
+    let meleeWeapons: [String]
+    
+    @Published var selectedRangedWeapon: String
+    @Published var selectedUnderarmor: String
+    @Published var selectedMeleeWeapon: String
     
     private let saveKey = "Equipment"
     
     init() {
-        if let data = UserDefaults.standard.data(forKey: saveKey) {
-            if let decodedData = try? JSONDecoder().decode([String].self, from: data) {
-                rangedWeapons = decodedData
-                underarmors = decodedData
-                meleeWeapons = decodedData
-                return
-            }
-        }
-        
         rangedWeapons = ["Handmade Rifle", "The Fixer", "Gatling Gun"]
         underarmors = ["Secret Service", "Raider Leathers", "Vault76 Jumpsuit"]
         meleeWeapons = ["Bone Hammer", "Super Sledge", "Walking Cane"]
+        
+        selectedRangedWeapon = "Handmade Rifle"
+        selectedUnderarmor = "Secret Service"
+        selectedMeleeWeapon = "Bone Hammer"
     }
 }

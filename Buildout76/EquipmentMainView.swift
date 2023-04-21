@@ -10,10 +10,6 @@ import SwiftUI
 struct EquipmentMainView: View {
     @EnvironmentObject var equipment: Equipment
     
-    @State private var selectedRangedWeapon = "Handmade Rifle"
-    @State private var selectedUnderarmor = "Secret Service"
-    @State private var selectedMeleeWeapon = "Bone Hammer"
-    
     var body: some View {
         NavigationView {
             VStack {
@@ -21,7 +17,7 @@ struct EquipmentMainView: View {
                     VStack {
                         Text("🔫")
                             .font(.largeTitle)
-                        Picker("Ranged", selection: $selectedRangedWeapon) {
+                        Picker("Ranged", selection: $equipment.selectedRangedWeapon) {
                             ForEach(equipment.rangedWeapons, id: \.self) {
                                 Text($0)
                             }
@@ -32,7 +28,7 @@ struct EquipmentMainView: View {
                     VStack {
                         Text("🦴")
                             .font(.largeTitle)
-                        Picker("Melee", selection: $selectedMeleeWeapon) {
+                        Picker("Melee", selection: $equipment.selectedMeleeWeapon) {
                             ForEach(equipment.meleeWeapons, id: \.self) {
                                 Text($0)
                             }
