@@ -75,27 +75,27 @@ struct PerkCardView: View {
                                 if pickedPerks.totalPerkPoints >= perkCardLevel {
                                     switch newPickedPerk.perk.specialCategory {
                                     case "Strength":
-                                        if pickedPerks.totalStrengthPerkPoints >= perkCardLevel {
+                                        if pickedPerks.strengthPoints + perkCardLevel <= 15 {
                                             pickedPerks.add(newPickedPerk)
                                         }
                                     case "Perception":
-                                        if pickedPerks.totalPerceptionPerkPoints >= perkCardLevel {
+                                        if pickedPerks.perceptionPoints + perkCardLevel <= 15 {
                                             pickedPerks.add(newPickedPerk)
                                         }
                                     case "Endurance":
-                                        if pickedPerks.totalEndurancePerkPoints >= perkCardLevel {
+                                        if pickedPerks.endurancePoints + perkCardLevel <= 15 {
                                             pickedPerks.add(newPickedPerk)
                                         }
                                     case "Charisma":
-                                        if pickedPerks.totalCharismaPerkPoints >= perkCardLevel {
+                                        if pickedPerks.charismaPoints + perkCardLevel <= 15 {
                                             pickedPerks.add(newPickedPerk)
                                         }
                                     case "Intelligence":
-                                        if pickedPerks.totalIntelligencePerkPoints >= perkCardLevel {
+                                        if pickedPerks.intelligencePoints + perkCardLevel <= 15 {
                                             pickedPerks.add(newPickedPerk)
                                         }
                                     case "Agility":
-                                        if pickedPerks.totalLuckPerkPoints >= perkCardLevel {
+                                        if pickedPerks.agilityPoints + perkCardLevel <= 15 {
                                             pickedPerks.add(newPickedPerk)
                                         }
                                     default:
