@@ -7,147 +7,81 @@
 
 import SwiftUI
 
-struct EquipmentMainView: View {
+struct RangedWeaponView: View {
     @EnvironmentObject var equipment: Equipment
     
     var body: some View {
-        NavigationView {
-            VStack {
-                HStack {
-                    VStack {
-                        Text("Ranged")
-                            .fontWeight(.bold)
-                        Button {
-                            //
-                        } label: {
-                            Text("🔫")
-                                .font(.largeTitle)
-                        }
-                    }
-                    .padding(.horizontal)
-                    
-                    VStack {
-                        Text("Melee")
-                            .fontWeight(.bold)
-                        Button {
-                            //
-                        } label: {
-                            Text("🦴")
-                                .font(.largeTitle)
-                        }
-                    }
-                    .padding(.horizontal)
-                }
-                
-                VStack {
-                    Text("Underamor")
-                        .fontWeight(.bold)
-                    Button {
-                        //
-                    } label: {
-                        Text("👙")
-                            .font(.largeTitle)
-                            .padding(.bottom)
-                    }
-                    
-                    Text("Armor")
-                        .fontWeight(.bold)
-                    Button {
-                        //
-                    } label: {
-                        Text("👨")
-                            .font(.largeTitle)
-                    }
-                    
-                    HStack {
-                        Button {
-                            //
-                        } label: {
-                            Text("💪")
-                                .font(.largeTitle)
-                        }
-                        Button {
-                            //
-                        } label: {
-                            Text("👕")
-                                .font(.system(size: 50))
-                        }
-                        Button {
-                            //
-                        } label: {
-                            Text("💪")
-                                .font(.largeTitle)
-                                .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                        }
-                    }
-                    HStack {
-                        Button {
-                            //
-                        } label: {
-                            Text("🦵")
-                                .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                                .font(.system(size: 50))
-                        }
-                        Button {
-                            //
-                        } label: {
-                            Text("🦵")
-                                .font(.system(size: 50))
-                        }
-                    }
-                }
-                .padding()
-                
-                VStack {
-                    Text("Power Armor")
-                        .fontWeight(.bold)
-                    Button {
-                        //
-                    } label: {
-                        Text("🤖")
-                            .font(.largeTitle)
-                    }
-                    
-                    HStack {
-                        Button {
-                            //
-                        } label: {
-                            Text("🦾")
-                                .font(.largeTitle)
-                        }
-                        Button {
-                            //
-                        } label: {
-                            Text("📺")
-                                .font(.system(size: 50))
-                        }
-                        Button {
-                            //
-                        } label: {
-                            Text("🦾")
-                                .font(.largeTitle)
-                                .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                        }
-                    }
-                    HStack {
-                        Button {
-                            //
-                        } label: {
-                            Text("🦿")
-                                .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                                .font(.system(size: 50))
-                        }
-                        Button {
-                            //
-                        } label: {
-                            Text("🦿")
-                                .font(.system(size: 50))
-                        }
-                    }
-                }
-                .padding()
+        ForEach(equipment.rangedWeapons, id: \.self) { rangedWeapon in
+            Text(rangedWeapon)
+        }
+    }
+}
+
+struct EquipmentMainView: View {
+    @EnvironmentObject var equipment: Equipment
+    
+    @State private var rangedWeaponViewIsShowing = false
+    
+    var body: some View {
+        Form {
+            Section {
+                Text(equipment.selectedRangedWeapon)
+                    .fontWeight(.bold)
+                Text(equipment.selectedRangedPrefix1)
+                    .foregroundColor(.secondary)
+                Text(equipment.selectedRangedPrefix2)
+                    .foregroundColor(.secondary)
+                Text(equipment.selectedRangedPrefix3)
+                    .foregroundColor(.secondary)
+            } header: {
+                Label("Ranged Weapon", systemImage: "figure.hunting")
             }
-            .navigationTitle("⚛︎ Equipment")
+            
+            Section {
+                Text(equipment.selectedMeleeWeapon)
+                    .fontWeight(.bold)
+                Text(equipment.selectedMeleePrefix1)
+                    .foregroundColor(.secondary)
+                Text(equipment.selectedMeleePrefix2)
+                    .foregroundColor(.secondary)
+                Text(equipment.selectedMeleePrefix3)
+                    .foregroundColor(.secondary)
+            } header: {
+                Label("Melee Weapon", systemImage: "figure.fencing")
+            }
+            
+            Section {
+                Text(equipment.selectedUnderarmor)
+                    .fontWeight(.bold)
+            } header: {
+                Label("Underarmor", systemImage: "figure.arms.open")
+            }
+            
+            Section {
+                Text("Forest Scout")
+                    .fontWeight(.bold)
+                Text("Unyielding")
+                    .foregroundColor(.secondary)
+                Text("Ammo Weight Reduction")
+                    .foregroundColor(.secondary)
+                Text("+1 Luck")
+                    .foregroundColor(.secondary)
+            } header: {
+                Label("Armor", systemImage: "shield.fill")
+            }
+            
+            Section {
+                Text("T-65")
+                    .fontWeight(.bold)
+                Text("Assassin's")
+                    .foregroundColor(.secondary)
+                Text("Ammo Weight Reduction")
+                    .foregroundColor(.secondary)
+                Text("AP Cost Reduction")
+                    .foregroundColor(.secondary)
+            } header: {
+                Label("Power Armor", systemImage: "bolt.shield.fill")
+            }
         }
     }
 }
