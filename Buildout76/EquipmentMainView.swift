@@ -20,67 +20,111 @@ struct RangedWeaponView: View {
 struct EquipmentMainView: View {
     @EnvironmentObject var equipment: Equipment
     
-    @State private var rangedWeaponViewIsShowing = false
+    @State private var equipmentSelectionSaved = false
     
     var body: some View {
-        Form {
-            Section {
-                Text(equipment.selectedRangedWeapon)
-                    .fontWeight(.bold)
-                Text(equipment.selectedRangedPrefix1)
-                    .foregroundColor(.secondary)
-                Text(equipment.selectedRangedPrefix2)
-                    .foregroundColor(.secondary)
-                Text(equipment.selectedRangedPrefix3)
-                    .foregroundColor(.secondary)
-            } header: {
-                Label("Ranged Weapon", systemImage: "figure.hunting")
+        NavigationView {
+            Form {
+                Section {
+                    Picker("Name", selection: $equipment.selectedRangedWeapon) {
+                        ForEach(equipment.rangedWeapons, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    
+                    Picker("★", selection: $equipment.selectedRangedPrefix1) {
+                        ForEach(equipment.rangedPrefixes1, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    
+                    Picker("★★", selection: $equipment.selectedRangedPrefix2) {
+                        ForEach(equipment.rangedPrefixes2, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    
+                    Picker("★★★", selection: $equipment.selectedRangedPrefix3) {
+                        ForEach(equipment.rangedPrefixes3, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                } header: {
+                    Label("Ranged Weapon", systemImage: "figure.hunting")
+                }
+                
+                Section {
+                    Picker("Name", selection: $equipment.selectedMeleeWeapon) {
+                        ForEach(equipment.meleeWeapons, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    
+                    Picker("★", selection: $equipment.selectedMeleePrefix1) {
+                        ForEach(equipment.meleePrefixes1, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    
+                    Picker("★★", selection: $equipment.selectedMeleePrefix2) {
+                        ForEach(equipment.meleePrefixes2, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    
+                    Picker("★★★", selection: $equipment.selectedMeleePrefix3) {
+                        ForEach(equipment.meleePrefixes3, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                } header: {
+                    Label("Melee Weapon", systemImage: "figure.fencing")
+                }
+                
+                Section {
+                    Picker("Name", selection: $equipment.selectedUnderarmor) {
+                        ForEach(equipment.underarmors, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                } header: {
+                    Label("Underarmor", systemImage: "figure.arms.open")
+                }
+                
+                Section {
+                    Text("Forest Scout")
+                        .fontWeight(.bold)
+                    Text("Unyielding")
+                        .foregroundColor(.secondary)
+                    Text("Ammo Weight Reduction")
+                        .foregroundColor(.secondary)
+                    Text("+1 Luck")
+                        .foregroundColor(.secondary)
+                } header: {
+                    Label("Armor", systemImage: "shield.fill")
+                }
+                
+                Section {
+                    Text("T-65")
+                        .fontWeight(.bold)
+                    Text("Assassin's")
+                        .foregroundColor(.secondary)
+                    Text("Ammo Weight Reduction")
+                        .foregroundColor(.secondary)
+                    Text("AP Cost Reduction")
+                        .foregroundColor(.secondary)
+                } header: {
+                    Label("Power Armor", systemImage: "bolt.shield.fill")
+                }
+            }
+            .toolbar {
+                Button("Save") {
+                    equipmentSelectionSaved = true
+                }
             }
             
-            Section {
-                Text(equipment.selectedMeleeWeapon)
-                    .fontWeight(.bold)
-                Text(equipment.selectedMeleePrefix1)
-                    .foregroundColor(.secondary)
-                Text(equipment.selectedMeleePrefix2)
-                    .foregroundColor(.secondary)
-                Text(equipment.selectedMeleePrefix3)
-                    .foregroundColor(.secondary)
-            } header: {
-                Label("Melee Weapon", systemImage: "figure.fencing")
-            }
-            
-            Section {
-                Text(equipment.selectedUnderarmor)
-                    .fontWeight(.bold)
-            } header: {
-                Label("Underarmor", systemImage: "figure.arms.open")
-            }
-            
-            Section {
-                Text("Forest Scout")
-                    .fontWeight(.bold)
-                Text("Unyielding")
-                    .foregroundColor(.secondary)
-                Text("Ammo Weight Reduction")
-                    .foregroundColor(.secondary)
-                Text("+1 Luck")
-                    .foregroundColor(.secondary)
-            } header: {
-                Label("Armor", systemImage: "shield.fill")
-            }
-            
-            Section {
-                Text("T-65")
-                    .fontWeight(.bold)
-                Text("Assassin's")
-                    .foregroundColor(.secondary)
-                Text("Ammo Weight Reduction")
-                    .foregroundColor(.secondary)
-                Text("AP Cost Reduction")
-                    .foregroundColor(.secondary)
-            } header: {
-                Label("Power Armor", systemImage: "bolt.shield.fill")
+            .alert("Equipment selection saved!", isPresented: $equipmentSelectionSaved) {
+                Button("OK", role: .cancel) { }
             }
         }
     }

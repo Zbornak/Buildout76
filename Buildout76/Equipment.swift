@@ -36,7 +36,7 @@ class Equipment: ObservableObject {
         meleeWeapons = ["Bone Hammer", "Super Sledge", "Walking Cane"]
         
         rangedPrefixes1 = ["Anti-Armor", "Bloodied", "Juggernauts"]
-        rangedPrefixes2 = ["Faster Fire-Rate", "Explosive", "+50% V.A.T.S. Hit Chance"]
+        rangedPrefixes2 = ["15% Faster Fire-Rate", "Explosive", "+50% V.A.T.S. Hit Chance"]
         rangedPrefixes3 = ["25% Less V.A.T.S. AP Cost", "15% Faster Fire-Rate", "90% Reduced Weight"]
         
         meleePrefixes1 = ["Anti-Armor", "Bloodied", "Juggernauts"]
