@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190417D929F28B86007F3027 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190417D829F28B86007F3027 /* Equipment.swift */; };
 		1975BDFC29EFF4A50079A938 /* PickedLegendaryPerk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975BDFB29EFF4A50079A938 /* PickedLegendaryPerk.swift */; };
 		1975BDFE29F02F5D0079A938 /* LegendaryPerkCardSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975BDFD29F02F5D0079A938 /* LegendaryPerkCardSummaryView.swift */; };
 		19E156EC29ED4DCE00B5F36C /* AllLegendaryPerksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E156EB29ED4DCE00B5F36C /* AllLegendaryPerksView.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		190417D829F28B86007F3027 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
 		1975BDFB29EFF4A50079A938 /* PickedLegendaryPerk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickedLegendaryPerk.swift; sourceTree = "<group>"; };
 		1975BDFD29F02F5D0079A938 /* LegendaryPerkCardSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendaryPerkCardSummaryView.swift; sourceTree = "<group>"; };
 		19E156EB29ED4DCE00B5F36C /* AllLegendaryPerksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllLegendaryPerksView.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				19FC8F7529EE96EA00A94C9B /* mutations.json */,
 				19E63ACE29E6AA180065155B /* Bundle-Decodable.swift */,
 				19E1807329F17DD600BB131B /* EquipmentMainView.swift */,
+				190417D829F28B86007F3027 /* Equipment.swift */,
 				19E63AC229E6A9BF0065155B /* Assets.xcassets */,
 				19E63AC429E6A9BF0065155B /* Preview Content */,
 			);
@@ -224,6 +227,7 @@
 				19E156EC29ED4DCE00B5F36C /* AllLegendaryPerksView.swift in Sources */,
 				19E7B77E29E84B6600A00469 /* BuildDetailView.swift in Sources */,
 				19E7B77C29E8491100A00469 /* SavedBuildsListView.swift in Sources */,
+				190417D929F28B86007F3027 /* Equipment.swift in Sources */,
 				19E63ADD29E6B7A00065155B /* AllPerksView.swift in Sources */,
 				19E63AD529E6AC250065155B /* PickedPerk.swift in Sources */,
 				19E63AE129E6EAD50065155B /* PickedPerks.swift in Sources */,
