@@ -16,8 +16,6 @@ class Equipment: ObservableObject {
     @Published var selectedUnderarmor: String
     @Published var selectedMeleeWeapon: String
     
-    private let saveKey = "Equipment"
-    
     init() {
         rangedWeapons = ["Handmade Rifle", "The Fixer", "Gatling Gun"]
         underarmors = ["Secret Service", "Raider Leathers", "Vault76 Jumpsuit"]
