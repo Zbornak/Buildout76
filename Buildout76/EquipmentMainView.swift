@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct EquipmentMainView: View {
+    @EnvironmentObject var equipment: Equipment
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -18,13 +20,6 @@ struct EquipmentMainView: View {
                         Text("Ranged")
                             .fontWeight(.bold)
                     }
-                    
-                    VStack {
-                        Text("👙")
-                            .font(.largeTitle)
-                        Text("Underamor")
-                            .fontWeight(.bold)
-                    }
                     .padding(.horizontal)
                     
                     VStack {
@@ -33,9 +28,16 @@ struct EquipmentMainView: View {
                         Text("Melee")
                             .fontWeight(.bold)
                     }
+                    .padding(.horizontal)
                 }
                 
                 VStack {
+                    Text("Underamor")
+                        .fontWeight(.bold)
+                    Text("👙")
+                        .font(.largeTitle)
+                        .padding(.bottom)
+                            
                     Text("Armor")
                         .fontWeight(.bold)
                     Text("👨")
@@ -94,5 +96,6 @@ struct EquipmentMainView: View {
 struct EquipmentMainView_Previews: PreviewProvider {
     static var previews: some View {
         EquipmentMainView()
+            .environmentObject(Equipment())
     }
 }

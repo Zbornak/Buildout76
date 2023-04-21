@@ -12,6 +12,7 @@ struct ContentView: View {
     @StateObject var pickedPerks = PickedPerks()
     @StateObject var pickedLegendaryPerks = PickedLegendaryPerks()
     @StateObject var mutations = Mutations()
+    @StateObject var equipment = Equipment()
     
     var body: some View {
         TabView {
@@ -39,6 +40,7 @@ struct ContentView: View {
         .environmentObject(pickedPerks)
         .environmentObject(pickedLegendaryPerks)
         .environmentObject(mutations)
+        .environmentObject(equipment)
     }
 }
 
