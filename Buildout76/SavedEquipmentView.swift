@@ -46,26 +46,26 @@ struct SavedEquipmentView: View {
             }
             
             Section {
-                Text("Forest Scout")
+                Text(equipment.selectedArmor)
                     .fontWeight(.bold)
-                Text("Unyielding")
+                Text(equipment.selectedArmorPrefix1)
                     .foregroundColor(.secondary)
-                Text("Ammo Weight Reduction")
+                Text(equipment.selectedArmorPrefix2)
                     .foregroundColor(.secondary)
-                Text("+1 Luck")
+                Text(equipment.selectedArmorPrefix3)
                     .foregroundColor(.secondary)
             } header: {
                 Text("Armor")
             }
             
             Section {
-                Text("T-65")
+                Text(equipment.selectedPowerArmor)
                     .fontWeight(.bold)
-                Text("Assassin's")
+                Text(equipment.selectedPowerArmorPrefix1)
                     .foregroundColor(.secondary)
-                Text("Ammo Weight Reduction")
+                Text(equipment.selectedPowerArmorPrefix2)
                     .foregroundColor(.secondary)
-                Text("AP Cost Reduction")
+                Text(equipment.selectedPowerArmorPrefix3)
                     .foregroundColor(.secondary)
             } header: {
                 Text("Power Armor")
