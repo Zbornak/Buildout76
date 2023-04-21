@@ -9,7 +9,7 @@ import SwiftUI
 
 class Equipment: ObservableObject {
     @Published var rangedWeapons: [String]
-    @Published var underArmors: [String]
+    @Published var underarmors: [String]
     @Published var meleeWeapons: [String]
     
     private let saveKey = "Equipment"
@@ -18,14 +18,14 @@ class Equipment: ObservableObject {
         if let data = UserDefaults.standard.data(forKey: saveKey) {
             if let decodedData = try? JSONDecoder().decode([String].self, from: data) {
                 rangedWeapons = decodedData
-                underArmors = decodedData
+                underarmors = decodedData
                 meleeWeapons = decodedData
                 return
             }
         }
         
         rangedWeapons = ["Handmade Rifle", "The Fixer", "Gatling Gun"]
-        underArmors = ["Secret Service", "Raider Leathers", "Vault76 Jumpsuit"]
+        underarmors = ["Secret Service", "Raider Leathers", "Vault76 Jumpsuit"]
         meleeWeapons = ["Bone Hammer", "Super Sledge", "Walking Cane"]
     }
 }
