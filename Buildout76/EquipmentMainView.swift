@@ -15,46 +15,82 @@ struct EquipmentMainView: View {
                     VStack {
                         Text("Ranged")
                             .fontWeight(.bold)
-                        Text("🔫")
-                            .font(.largeTitle)
+                        Button {
+                            // ranged
+                        } label: {
+                            Text("🔫")
+                                .font(.largeTitle)
+                        }
                     }
                     
                     VStack {
                         Text("Underamor")
                             .fontWeight(.bold)
-                        Text("👙")
-                            .font(.largeTitle)
+                        Button {
+                            // underarmor
+                        } label: {
+                            Text("👙")
+                                .font(.largeTitle)
+                        }
                     }
                     .padding(.horizontal)
                     
                     VStack {
                         Text("Melee")
                             .fontWeight(.bold)
-                        Text("🦴")
-                            .font(.largeTitle)
+                        Button {
+                            // melee
+                        } label: {
+                            Text("🦴")
+                                .font(.largeTitle)
+                        }
                     }
                 }
                 
                 VStack {
                     Text("Armor")
                         .fontWeight(.bold)
-                    Text("👨")
-                        .font(.largeTitle)
-                    HStack {
-                        Text("💪")
+                    Button {
+                        // helmet
+                    } label: {
+                        Text("👨")
                             .font(.largeTitle)
-                        Text("👕")
-                            .font(.system(size: 50))
-                        Text("💪")
-                            .font(.largeTitle)
-                            .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
                     }
                     HStack {
-                        Text("🦵")
-                            .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                            .font(.system(size: 50))
-                        Text("🦵")
-                            .font(.system(size: 50))
+                        Button {
+                            // left arm
+                        } label: {
+                            Text("💪")
+                                .font(.largeTitle)
+                        }
+                        Button {
+                            // torso
+                        } label: {
+                            Text("👕")
+                                .font(.system(size: 50))
+                        }
+                        Button {
+                            // right arm
+                        } label: {
+                            Text("💪")
+                                .font(.largeTitle)
+                                .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+                        }
+                    }
+                    HStack {
+                        Button {
+                            // left leg
+                        } label: {
+                            Text("🦵")
+                                .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+                                .font(.system(size: 50))
+                        }
+                        Button {
+                            // right leg
+                        } label: {
+                            Text("🦵")
+                                .font(.system(size: 50))
+                        }
                     }
                 }
                 .padding()
@@ -62,23 +98,47 @@ struct EquipmentMainView: View {
                 VStack {
                     Text("Power Armor")
                         .fontWeight(.bold)
-                    Text("🤖")
-                        .font(.largeTitle)
-                    HStack {
-                        Text("🦾")
+                    Button {
+                        // helmet
+                    } label: {
+                        Text("🤖")
                             .font(.largeTitle)
-                        Text("📺")
-                            .font(.system(size: 50))
-                        Text("🦾")
-                            .font(.largeTitle)
-                            .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
                     }
                     HStack {
-                        Text("🦿")
-                            .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                            .font(.system(size: 50))
-                        Text("🦿")
-                            .font(.system(size: 50))
+                        Button {
+                            // left arm
+                        } label: {
+                            Text("🦾")
+                                .font(.largeTitle)
+                        }
+                        Button {
+                            // torso
+                        } label: {
+                            Text("📺")
+                                .font(.system(size: 50))
+                        }
+                        Button {
+                            // right arm
+                        } label: {
+                            Text("🦾")
+                                .font(.largeTitle)
+                                .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+                        }
+                    }
+                    HStack {
+                        Button {
+                            // left leg
+                        } label: {
+                            Text("🦿")
+                                .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+                                .font(.system(size: 50))
+                        }
+                        Button {
+                            // right leg
+                        } label: {
+                            Text("🦿")
+                                .font(.system(size: 50))
+                        }
                     }
                 }
                 .padding()
