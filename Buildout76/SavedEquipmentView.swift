@@ -11,88 +11,65 @@ struct SavedEquipmentView: View {
     @EnvironmentObject var equipment: Equipment
     
     var body: some View {
-        VStack {
-            HStack {
-                VStack {
-                    Text(equipment.selectedRangedWeapon)
-                        .fontWeight(.bold)
-                    Text("🔫")
-                        .font(.largeTitle)
-                    Text(equipment.selectedRangedPrefix1)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text(equipment.selectedRangedPrefix2)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text(equipment.selectedRangedPrefix3)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .padding(.horizontal)
-                
-                VStack {
-                    Text(equipment.selectedMeleeWeapon)
-                        .fontWeight(.bold)
-                    Text("🦴")
-                        .font(.largeTitle)
-                    Text(equipment.selectedMeleePrefix1)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text(equipment.selectedMeleePrefix2)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text(equipment.selectedMeleePrefix3)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .padding(.horizontal)
+        Form {
+            Section {
+                Text(equipment.selectedRangedWeapon)
+                    .fontWeight(.bold)
+                Text(equipment.selectedRangedPrefix1)
+                    .foregroundColor(.secondary)
+                Text(equipment.selectedRangedPrefix2)
+                    .foregroundColor(.secondary)
+                Text(equipment.selectedRangedPrefix3)
+                    .foregroundColor(.secondary)
+            } header: {
+                Text("Ranged Weapon")
             }
             
-            VStack {
-                Text("Underamor")
+            Section {
+                Text(equipment.selectedMeleeWeapon)
                     .fontWeight(.bold)
-                Text("👙")
-                    .font(.largeTitle)
+                Text(equipment.selectedMeleePrefix1)
+                    .foregroundColor(.secondary)
+                Text(equipment.selectedMeleePrefix2)
+                    .foregroundColor(.secondary)
+                Text(equipment.selectedMeleePrefix3)
+                    .foregroundColor(.secondary)
+            } header: {
+                Text("Melee Weapon")
+            }
+            
+            Section {
                 Text(equipment.selectedUnderarmor)
-                    .padding(.bottom)
-                
-                Text("Armor")
                     .fontWeight(.bold)
-                Text("👨")
-                    .font(.largeTitle)
-                Text("💪")
-                    .font(.largeTitle)
-                Text("👕")
-                    .font(.system(size: 50))
-                Text("💪")
-                    .font(.largeTitle)
-                    .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                Text("🦵")
-                    .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                    .font(.system(size: 50))
-                Text("🦵")
-                    .font(.system(size: 50))
+            } header: {
+                Text("Underarmor")
             }
-            .padding()
             
-            VStack {
-                Text("Power Armor")
+            Section {
+                Text("Forest Scout")
                     .fontWeight(.bold)
-                Text("🤖")
-                    .font(.largeTitle)
-                
-                HStack {
-                    Text("🦾")
-                        .font(.largeTitle)
-                    Text("📺")
-                        .font(.system(size: 50))
-                    Text("🦾")
-                        .font(.largeTitle)
-                        .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                }
-                HStack {
-                    Text("🦿")
-                        .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                        .font(.system(size: 50))
-                    Text("🦿")
-                        .font(.system(size: 50))
-                }
+                Text("Unyielding")
+                    .foregroundColor(.secondary)
+                Text("Ammo Weight Reduction")
+                    .foregroundColor(.secondary)
+                Text("+1 Luck")
+                    .foregroundColor(.secondary)
+            } header: {
+                Text("Armor")
             }
-            .padding()
+            
+            Section {
+                Text("T-65")
+                    .fontWeight(.bold)
+                Text("Assassin's")
+                    .foregroundColor(.secondary)
+                Text("Ammo Weight Reduction")
+                    .foregroundColor(.secondary)
+                Text("AP Cost Reduction")
+                    .foregroundColor(.secondary)
+            } header: {
+                Text("Power Armor")
+            }
         }
     }
 }
