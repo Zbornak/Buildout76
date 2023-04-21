@@ -56,8 +56,8 @@ class Equipment: ObservableObject {
         rangedWeapons = ["Handmade Rifle", "The Fixer", "Gatling Gun"]
         underarmors = ["Secret Service", "Raider Leathers", "Vault76 Jumpsuit"]
         meleeWeapons = ["Bone Hammer", "Super Sledge", "Walking Cane"]
-        armors = []
-        powerArmors = []
+        armors = ["Forest Scout", "Secret Service", "Wood"]
+        powerArmors = ["Hellcat", "T-45", "T-65"]
         
         rangedPrefixes1 = ["Anti-Armor", "Bloodied", "Juggernauts"]
         rangedPrefixes2 = ["15% Faster Fire-Rate", "Explosive", "+50% V.A.T.S. Hit Chance"]

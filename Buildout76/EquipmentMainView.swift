@@ -92,27 +92,51 @@ struct EquipmentMainView: View {
                 }
                 
                 Section {
-                    Text("Forest Scout")
-                        .fontWeight(.bold)
-                    Text("Unyielding")
-                        .foregroundColor(.secondary)
-                    Text("Ammo Weight Reduction")
-                        .foregroundColor(.secondary)
-                    Text("+1 Luck")
-                        .foregroundColor(.secondary)
+                    Picker("Name", selection: $equipment.selectedArmor) {
+                        ForEach(equipment.armors, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    Picker("★", selection: $equipment.selectedArmorPrefix1) {
+                        ForEach(equipment.armorPrefixes1, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    Picker("★★", selection: $equipment.selectedArmorPrefix2) {
+                        ForEach(equipment.armorPrefixes2, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    Picker("★★★", selection: $equipment.selectedArmorPrefix3) {
+                        ForEach(equipment.armorPrefixes3, id: \.self) {
+                            Text($0)
+                        }
+                    }
                 } header: {
                     Label("Armor", systemImage: "shield.fill")
                 }
                 
                 Section {
-                    Text("T-65")
-                        .fontWeight(.bold)
-                    Text("Assassin's")
-                        .foregroundColor(.secondary)
-                    Text("Ammo Weight Reduction")
-                        .foregroundColor(.secondary)
-                    Text("AP Cost Reduction")
-                        .foregroundColor(.secondary)
+                    Picker("Name", selection: $equipment.selectedPowerArmor) {
+                        ForEach(equipment.armors, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    Picker("★", selection: $equipment.selectedPowerArmorPrefix1) {
+                        ForEach(equipment.powerArmorPrefixes1, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    Picker("★★", selection: $equipment.selectedPowerArmorPrefix2) {
+                        ForEach(equipment.powerArmorPrefixes2, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    Picker("★★★", selection: $equipment.selectedPowerArmorPrefix3) {
+                        ForEach(equipment.powerArmorPrefixes3, id: \.self) {
+                            Text($0)
+                        }
+                    }
                 } header: {
                     Label("Power Armor", systemImage: "bolt.shield.fill")
                 }
