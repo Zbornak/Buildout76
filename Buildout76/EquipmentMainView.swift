@@ -15,26 +15,20 @@ struct EquipmentMainView: View {
             VStack {
                 HStack {
                     VStack {
+                        Text("Ranged")
+                            .fontWeight(.bold)
                         Text("🔫")
                             .font(.largeTitle)
-                        Picker("Ranged", selection: $equipment.selectedRangedWeapon) {
-                            ForEach(equipment.rangedWeapons, id: \.self) {
-                                Text($0)
-                            }
-                        }
-                        .fontWeight(.bold)
                     }
+                    .padding(.horizontal)
                     
                     VStack {
+                        Text("Melee")
+                            .fontWeight(.bold)
                         Text("🦴")
                             .font(.largeTitle)
-                        Picker("Melee", selection: $equipment.selectedMeleeWeapon) {
-                            ForEach(equipment.meleeWeapons, id: \.self) {
-                                Text($0)
-                            }
-                        }
-                        .fontWeight(.bold)
                     }
+                    .padding(.horizontal)
                 }
                 
                 VStack {
