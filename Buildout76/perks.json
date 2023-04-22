@@ -605,7 +605,7 @@
         "name": "Night Eyes",
         "specialCategory": "Perception",
         "levelAvailable": 50,
-        "maxLevel": 2,
+        "maxLevel": 1,
         "description1": "Gain night vision while sneaking between 6:00pm and 6:00am."
     },
 	{

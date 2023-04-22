@@ -36,6 +36,10 @@ class PickedPerks: ObservableObject {
             if perk.perk.specialCategory.contains("Perception") {
                 points += perk.perkLevel
             }
+            
+            if perk.perk.id == "night-eyes" {
+                points += 1
+            }
         }
         
         return points
