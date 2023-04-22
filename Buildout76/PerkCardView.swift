@@ -13,6 +13,7 @@ struct PerkCardView: View {
     @State private var perkCardLevel = 1
     
     @EnvironmentObject var pickedPerks: PickedPerks
+    @EnvironmentObject var pickedLegendaryPerks: PickedLegendaryPerks
     
     var setPerkCardColor: Color {
         if perk.specialCategory == "Strength" {
@@ -70,7 +71,7 @@ struct PerkCardView: View {
                         withAnimation {
                             //add perk to array of pickedPerks (including level)
                             let newPickedPerk = PickedPerk(perk: perk, perkLevel: perkCardLevel)
-                            pickedPerks.add(newPickedPerk, perkCardLevel: perkCardLevel)
+                            pickedPerks.add(newPickedPerk, perkCardLevel: perkCardLevel, legendaryPerks: pickedLegendaryPerks)
                         }
                     }
                     .buttonStyle(.borderedProminent)
@@ -86,5 +87,6 @@ struct PerkCardView_Previews: PreviewProvider {
     static var previews: some View {
         PerkCardView(perk: Perk.example)
             .environmentObject(PickedPerks())
+            .environmentObject(PickedLegendaryPerks())
     }
 }

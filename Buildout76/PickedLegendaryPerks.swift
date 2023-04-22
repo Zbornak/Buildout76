@@ -9,7 +9,32 @@ import SwiftUI
 
 class PickedLegendaryPerks: ObservableObject {
     @Published var pickedLegendaryPerks: [PickedLegendaryPerk]
-    
+    var legendaryPointBoostTotal: Int {
+        pickedLegendaryPerks.reduce(0) { partialResult, legendary in
+            switch legendary.perk.name {
+            case "Legendary Strength": fallthrough;
+            case "Legendary Perception": fallthrough;
+            case "Legendary Endurance": fallthrough;
+            case "Legendary Charisma": fallthrough;
+            case "Legendary Intelligence": fallthrough;
+            case "Legendary Agility": fallthrough;
+            case "Legendary Luck":
+                return partialResult + legendary.perkLevel
+            default:
+                return partialResult
+            }
+        }
+    }
+    func legendaryPointBoost(forPerk perk: Perk) -> Int {
+        let legendaryName = "Legendary \(perk.specialCategory)"
+        return pickedLegendaryPerks.reduce(0) { partialResult, legendary in
+            if legendary.perk.name == legendaryName {
+                return partialResult + legendary.perkLevel
+            } else {
+                return partialResult
+            }
+        }
+    }
     private let saveKey = "PickedLegendaryPerks"
     
     init() {

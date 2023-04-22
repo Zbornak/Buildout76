@@ -152,7 +152,7 @@ struct AllPerksView: View {
                 
                 Spacer()
                 
-                Text("\(pickedPerks.totalPerkPoints)")
+                Text("\(max(pickedPerks.totalPerkPoints, 0))")
                     .fontWeight(.bold)
                     .padding(10)
                     .overlay(
