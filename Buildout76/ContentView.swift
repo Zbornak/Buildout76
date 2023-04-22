@@ -12,7 +12,6 @@ struct ContentView: View {
     @StateObject var pickedPerks = PickedPerks()
     @StateObject var pickedLegendaryPerks = PickedLegendaryPerks()
     @StateObject var mutations = Mutations()
-    @StateObject var equipment = Equipment()
     
     var body: some View {
         TabView {
@@ -30,17 +29,11 @@ struct ContentView: View {
                 .tabItem {
                     Label("In Progress", systemImage: "gearshape.2")
                 }
-            
-            EquipmentMainView()
-                .tabItem {
-                    Label("Equipment", systemImage: "backpack.circle.fill")
-                }
         }
         .environmentObject(builds)
         .environmentObject(pickedPerks)
         .environmentObject(pickedLegendaryPerks)
         .environmentObject(mutations)
-        .environmentObject(equipment)
     }
 }
 
