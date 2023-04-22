@@ -51,6 +51,10 @@ class PickedPerks: ObservableObject {
             if perk.perk.specialCategory.contains("Endurance") {
                 points += perk.perkLevel
             }
+            
+            if perk.perk.id == "professional-drinker" {
+                points += 2
+            }
         }
         
         return points
@@ -61,6 +65,10 @@ class PickedPerks: ObservableObject {
         for perk in perks {
             if perk.perk.specialCategory.contains("Charisma") {
                 points += perk.perkLevel
+            }
+            
+            if perk.perk.id == "field-surgeon" {
+                points += 1
             }
         }
         
