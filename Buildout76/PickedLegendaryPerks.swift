@@ -29,6 +29,15 @@ class PickedLegendaryPerks: ObservableObject {
             }
         }
     }
+    
+    func containsLegendaryPerk(name: String) -> String {
+        if pickedLegendaryPerks.firstIndex(where: { $0.perk.name == "Legendary \(name)" }) != nil {
+                    return "★"
+                } else {
+                    return "☆"
+                }
+    }
+    
     func legendaryPointBoost(forPerk perk: Perk) -> Int {
         let legendaryName = "Legendary \(perk.specialCategory)"
         return pickedLegendaryPerks.reduce(0) { partialResult, legendary in

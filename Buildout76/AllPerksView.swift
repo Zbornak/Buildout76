@@ -42,6 +42,7 @@ struct AllPerksView: View {
                             .font(.largeTitle)
                             .foregroundColor(.green)
                     }
+                    Text(pickedLegendaryPerks.containsLegendaryPerk(name: "Strength"))
                 }
                 
                 VStack {
@@ -54,6 +55,7 @@ struct AllPerksView: View {
                             .font(.largeTitle)
                             .foregroundColor(.brown)
                     }
+                    Text(pickedLegendaryPerks.containsLegendaryPerk(name: "Perception"))
                 }
                 
                 VStack {
@@ -66,6 +68,7 @@ struct AllPerksView: View {
                             .font(.largeTitle)
                             .foregroundColor(.blue)
                     }
+                    Text(pickedLegendaryPerks.containsLegendaryPerk(name: "Endurance"))
                 }
                 
                 VStack {
@@ -78,6 +81,7 @@ struct AllPerksView: View {
                             .font(.largeTitle)
                             .foregroundColor(.orange)
                     }
+                    Text(pickedLegendaryPerks.containsLegendaryPerk(name: "Charisma"))
                 }
                 
                 VStack {
@@ -90,6 +94,7 @@ struct AllPerksView: View {
                             .font(.largeTitle)
                             .foregroundColor(.gray)
                     }
+                    Text(pickedLegendaryPerks.containsLegendaryPerk(name: "Intelligence"))
                 }
                 
                 VStack {
@@ -102,6 +107,7 @@ struct AllPerksView: View {
                             .font(.largeTitle)
                             .foregroundColor(.orange.opacity(0.5))
                     }
+                    Text(pickedLegendaryPerks.containsLegendaryPerk(name: "Agility"))
                 }
                 
                 VStack {
@@ -114,6 +120,7 @@ struct AllPerksView: View {
                             .font(.largeTitle)
                             .foregroundColor(.purple)
                     }
+                    Text(pickedLegendaryPerks.containsLegendaryPerk(name: "Luck"))
                 }
             }
             
