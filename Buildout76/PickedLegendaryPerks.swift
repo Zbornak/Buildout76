@@ -19,7 +19,11 @@ class PickedLegendaryPerks: ObservableObject {
             case "Legendary Intelligence": fallthrough;
             case "Legendary Agility": fallthrough;
             case "Legendary Luck":
-                return partialResult + legendary.perkLevel
+                if legendary.perkLevel == 4 {
+                    return partialResult + legendary.perkLevel + 1
+                } else {
+                    return partialResult + legendary.perkLevel
+                }
             default:
                 return partialResult
             }
