@@ -28,14 +28,6 @@ struct SavedBuildsListView: View {
                 
                 if builds.builds.isEmpty {
                     VStack {
-                        Image(systemName: "gearshape")
-                            .font(.largeTitle)
-                            .rotationEffect(.degrees(rotation))
-                            .animation(.linear(duration: 30).delay(1), value: rotation)
-                            .onAppear {
-                                rotation += 360
-                            }
-                        Spacer()
                         HStack {
                             Image(systemName: "gearshape.fill")
                                 .rotationEffect(.degrees(rotation))
