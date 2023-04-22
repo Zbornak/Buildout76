@@ -27,6 +27,8 @@ struct AllPerksView: View {
     @State private var legendaryPerksSheetShowing = false
     @State private var mutationsSheetShowing = false
     
+    @State var rotation = 0.0
+    
     var body: some View {
         VStack {
             HStack {
@@ -120,6 +122,11 @@ struct AllPerksView: View {
                     Text("↑")
                     HStack {
                         Image(systemName: "gearshape.fill")
+                            .rotationEffect(.degrees(rotation))
+                            .animation(.linear(duration: 30).delay(1), value: rotation)
+                            .onAppear {
+                                rotation += 360
+                            }
                         Text("Pick a SPECIAL category")
                     }
                 }

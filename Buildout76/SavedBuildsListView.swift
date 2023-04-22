@@ -38,6 +38,11 @@ struct SavedBuildsListView: View {
                         Spacer()
                         HStack {
                             Image(systemName: "gearshape.fill")
+                                .rotationEffect(.degrees(rotation))
+                                .animation(.linear(duration: 30).delay(1), value: rotation)
+                                .onAppear {
+                                    rotation += 360
+                                }
                             Text("Go to the Perks tab to begin!")
                         }
                         Text("↓")
