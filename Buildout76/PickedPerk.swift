@@ -38,7 +38,7 @@ struct PickedPerk: Codable, Identifiable, Equatable {
         case 2:
             return "☆☆"
         case 1:
-            return "☆☆"
+            return "☆"
         default:
             return ""
         }
