@@ -26,6 +26,15 @@ class PickedPerks: ObservableObject {
             if perk.perk.id == "field-surgeon" {
                 points -= 1
             }
+            
+            if perk.perk.id == "lifegiver" {
+                switch perk.perkLevel {
+                case 1:
+                    points -= 1
+                default:
+                    points -= 1
+                }
+            }
         }
         
         return points
@@ -66,6 +75,15 @@ class PickedPerks: ObservableObject {
             
             if perk.perk.id == "professional-drinker" {
                 points += 2
+            }
+            
+            if perk.perk.id == "lifegiver" {
+                switch perk.perkLevel {
+                case 1:
+                    points += 1
+                default:
+                    points += 1
+                }
             }
         }
         

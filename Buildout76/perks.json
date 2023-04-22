@@ -898,7 +898,7 @@
         "name": "Lifegiver",
         "specialCategory": "Endurance",
         "levelAvailable": 50,
-        "maxLevel": 4,
+        "maxLevel": 3,
         "description1": "Gain a total of +15 to your maximum health.",
         "description2": "Gain a total of +30 to your maximum health.",
         "description3": "Gain a total of +45 to your maximum health."
