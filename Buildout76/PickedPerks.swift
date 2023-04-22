@@ -173,12 +173,6 @@ class PickedPerks: ObservableObject {
         guard perks.firstIndex(where: { $0.perk.name == pickedPerk.perk.name }) == nil else { return }
         guard totalPerkPoints + legendaryPerks.legendaryPointBoostTotal >= perkCardLevel else { return }
         
-        if totalPerkPoints < perkCardLevel {
-            if legendaryPerks.legendaryPointBoost(forPerk: pickedPerk.perk) == 0 {
-                return
-            }
-        }
-
         let points = {
             switch pickedPerk.perk.specialCategory {
             case "Strength":
@@ -193,11 +187,15 @@ class PickedPerks: ObservableObject {
                 return intelligencePoints
             case "Agility":
                 return agilityPoints
+            case "Luck":
+                return luckPoints
             default:
                 return Int.max
             }
         }()
         guard points + perkCardLevel <= 15 else { return }
+        
+        guard totalPerkPoints <= 0, legendaryPerks.legendaryPointBoost(forPerk: pickedPerk.perk) != 0 else { return }
         
         objectWillChange.send()
         perks.append(pickedPerk)
