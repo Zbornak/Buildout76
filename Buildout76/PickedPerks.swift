@@ -169,7 +169,30 @@ class PickedPerks: ObservableObject {
         perks = []
     }
     
-    func add(_ pickedPerk: PickedPerk) {
+    func add(_ pickedPerk: PickedPerk, perkCardLevel: Int) {
+        guard perks.firstIndex(where: { $0.perk.name == pickedPerk.perk.name }) == nil else { return }
+        guard totalPerkPoints >= perkCardLevel else { return }
+
+        let points = {
+            switch pickedPerk.perk.specialCategory {
+            case "Strength":
+                return strengthPoints
+            case "Perception":
+                return perceptionPoints
+            case "Endurance":
+                return endurancePoints
+            case "Charisma":
+                return charismaPoints
+            case "Intelligence":
+                return intelligencePoints
+            case "Agility":
+                return agilityPoints
+            default:
+                return Int.max
+            }
+        }()
+        guard points + perkCardLevel <= 15 else { return }
+        
         objectWillChange.send()
         perks.append(pickedPerk)
         save()

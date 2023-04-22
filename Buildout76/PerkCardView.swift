@@ -70,39 +70,7 @@ struct PerkCardView: View {
                         withAnimation {
                             //add perk to array of pickedPerks (including level)
                             let newPickedPerk = PickedPerk(perk: perk, perkLevel: perkCardLevel)
-                                
-                            if pickedPerks.perks.firstIndex(where: { $0.perk.name == perk.name }) == nil {
-                                if pickedPerks.totalPerkPoints >= perkCardLevel {
-                                    switch newPickedPerk.perk.specialCategory {
-                                    case "Strength":
-                                        if pickedPerks.strengthPoints + perkCardLevel <= 15 {
-                                            pickedPerks.add(newPickedPerk)
-                                        }
-                                    case "Perception":
-                                        if pickedPerks.perceptionPoints + perkCardLevel <= 15 {
-                                            pickedPerks.add(newPickedPerk)
-                                        }
-                                    case "Endurance":
-                                        if pickedPerks.endurancePoints + perkCardLevel <= 15 {
-                                            pickedPerks.add(newPickedPerk)
-                                        }
-                                    case "Charisma":
-                                        if pickedPerks.charismaPoints + perkCardLevel <= 15 {
-                                            pickedPerks.add(newPickedPerk)
-                                        }
-                                    case "Intelligence":
-                                        if pickedPerks.intelligencePoints + perkCardLevel <= 15 {
-                                            pickedPerks.add(newPickedPerk)
-                                        }
-                                    case "Agility":
-                                        if pickedPerks.agilityPoints + perkCardLevel <= 15 {
-                                            pickedPerks.add(newPickedPerk)
-                                        }
-                                    default:
-                                        pickedPerks.add(newPickedPerk)
-                                    }
-                                }
-                            }
+                            pickedPerks.add(newPickedPerk, perkCardLevel: perkCardLevel)
                         }
                     }
                     .buttonStyle(.borderedProminent)
