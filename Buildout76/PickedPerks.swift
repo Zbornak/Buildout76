@@ -195,7 +195,7 @@ class PickedPerks: ObservableObject {
         }()
         guard points + perkCardLevel <= 15 else { return }
         
-        guard totalPerkPoints <= 0, legendaryPerks.legendaryPointBoost(forPerk: pickedPerk.perk) != 0 else { return }
+        guard (totalPerkPoints > 0) || (legendaryPerks.legendaryPointBoost(forPerk: pickedPerk.perk) != 0) else { return }
         
         objectWillChange.send()
         perks.append(pickedPerk)
