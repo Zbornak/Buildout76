@@ -1032,7 +1032,7 @@
         "name": "Party Boy/Girl",
         "specialCategory": "Charisma",
         "levelAvailable": 24,
-        "maxLevel": 3,
+        "maxLevel": 2,
         "description1": "The positive effects of pre-war alcohol are doubled.",
         "description2": "The positive effects of pre-war alcohol are tripled."
     },
