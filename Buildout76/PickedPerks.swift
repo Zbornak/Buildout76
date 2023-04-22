@@ -14,6 +14,18 @@ class PickedPerks: ObservableObject {
         var points = 56
         for perk in perks {
             points -= perk.perkLevel
+            
+            if perk.perk.id == "night-eyes" {
+                points -= 1
+            }
+            
+            if perk.perk.id == "professional-drinker" {
+                points -= 2
+            }
+            
+            if perk.perk.id == "field-surgeon" {
+                points -= 1
+            }
         }
         
         return points
